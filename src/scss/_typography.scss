@@ -1,0 +1,264 @@
+//
+// Headings
+//
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin-top: 0;
+    margin-bottom: ($spacer / 2);
+    font-family: inherit;
+    line-height: 1.1;
+    color: inherit;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+}
+
+h4,
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+    font-weight: $font-weight-normal;
+}
+
+h1,
+.h1 {
+    font-size: 1.125rem; // 18px
+    letter-spacing: 0.05em;
+
+    @include media-breakpoint-up(md) {
+        font-size: 1.25rem; // 20px
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1.4375rem; // 23px
+    }
+
+    &.heading,
+    .heading {
+        font-size: 1.75rem; // 28px
+        letter-spacing: 0.05em;
+
+        @include media-breakpoint-up(md) {
+            font-size: 2rem; // 32px
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 2.25rem; // 40px
+        }
+    }
+}
+
+h2,
+.h2 {
+    font-size: 0.875rem; // 14px
+    letter-spacing: 0.05em;
+
+    @include media-breakpoint-up(md) {
+        font-size: 1rem; // 16px
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1.125rem; // 18px
+    }
+
+    &.heading,
+    .heading {
+        font-size: 1.125rem; // 18px
+        letter-spacing: 0.05em;
+
+        @include media-breakpoint-up(md) {
+            font-size: 1.25rem; // 20px
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 1.5rem; // 24px
+        }
+    }
+}
+
+h3,
+.h3 {
+    font-size: 0.8125rem; // 13px
+    letter-spacing: 0.05em;
+
+    @include media-breakpoint-up(md) {
+        font-size: 0.875rem; // 14px
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 0.9375rem; // 15px
+    }
+}
+
+h4,
+.h4 {
+    font-size: 0.8125rem; // 14px
+    letter-spacing: 0.3em;
+
+    @include media-breakpoint-up(md) {
+        font-size: 0.9375rem; // 15px
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1rem; // 16px
+    }
+}
+
+h5,
+h6,
+.h5,
+.h6 {
+    font-size: 0.6875rem; // 11px
+    letter-spacing: 0.3em;
+
+    @include media-breakpoint-up(md) {
+        font-size: 0.75rem; // 12px
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 0.8125rem; // 13px
+    }
+}
+
+// Heading
+.heading {
+    font-weight: $font-weight-normal;
+    letter-spacing: 0.02em;
+    text-transform: none;
+}
+
+//
+// Links
+//
+
+a {
+    color: $link-color;
+    text-decoration: none;
+    // Remove the gray background on active links in IE 10
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        color: $link-hover-color;
+        text-decoration: underline;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6,
+        .headings-1,
+        .headings-sale {
+            // Headings inside anchors should not get underlined nor change color on hover
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    p & {
+        // Anchors inside paragraph should always be underlined
+        text-decoration: underline;
+    }
+}
+
+//
+// Paragraphs
+//
+
+p {
+    margin-top: 0;
+    margin-bottom: $spacer;
+}
+
+//
+// Horizontal rules
+//
+
+hr,
+.hr {
+    margin-top: $spacer;
+    margin-bottom: $spacer;
+    border: 0;
+    border-top: $border-width solid rgba($black, 0.1);
+}
+
+.divider {
+    @include media-breakpoint-up(sm) {
+        display: table;
+        margin: 0 auto;
+        padding: 0 $spacer;
+        position: relative;
+        text-align: center;
+
+        &::before,
+        &::after {
+            background-color: rgba($black, 0.1);
+            content: '';
+            height: 1px;
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            width: calc(50vw - 50%);
+        }
+
+        &::after {
+            box-shadow: 100px 0 0 rgba($black, 0.1);
+            left: 100%;
+            right: auto;
+            width: calc(48vw - 50%);
+        }
+    }
+}
+
+//
+// Emphasis
+//
+
+small,
+.small {
+    font-size: 80%;
+    font-weight: $font-weight-normal;
+}
+
+//
+// Lists
+//
+
+.list-unstyled,
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+.list-inline-item {
+    display: inline-block;
+
+    &:not(:last-child) {
+        margin-right: $spacer * 0.5;
+    }
+}
+
+.list-spaced {
+    li {
+        margin: ($spacer / 2) 0;
+    }
+}

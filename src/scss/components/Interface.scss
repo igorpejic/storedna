@@ -1,0 +1,58 @@
+#root {
+  height: 3000px;
+}
+
+.optimisation-cycle {
+}
+
+.interface--container {
+  transform: scale(0.3);
+  will-change: transform;
+  transition: transform 0.2s ease;
+  max-width: 140vh;
+  z-index: 5;
+}
+
+.interface--screen {
+  position: absolute;
+  z-index: 6;
+  top: 7.6%;
+  left: 13.3%;
+  width: 73.2%;
+  height: 81%;
+  background-color: grey;
+}
+
+.cycle-nav {
+  transform: translateY(-250px);
+  transition: transform 0.2s ease;
+}
+
+$n: 6; // has to match number of DOM nodes
+
+.cycle-nav--item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 110px;
+  height: 110px;
+  margin-left: -55px;
+  transition: transform 0.2s ease;
+
+
+  @for $i from 0 to $n {
+    &:nth-child(#{$i + 1}) {
+      transform: rotate(($i - 1)*360deg/$n - 30) translate(250px) rotate(-(($i - 1)*360deg/$n - 30));
+    }
+  }
+
+  .icon__fleet,
+  .icon__scale {
+    margin: 10px 15px;
+  }
+
+  .icon__store {
+    margin: 10px;
+  }
+}
