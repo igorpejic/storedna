@@ -28,7 +28,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        height: 1px;
+        height: 2px;
         width: 100%;
         background-color: currentColor;
         transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
@@ -37,13 +37,12 @@
     &::after {
         content: '';
         transition-delay: 0;
-        transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-105%, 0, 0);
     }
 
     &:hover,
     &:focus,
     .t-underline__container:hover & {
-        color: $link-hover-color;
         text-decoration: none;
 
         &::after {

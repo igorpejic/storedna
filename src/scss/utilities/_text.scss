@@ -48,3 +48,7 @@
 .t-normal { font-weight: $font-weight-normal; }
 .t-bold   { font-weight: $font-weight-bold; }
 .t-italic { font-style: italic; }
+
+.clickable {
+  cursor: pointer;
+}

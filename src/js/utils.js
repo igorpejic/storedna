@@ -1,60 +1,27 @@
-const SCRIPT_REGEX = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi;
+export const lazyPlayVideos = () => {
+  const videos = document.getElementsByTagName("video"),
+  fraction = 0.5;
 
-export function sanitize(string) {
-  let name = string.replace(/ /g, '+').toLowerCase();
-  while (SCRIPT_REGEX.test(string)) {
-    name = name.replace(SCRIPT_REGEX, '');
-  }
-  name = name.replace(/[|&;$%@?#"<>()+,]/g, '');
+  for(var i = 0; i < videos.length; i++) {
+    const video = videos[i];
+    const x = video.offsetLeft,
+      y = video.offsetTop,
+      w = video.offsetWidth,
+      h = video.offsetHeight,
+      r = x + w, //right
+      b = y + h; //bottom
+    let visibleX, visibleY, visible;
 
-  if (name !== '') {
-    return encodeURI(name);
-  }
+    visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
+    visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
+    visible = visibleX * visibleY / (w * h);
 
-  return false;
-}
-
-export function desanitize(string) {
-  let name = string.replace(/\+/g, ' ');
-
-  while (SCRIPT_REGEX.test(string)) {
-    name = name.replace(SCRIPT_REGEX, '');
-  }
-
-  if (name !== '') {
-    return decodeURI(name);
-  }
-
-  return false;
-}
-
-export function throttle(func, wait = 100) {
-  let timer = null;
-  return (...args) => {
-    if (timer === null) {
-      timer = setTimeout(() => {
-        func.apply(this, args);
-        timer = null;
-      }, wait);
+    if (visible > fraction) {
+        video.play();
+        console.log('play');
+    } else {
+        video.pause();
+        console.log('pause');
     }
-  };
-}
-
-export function debounce(fn, threshold = 250, immediate) {
-  let timeout;
-
-  return () => {
-    const args = arguments; // eslint-disable-line prefer-rest-params
-    const delayed = () => {
-      fn(...args);
-      timeout = null;
-    };
-
-    if (timeout) {
-      clearTimeout(timeout);
-    } else if (immediate) {
-      fn(...args);
-    }
-    timeout = setTimeout(delayed, threshold);
-  };
+  }
 }

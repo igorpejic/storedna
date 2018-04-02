@@ -25,10 +25,8 @@ h6,
 
 h4,
 h5,
-h6,
 .h4,
-.h5,
-.h6 {
+.h5{
     font-weight: $font-weight-normal;
 }
 
@@ -117,9 +115,7 @@ h4,
 }
 
 h5,
-h6,
-.h5,
-.h6 {
+.h5 {
     font-size: 0.6875rem; // 11px
     letter-spacing: 0.3em;
 
@@ -129,6 +125,19 @@ h6,
 
     @include media-breakpoint-up(lg) {
         font-size: 0.8125rem; // 13px
+    }
+}
+
+h6 {
+    font-size: 0.5rem;
+    letter-spacing: 0.05em;
+
+    @include media-breakpoint-up(md) {
+        font-size: 0.55rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: 0.6rem;
     }
 }
 

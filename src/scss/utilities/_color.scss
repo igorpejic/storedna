@@ -9,6 +9,7 @@
 .bg-black       { background-color: $black !important; }
 .bg-white       { background-color: $white !important; }
 .bg-transparent { background-color: transparent !important; }
+.bg-brand       { background-color: $brand !important; }
 
 .t-green      { color: $green !important; }
 .t-yellow     { color: $yellow !important; }
@@ -17,3 +18,4 @@
 .t-light-grey { color: $grey-500 !important; }
 .t-white      { color: $white !important; }
 .t-black      { color: $black !important; }
+.t-brand      { color: $brand !important; }
