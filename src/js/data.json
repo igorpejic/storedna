@@ -36,7 +36,7 @@
     "action1": "Reposition to sell more",
     "action2": "Optimal performance",
     "action3": "Remove from the wall",
-    "action4": "Consider markdown / replenish stock",
+    "action4": "Consider markdown or replenish stock",
     "tab": "opportunities"
   },{
     "name": "test",
@@ -66,6 +66,23 @@
   },{
     "name": "scale",
     "title": "Scale",
+    "heading": "Assortment positioning - Men's Running Shoewall",
+    "description": "To maximize results apply verified test learnings to the entire fleet",
+    "image": "/assets/images/shoewall.jpg",
+    "history": [
+      {
+        "heading": "Staff's hours optimization",
+        "description": "Staff scheduling solution that keeps queues short without hiring more staff..."
+      },
+      {
+        "heading": "Store Layout - Category placements",
+        "description": "5% increase in overall revenue after children's section repositioning..."
+      },
+      {
+        "heading": "Store navigation solution",
+        "description": "Store layout and navigation guide to improve traffic flow and top floor coverage..."
+      }
+    ],
     "tab": "knowledge"
   }
 ]}

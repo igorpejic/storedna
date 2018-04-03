@@ -1,0 +1,109 @@
+.interface-matrix-continer,
+.interface-matrix-wrapper {
+  height: 92%;
+}
+
+.y-axis {
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+}
+
+.interface-matrix {
+  border-left: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+
+  &::before {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid black;
+    top: -2px;
+    left: -6px;
+  }
+
+  &::after {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid black;
+    bottom: -6px;
+    right: -2px;
+  }
+}
+
+.interface-matrix,
+.matrix-overlay,
+.matrix-bg {
+  width: 96%;
+  height: 90%;
+}
+
+.matrix-bg {
+  object-fit: contain;
+}
+
+.matrix-label {
+  max-width: 70%;
+}
+
+.matrix-box {
+  flex: 1;
+  overflow: hidden;
+}
+
+.matrix-boxes-top {
+  height: 51%;
+}
+
+.matrix-boxes-bottom {
+  height: 49%;
+}
+
+//transitions
+
+.fade-in {
+  .overlay-box {
+    opacity: 0;
+    transition: opacity 1.5s 0.5s ease-in;
+  }
+
+  .matrix-label {
+    opacity: 0;
+    transition: opacity 1s 2s ease;
+  }
+
+  .matrix-box {
+    box-shadow: 0px 0px 0px rgba(0,0,0,0);
+    transition: box-shadow 1.5s 0.5s ease-in;
+  }
+
+  &.faded-in-transparent {
+    .overlay-box {
+      opacity: 0.95;
+    }
+
+    .matrix-label {
+      opacity: 1;
+    }
+
+    .matrix-box {
+      box-shadow: -2px -2px 2px rgba(0,0,0,.2);
+    }
+  }
+}
+
+.interface-store {
+  .faded-in-transparent {
+    .matrix-box {
+      box-shadow: 2px -2px 2px rgba(0,0,0,.2) !important;
+    }
+  }
+}

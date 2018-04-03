@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ActionBoard from './ActionBoard.js';
 import Opportunities from './Opportunities.js'
+import KnowledgeCenter from './KnowledgeCenter.js'
 
 export default class Screen extends React.PureComponent {
   renderVideo() {
@@ -22,8 +23,10 @@ export default class Screen extends React.PureComponent {
     );
   }
 
-  renderKnoledgeCenter() {
-    console.log('knowledge');
+  renderKnowledgeCenter() {
+    return (
+      <KnowledgeCenter data={ this.props.data } />
+    );
   }
 
   render() {
@@ -39,13 +42,13 @@ export default class Screen extends React.PureComponent {
               <ul className="interface-header-tabs d-flex list-unstyled mb-0 mt-1">
                 <li className={ `mr-3 interface-header-tab clickable ${tab === 'opportunities' ? ' active' : ''}` } onClick={ onClick.bind(this,'fleet') }>Opportunities</li>
                 <li className={ `mr-3 interface-header-tab clickable ${tab === 'actionboard' ? ' active' : ''}` } onClick={ onClick.bind(this,'test') }>ActionBoard</li>
-                <li className={ `mr-3 interface-header-tab clickable ${tab === 'knowledge' ? ' active' : ''}` }>Knowledge Center</li>
+                <li className={ `mr-3 interface-header-tab clickable ${tab === 'knowledge' ? ' active' : ''}` } onClick={ onClick.bind(this,'scale') }>Knowledge Center</li>
                 <li className={ `interface-header-tab clickable ${tab === 'video' ? ' active' : ''}` } onClick={ onClick.bind(this,'video') }>Visual Insights</li>
               </ul>
             </div>
             <div className="interface-header-right mt-1 ml-auto">Logout</div>
           </div>
-          { tab === 'video' ? this.renderVideo() : tab === 'opportunities' ? this.renderOpportunities() :  tab === 'actionboard' ? this.renderActionBoard() : this.renderKnoledgeCenter() }
+          { tab === 'video' ? this.renderVideo() : tab === 'opportunities' ? this.renderOpportunities() :  tab === 'actionboard' ? this.renderActionBoard() : this.renderKnowledgeCenter() }
         </div>
       </div>
     );

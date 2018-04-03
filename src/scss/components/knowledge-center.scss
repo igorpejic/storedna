@@ -1,0 +1,28 @@
+.card-image {
+  width: auto;
+  height: 100%;
+}
+
+.card-h {
+  height: 140px;
+}
+
+.card-v {
+  width: 33%;
+}
+
+.card {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 1px 1px 3px rgba(0,0,0,.05) !important;
+}
+
+.search-bar {
+  height: 30px;
+  box-shadow: inset -1px 1px 3px rgba(0,0,0,.1);
+
+  .search-label {
+    line-height: 1rem;
+    color: $grey-200;
+  }
+}
