@@ -2,6 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default class Chart extends React.PureComponent {
+  componentDidMount() {
+    if (this.props.data.tab === 'opportunities') {
+      setTimeout(() => {
+        document.querySelector('.matrix-boxes').classList.add('faded-in-transparent')
+      }, 1);
+    }
+  }
+
   render() {
     const { title, test, result, labelX, labelY, background } = this.props.data;
 

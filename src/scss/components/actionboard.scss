@@ -1,0 +1,156 @@
+.actionboard-item {
+  &.category-item {
+    width: 14%;
+    bottom: 2%;
+    left: 50%;
+    transition: all 2s ease;
+
+    .shoe-label {
+      fill: rgb(234, 68, 69);
+      transition: all 1s 1s ease;
+    }
+
+    .shoe {
+      stroke: rgb(234, 68, 69);
+      transition: all 1s 1s ease;
+    }
+
+    .shoe-thin-line {
+      stroke-miterlimit: 10;
+      stroke-width:0.57px;
+    }
+
+    .shoe-thick-line {
+      fill: none;
+      stroke-linejoin: bevel;
+      stroke-width: 2.72px;
+    }
+
+    &.after {
+      transform: translate(140%, -120%);
+
+      .shoe-label {
+        fill: $brand-primary;
+      }
+
+      .shoe {
+        stroke: $brand-primary;
+      }
+    }
+  }
+
+  .store-item-pin {
+    fill: rgb(234, 68, 69);
+    transition: all 1s 1s ease;
+  }
+
+  .store-item-label {
+    color: rgb(234, 68, 69);
+    transition: color 1s 1s ease;
+  }
+
+  .store-item {
+    width: 3%;
+    transition: all 2s ease;
+
+    &.amsterdam {
+      bottom: 2%;
+      right: 5%;
+    }
+
+    &.dublin {
+      bottom: 10%;
+      right: 13%;
+    }
+
+    &.istanbul {
+      bottom: 20%;
+      right: 28%;
+    }
+
+    &.utrecht {
+      bottom: 12%;
+      right: 35%;
+    }
+
+    &.rome {
+      bottom: 22%;
+      right: 67%;
+    }
+  }
+
+  &.after {
+    .store-item-pin {
+      fill: $brand-primary;
+    }
+
+    .store-item-label {
+      color: $brand-primary;
+    }
+
+    .store-item {
+      &.amsterdam {
+        bottom: 20%;
+        right: 6%;
+      }
+
+      &.dublin {
+        bottom: 25%;
+        right: 11%;
+      }
+
+      &.istanbul {
+        bottom: 43%;
+        right: 27%;
+      }
+
+      &.utrecht {
+        bottom: 17%;
+        right: 38%;
+      }
+
+      &.rome {
+        bottom: 27%;
+        right: 62%;
+      }
+    }
+  }
+}
+
+.test-toggle {
+  max-width: 350px;
+  border-radius: 25px;
+  padding: 2px;
+  box-shadow: inset 0px 0px 5px rgba(0,0,0,.14);
+
+  .test-toggle-btn {
+    border-radius: 23px;
+    color: $white;
+    background-color: $black;
+    box-shadow: 1px 2px 2px rgba(0,0,0,.3);
+    transition: all 0.1s ease;
+
+    &:not(.active) {
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 2px 3px 5px rgba(0,0,0,.5);
+      }
+    }
+
+    &.active,
+    &:focus {
+      background-color: $brand-primary;
+      box-shadow: inset 0px 0px 5px rgba(0,0,0,.24);
+      outline: none;
+    }
+  }
+
+  .test-toggle-middle {
+    &.active {
+      transform: scale(1.3);
+      transition: all 0.3s ease;
+      color: $brand-primary;
+    }
+  }
+}

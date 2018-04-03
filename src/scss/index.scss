@@ -6,5 +6,8 @@
 @import "images";
 @import "typography";
 @import "reboot";
+@import "general";
 
-@import "./components/interface";
+@import "./components/screen";
+@import "./components/actionboard";
+@import "./components/cycle-nav";

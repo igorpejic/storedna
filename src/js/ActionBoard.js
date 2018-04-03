@@ -4,11 +4,11 @@ import Chart from './Chart.js'
 import { categoryItem, locationPin } from './svgInline.js'
 
 export default class ActionBoard extends React.PureComponent {
-  // componentDidMount() {
-  //   setTimeout(() => {
-  //     document.querySelector('.test-toggle-after').click();
-  //   }, 100);
-  // }
+  componentDidMount() {
+    setTimeout(() => {
+      document.querySelector('.test-toggle-after').click();
+    }, 100);
+  }
 
   toggleBeforeAfter = (e) => {
     if (!e.target.classList.contains('active')) {
@@ -21,15 +21,14 @@ export default class ActionBoard extends React.PureComponent {
 
   locationPins() {
     const { stores } = this.props.data;
-    console.log(stores);
 
-    return(
-      <div className="actionboard-item store-item pos-absolute">
-        { stores.forEach((store) => {
+    return (
+      <div className="actionboard-item">
+        { stores.map((store) => {
           return (
-            <div>
+            <div key={ store } className={ `store-item ${store} pos-absolute d-flex flex-column align-items-center` }>
               { locationPin(store) }
-              <h6 className="store-item-label mb-0">store</h6>
+              <h6 className="store-item-label mb-0">{ store }</h6>
             </div>
           );
         }) }
@@ -38,13 +37,11 @@ export default class ActionBoard extends React.PureComponent {
   }
 
   getChartEl() {
-    if (this.props.data.name === 'test') {
-      return (
-        <div className="pos-relative w-100 h-100 p-2">
-          { this.props.data.name === 'test' ? categoryItem() : this.locationPins() }
-        </div>
-      )
-    }
+    return (
+      <div className="pos-relative w-100 h-100 p-2">
+        { this.props.data.name === 'test' ? categoryItem() : this.locationPins() }
+      </div>
+    );
   }
 
   render() {
@@ -55,7 +52,7 @@ export default class ActionBoard extends React.PureComponent {
         <Chart
           data={ data }
           chartEl={ this.getChartEl() } />
-        <div className="test-toggle pos-relative pos-h-center mt-1 d-flex justify-content-between bg-grey">
+        <div className="test-toggle pos-relative pos-h-center mt-2 d-flex justify-content-between bg-grey">
           <h6 className="test-toggle-btn test-toggle-btn-before mb-0 p-2 active" onClick={ this.toggleBeforeAfter }>{ data.before }</h6>
           <h6 className="d-none d-sm-inline-block test-toggle-middle mb-0 p-2 pr-2 active">{`<<< before`}</h6>
           <h6 className="d-none d-sm-inline-block test-toggle-middle mb-0 p-2 pl-2 ">{`after >>>`}</h6>

@@ -12,13 +12,13 @@ export default class Screen extends React.PureComponent {
 
   renderOpportunities() {
     return (
-      <Opportunities { ...this.props }/>
+      <Opportunities { ...this.props } />
     );
   }
 
   renderActionBoard() {
     return (
-      <ActionBoard data={ this.props.data } />
+      <ActionBoard data={ this.props.data } key={ this.props.data.name } />
     );
   }
 

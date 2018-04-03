@@ -62,7 +62,7 @@
     "before": "May 3 - May 17",
     "after": "May 17 - Jun 1",
     "tab": "actionboard",
-    "stores": ["Amsterdam", "Dublin", "Istanbul", "Utrecht", "Rome"]
+    "stores": ["amsterdam", "dublin", "istanbul", "utrecht", "rome"]
   },{
     "name": "scale",
     "title": "Scale",

@@ -1,0 +1,118 @@
+#root {
+  height: 1000px;
+}
+
+.macbook--screen {
+  position: absolute;
+  z-index: 6;
+  top: 7.6%;
+  left: 13.3%;
+  width: 73.2%;
+  height: 81%;
+  background-color: $black;
+}
+
+.interface--container {
+  transform: scale(0.3);
+  will-change: transform;
+  transition: transform 0.2s ease;
+  max-width: 140vh;
+  z-index: 5;
+}
+
+.interface-header {
+  height: 7%;
+
+  .interface-header-logo {
+    width: 6%;
+  }
+}
+
+.interface-body {
+  height: 93%;
+}
+
+.interface-header-tab,
+.interface-navigation-item {
+  &.clickable {
+    @extend %underline--fancy-hover;
+    margin-bottom: -4px;
+
+    &.active {
+      @extend %underline--fancy;
+    }
+  }
+}
+
+.interface-video {
+  height: 93%;
+}
+
+.interface-matrix-continer,
+.interface-matrix-wrapper {
+  height: 92%;
+}
+
+.y-axis {
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+}
+
+.interface-matrix {
+  border-left: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+
+  &::before {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid black;
+    top: -2px;
+    left: -6px;
+  }
+
+  &::after {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid black;
+    bottom: -6px;
+    right: -2px;
+  }
+}
+
+.interface-matrix,
+.matrix-overlay,
+.matrix-bg {
+  width: 96%;
+  height: 90%;
+}
+
+.matrix-bg {
+  object-fit: contain;
+}
+
+.matrix-label {
+  max-width: 70%;
+}
+
+.matrix-box {
+  flex: 1;
+  overflow: hidden;
+}
+
+.matrix-boxes-top {
+  height: 51%;
+}
+
+.matrix-boxes-bottom {
+  height: 49%;
+}
