@@ -39,77 +39,77 @@
     }
   }
 
-  .store-item-pin {
-    fill: rgb(234, 68, 69);
-    transition: all 1s 1s ease;
-  }
+  &.store-items {
+    .store-item-pin {
+      fill: rgb(234, 68, 69);
+      transition: all 1s 1s ease;
+    }
 
-  .store-item-label {
-    color: rgb(234, 68, 69);
-    transition: color 1s 1s ease;
-  }
+    .store-item-label {
+      color: rgb(234, 68, 69);
+      transition: color 1s 1s ease;
+    }
 
-  .store-item {
-    width: 3%;
-    transition: all 2s ease;
+    .store-item {
+      width: 3%;
+      transition: all 2s ease;
+    }
 
-    &.amsterdam {
+    :nth-child(1) {
       bottom: 2%;
       right: 5%;
     }
 
-    &.dublin {
+    :nth-child(2) {
       bottom: 10%;
       right: 13%;
     }
 
-    &.istanbul {
+    :nth-child(3) {
       bottom: 20%;
       right: 28%;
     }
 
-    &.utrecht {
+    :nth-child(4) {
       bottom: 12%;
       right: 35%;
     }
 
-    &.rome {
+    :nth-child(5) {
       bottom: 22%;
       right: 67%;
     }
-  }
 
-  &.after {
-    .store-item-pin {
-      fill: $brand-primary;
-    }
+    &.after {
+      .store-item-pin {
+        fill: $brand-primary;
+      }
 
-    .store-item-label {
-      color: $brand-primary;
-    }
+      .store-item-label {
+        color: $brand-primary;
+      }
 
-    .store-item {
-      &.amsterdam {
+      :nth-child(1) {
         bottom: 20%;
         right: 6%;
       }
 
-      &.dublin {
+      :nth-child(2) {
         bottom: 25%;
         right: 11%;
       }
 
-      &.istanbul {
+      :nth-child(3) {
         bottom: 43%;
-        right: 27%;
+        right: 30%;
       }
 
-      &.utrecht {
+      :nth-child(4) {
         bottom: 17%;
         right: 38%;
       }
 
-      &.rome {
+      :nth-child(5) {
         bottom: 27%;
         right: 62%;
       }

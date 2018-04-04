@@ -23,7 +23,7 @@ export default class ActionBoard extends React.PureComponent {
     const { stores } = this.props.data;
 
     return (
-      <div className="actionboard-item">
+      <div className="actionboard-item store-items">
         { stores.map((store) => {
           return (
             <div key={ store } className={ `store-item ${store} pos-absolute d-flex flex-column align-items-center` }>
