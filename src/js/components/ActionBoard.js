@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Chart from './Chart.js'
-import { categoryItem, locationPin } from './svgInline.js'
+import { categoryItem, locationPin } from '../svgInline.js'
 
 export default class ActionBoard extends React.PureComponent {
   componentDidMount() {
     setTimeout(() => {
-      document.querySelector('.test-toggle-after').click();
+      const el = document.querySelector('.test-toggle-after');
+      if (el) { el.click() };
     }, 100);
   }
 

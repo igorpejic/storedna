@@ -10,7 +10,7 @@ export default class CycleNavItem extends React.PureComponent {
   render() {
     const { name, label } = this.props;
     return (
-      <div className={ `cycle-nav-item cycle-nav-item--${name} pb-1 d-inline-flex flex-column justify-content-end` } onClick={ this.handleClick }>
+      <div className={ `cycle-nav-item cycle-nav-item--${name} d-inline-flex flex-column justify-content-end align-items-center` } onClick={ this.handleClick }>
         <img className={ `icon icon__${name} mb-2` } alt={ name } src={ `/assets/svg/${name}.svg` } />
         <h2 className="t-center">{ label }</h2>
       </div>

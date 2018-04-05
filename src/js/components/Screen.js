@@ -7,7 +7,7 @@ import KnowledgeCenter from './KnowledgeCenter.js'
 export default class Screen extends React.PureComponent {
   renderVideo() {
     return (
-      <video muted playsInline  loop className="interface-video pos-relative pos-h-center" src="/assets/video/3D_heatmap.mp4" />
+      <video muted playsInline autoPlay loop className="interface-video pos-relative pos-h-center" src="/assets/video/3D_heatmap.mp4" />
     );
   }
 

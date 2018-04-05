@@ -17,7 +17,7 @@
   },{
     "name": "store",
     "label": "Category performance",
-    "title": "LA store | Category performance",
+    "title": "store: LA | Category performance",
     "labelX": "Activity",
     "labelY": "Revenue per sqf",
     "background": "/assets/svg/categories.svg",
@@ -29,7 +29,7 @@
   },{
     "name": "category",
     "label": "Sku performance",
-    "title": "Men's Running Shoes category | Sku performance",
+    "title": "category: Men's Running Shoes | Sku performance",
     "labelX": "Activity",
     "labelY": "Revenue per sku",
     "background": "/assets/svg/skus.svg",
@@ -67,7 +67,7 @@
     "name": "scale",
     "title": "Scale",
     "heading": "Assortment positioning - Men's Running Shoewall",
-    "description": "To maximize results apply verified test learnings to the entire fleet",
+    "description": "To maximize results apply verified test learnings to the entire fleet: product benefit communication and assortment blocking and positioning guidelines for men's running shoes.",
     "image": "/assets/images/shoewall.jpg",
     "history": [
       {

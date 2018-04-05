@@ -1,5 +1,4 @@
 .cycle-nav {
-  transform: translateY(-250px);
   transition: transform 0.2s ease;
 
   $n: 6; // has to match number of cycle-nav-items
@@ -11,12 +10,28 @@
     transform: translate(-50%);
     width: 120px;
     height: 130px;
-    margin-left: -55px;
+    margin-left: -60px;
+    margin-top: -65px;
     transition: transform 0.2s ease;
 
-    @for $i from 0 to $n {
-      &:nth-child(#{$i + 1}) {
-        transform: rotate(($i - 1)*360deg/$n - 30) translate(250px) rotate(-(($i - 1)*360deg/$n - 30));
+    @include media-breakpoint-up(md) {
+      @for $i from 0 to $n {
+        &:nth-child(#{$i + 1}) {
+          transform: rotate(($i - 1)*360deg/$n - 30) translate(250px) rotate(-(($i - 1)*360deg/$n - 30));
+        }
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 70px;
+      height: 80px;
+      margin-left: -35px;
+      margin-top: -40px;
+
+      @for $i from 0 to $n {
+        &:nth-child(#{$i + 1}) {
+          transform: rotate(($i - 1)*360deg/$n - 30) translate(120px) rotate(-(($i - 1)*360deg/$n - 30));
+        }
       }
     }
 

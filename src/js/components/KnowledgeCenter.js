@@ -8,8 +8,8 @@ export default class KnowledgeCenter extends React.PureComponent {
         return(
           <div key={ index } className="card-v col-12 col-sm-6 col-md-4 d-inline-flex flex-column p-1">
             <div className="bg-white card">
-              <p className="px-3 py-2 t-2 t-white bg-brand mb-1">{ item.heading }</p>
-              <p className="px-3 mb-1">{ item.description }</p>
+              <p className="p-3 t-2 t-white bg-brand mb-1">{ item.heading }</p>
+              <p className="p-3 py-2">{ item.description }</p>
               <p className="px-3 py-2 t-6 t-brand">Learn more</p>
             </div>
           </div>
@@ -29,7 +29,7 @@ export default class KnowledgeCenter extends React.PureComponent {
           <div className="px-4 py-3">
             <p className="t-2 t-bold">{ heading }</p>
             <p className="mb-1">{ description }</p>
-            <p className="t-6 t-brand">Learn more</p>
+            <p className="t-6 t-brand mb-2">Learn more</p>
           </div>
         </div>
         <div className="search-bar bg-white w-100 p-2 mb-3 d-flex">

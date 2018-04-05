@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Chart from './Chart.js';
-import { defaultBox, peeledBoxLeft, peeledBoxRight } from './svgInline.js';
+import { defaultBox, peeledBoxLeft, peeledBoxRight } from '../svgInline.js';
 
 export default class Opportunities extends React.PureComponent {
   goToNextLevel = () => {

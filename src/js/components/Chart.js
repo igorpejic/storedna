@@ -5,7 +5,8 @@ export default class Chart extends React.PureComponent {
   componentDidMount() {
     if (this.props.data.tab === 'opportunities') {
       setTimeout(() => {
-        document.querySelector('.matrix-boxes').classList.add('faded-in-transparent')
+        const el = document.querySelector('.matrix-boxes');
+        if (el) { el.classList.add('faded-in-transparent') };
       }, 1);
     }
   }
@@ -27,7 +28,7 @@ export default class Chart extends React.PureComponent {
             <h3 className="axis-label y-axis-label m-0">{ labelY }</h3>
             <div className="axis-arrow y-axis-arrow"></div>
           </div>
-          <img src={ background } alt={ title } className="matrix-bg pos-absolute pos-right p-2" />
+          <img src={ background } alt={ title } className="matrix-bg pos-absolute pos-right p-3" />
           <div className="interface-matrix pos-absolute pos-top pos-right">
             { this.props.chartEl }
           </div>
