@@ -64,6 +64,10 @@
       @extend %underline--fancy;
     }
   }
+
+  @include media-breakpoint-down(xs) {
+    font-size: 6px;
+  }
 }
 
 .interface-video {

@@ -1,6 +1,10 @@
 .interface-matrix-continer,
 .interface-matrix-wrapper {
   height: 92%;
+
+  @include media-breakpoint-down(xs) {
+    height: 98%;
+  }
 }
 
 .y-axis {
@@ -105,5 +109,15 @@
     .matrix-box {
       box-shadow: 2px -2px 2px rgba(0,0,0,.2) !important;
     }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .interface-matrix-title {
+    margin-bottom: 2px;
+  }
+
+  .matrix-box {
+    margin: 1px;
   }
 }

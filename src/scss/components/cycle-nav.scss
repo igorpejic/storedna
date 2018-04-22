@@ -23,9 +23,9 @@
     }
 
     @include media-breakpoint-down(sm) {
-      width: 70px;
+      width: 80px;
       height: 80px;
-      margin-left: -35px;
+      margin-left: -40px;
       margin-top: -40px;
 
       @for $i from 0 to $n {

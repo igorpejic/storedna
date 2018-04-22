@@ -49,15 +49,15 @@ export default class ActionBoard extends React.PureComponent {
     const { data } = this.props;
 
     return (
-      <div className="interface-body mx-5 py-4">
+      <div className="interface-body actionboard mx-1 mx-md-5 py-1 py-md-4">
         <Chart
           data={ data }
           chartEl={ this.getChartEl() } />
-        <div className="test-toggle pos-relative pos-h-center mt-2 d-flex justify-content-between bg-grey">
-          <h6 className="test-toggle-btn test-toggle-btn-before mb-0 p-2 active" onClick={ this.toggleBeforeAfter }>{ data.before }</h6>
+        <div className="test-toggle pos-relative pos-h-center mt-md-2 d-flex justify-content-between bg-grey">
+          <h6 className="test-toggle-btn test-toggle-btn-before mb-0 p-1 p-sm-2 active" onClick={ this.toggleBeforeAfter }>{ data.before }</h6>
           <h6 className="d-none d-sm-inline-block test-toggle-middle mb-0 p-2 pr-2 active">{`<<< before`}</h6>
           <h6 className="d-none d-sm-inline-block test-toggle-middle mb-0 p-2 pl-2 ">{`after >>>`}</h6>
-          <h6 className="test-toggle-btn test-toggle-after mb-0 p-2" onClick={ this.toggleBeforeAfter }>{ data.after }</h6>
+          <h6 className="test-toggle-btn test-toggle-after mb-0 p-1 p-sm-2" onClick={ this.toggleBeforeAfter }>{ data.after }</h6>
         </div>
       </div>
     );

@@ -1,3 +1,11 @@
+.actionboard {
+  .interface-matrix-continer,
+  .interface-matrix-wrapper {
+    @include media-breakpoint-down(xs) {
+      height: 86%;
+    }
+  }
+}
 .actionboard-item {
   &.category-item {
     width: 14%;
@@ -48,6 +56,10 @@
     .store-item-label {
       color: rgb(234, 68, 69);
       transition: color 1s 1s ease;
+
+      @include media-breakpoint-down(xs) {
+        font-size: 3px;
+      }
     }
 
     .store-item {
@@ -154,5 +166,9 @@
       transition: all 0.3s ease;
       color: $black;
     }
+  }
+
+  @include media-breakpoint-down(xs) {
+    max-width: 150px;
   }
 }

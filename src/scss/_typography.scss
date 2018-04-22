@@ -88,8 +88,12 @@ h2,
 
 h3,
 .h3 {
-    font-size: 0.8125rem; // 13px
+    font-size: 0.5rem;
     letter-spacing: 0.05em;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 0.8rem;
+    }
 
     @include media-breakpoint-up(md) {
         font-size: 0.875rem; // 14px
@@ -129,8 +133,12 @@ h5,
 }
 
 h6 {
-    font-size: 0.5rem;
+    font-size: 0.4rem;
     letter-spacing: 0.05em;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 0.5rem;
+    }
 
     @include media-breakpoint-up(md) {
         font-size: 0.55rem;

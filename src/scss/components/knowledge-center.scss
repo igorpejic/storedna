@@ -4,7 +4,7 @@
 }
 
 .card-h {
-  height: 150px;
+  height: 13vw;
 }
 
 .card-v {
@@ -24,5 +24,18 @@
   .search-label {
     line-height: 1rem;
     color: $grey-200;
+  }
+}
+
+.knowledge-center {
+  @include media-breakpoint-down(xs) {
+    .t-2, .t-6, .search-label, p {
+      font-size: 10px !important;
+      margin: 0;
+    }
+
+    .card-h {
+      height: 20vw;
+    }
   }
 }
