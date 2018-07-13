@@ -45,15 +45,17 @@ h1,
 
     &.heading,
     .heading {
-        font-size: 1.75rem; // 28px
-        letter-spacing: 0.05em;
+        font-size: 1.25rem;
+        letter-spacing: 0.03em;
+        text-align: center;
 
         @include media-breakpoint-up(md) {
-            font-size: 2rem; // 32px
+            font-size: 1.5rem;
+            padding: 0 20vw;
         }
 
         @include media-breakpoint-up(lg) {
-            font-size: 2.25rem; // 40px
+            font-size: 1.75rem;
         }
     }
 }
@@ -61,7 +63,7 @@ h1,
 h2,
 .h2 {
     font-size: 0.875rem; // 14px
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
 
     @include media-breakpoint-up(md) {
         font-size: 1rem; // 16px
@@ -147,13 +149,6 @@ h6 {
     @include media-breakpoint-up(lg) {
         font-size: 0.6rem;
     }
-}
-
-// Heading
-.heading {
-    font-weight: $font-weight-normal;
-    letter-spacing: 0.02em;
-    text-transform: none;
 }
 
 //

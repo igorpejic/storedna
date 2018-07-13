@@ -1,0 +1,29 @@
+{
+  "title": "Test, verify and scale insights to the entire store portfolio",
+  "steps": [
+    {
+      "title": "Existing video feed",
+      "description": "Use existing or easy to install cameras to analyze shopper behavior.",
+      "video": "/assets/video/video_feed.mp4",
+      "poster": "/assets/images/video_feed.png"
+    },
+    {
+      "title": "Measure sku engagement",
+      "description": "StoreDNA machine learning algorithm detects exact number of engagements beetween shopper and product.",
+      "video": "/assets/video/sku_engagement.mp4",
+      "poster": "/assets/images/sku_engagement.png"
+    },
+    {
+      "title": "Connect with sales data",
+      "description": "Use sales data to connect product interaction (intention to buy) with actual sales results.",
+      "video": "/assets/video/sales.mp4",
+      "poster": "/assets/images/sales.png"
+    },
+    {
+      "title": "StoreDNA insights",
+      "description": "Actionable recommendations drive increased shoe wall productivity.",
+      "video": "/assets/video/recommendations.mp4",
+      "poster": "/assets/images/recommendations.png"
+    }
+  ]
+}

@@ -1,13 +1,10 @@
 import React from 'react';
-import UserInterface from './components/UserInterface.js'
+import Homepage from './pages/Homepage.js';
 
-class App extends React.Component {
+class App extends React.PureComponent {
   render() {
     return (
-      <div className="page">
-        <div/>
-        <UserInterface />
-      </div>
+        <Homepage />
     );
   }
 }
