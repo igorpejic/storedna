@@ -1,0 +1,13 @@
+.header {
+  background-color: rgba(50, 50, 50, 0.9);
+
+  @include media-breakpoint-down(sm) {
+    height: 30px;
+    transition: all 0.2s ease-in;
+
+    &.opened {
+      height: 100vh;
+      background-color: rgba(50, 50, 50, 1);
+    }
+  }
+}

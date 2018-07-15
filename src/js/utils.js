@@ -1,9 +1,9 @@
-export const lazyPlayVideos = () => {
+export const playLazyVideos = () => {
   const lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
 
   if ("IntersectionObserver" in window) {
-    const lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(video) {
+    const lazyVideoObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((video) => {
         if (video.isIntersecting) {
           video.target.play()
             .then(_ => video.target.classList.add("loaded"))
@@ -14,8 +14,21 @@ export const lazyPlayVideos = () => {
       });
     });
 
-    lazyVideos.forEach(function(lazyVideo) {
-      lazyVideoObserver.observe(lazyVideo);
+    lazyVideos.forEach((video) => {
+      lazyVideoObserver.observe(video);
     });
+  } else { // IntersectionObserver api does not work in Safari
+    lazyVideos.forEach((video) => {
+      document.addEventListener('scroll', () => {
+        const rect = video.getBoundingClientRect()
+        if (rect.top < 200 && rect.bottom > 0) {
+          video.play()
+            .then(_ => video.classList.add("loaded"))
+            .catch();
+        } else if (video.classList.contains("loaded")){
+          video.pause();
+        }
+      })
+    })
   }
 }

@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "title": "Windows",
+      "description": "Drive effective window communication.",
+      "icon": "/assets/svg/window.svg"
+    },
+    {
+      "title": "Assortment",
+      "description": "Present shopper-right assortment connect.",
+      "icon": "/assets/svg/assortment.svg"
+    },
+    {
+      "title": "In-store promos",
+      "description": "Improve in-store promotion effectivness.",
+      "icon": "/assets/svg/promos.svg"
+    },
+    {
+      "title": "Navigation",
+      "description": "Create connected shopper journey. ",
+      "icon": "/assets/svg/navigation.svg"
+    },
+    {
+      "title": "Sales staff",
+      "description": "Optimize sales staff interactions.",
+      "icon": "/assets/svg/staff.svg"
+    },
+    {
+      "title": "Memberships",
+      "description": "Drive strong member relationships.",
+      "icon": "/assets/svg/memberships.svg"
+    }
+  ],
+  "funnel": [
+    { "title": "discover" },
+    { "title": "plan" },
+    { "title": "browse" },
+    { "title": "choose" },
+    { "title": "try" },
+    { "title": "decide" },
+    { "title": "purchase" },
+    { "title": "(re)connect" }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "tabs": [
+    {
+      "label": "platform",
+      "href": "/platform"
+    },
+    {
+      "label": "verticals",
+      "href": "/verticals"
+    },
+    {
+      "label": "resources",
+      "href": "resources"
+    },
+    {
+      "label": "company",
+      "href": "/company"
+    },
+    {
+      "label": "support",
+      "href": "/support"
+    }
+  ]
+}

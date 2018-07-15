@@ -1,0 +1,43 @@
+.section--funnel {
+  @include media-breakpoint-down(sm) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
+.funnel-card {
+  background-color: $brand;
+
+  @include media-breakpoint-up(md) {
+    &:nth-child(even) {
+      background-color: $brand-light;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(6) {
+      background-color: $brand-light;
+    }
+  }
+}
+
+.funnel-card-top {
+  flex-grow: 1;
+}
+
+.funnel-card-bottom {
+  height: 100px;
+
+  @include media-breakpoint-down(sm) {
+    height: 70px;
+  }
+}
+
+.funnel-arrow {
+  @include media-breakpoint-down(sm) {
+    transform: rotate(90deg);
+  }
+}

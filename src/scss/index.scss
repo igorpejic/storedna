@@ -7,8 +7,12 @@
 @import "typography";
 @import "reboot";
 
+@import "./components/header";
+@import "./components/button";
+@import "./components/intro";
 @import "./components/cycle-nav";
 @import "./components/interface";
 @import "./components/opportunities";
 @import "./components/actionboard";
 @import "./components/knowledge-center";
+@import "./components/funnel";

@@ -76,7 +76,6 @@ h2,
     &.heading,
     .heading {
         font-size: 1.125rem; // 18px
-        letter-spacing: 0.05em;
 
         @include media-breakpoint-up(md) {
             font-size: 1.25rem; // 20px
@@ -91,7 +90,6 @@ h2,
 h3,
 .h3 {
     font-size: 0.5rem;
-    letter-spacing: 0.05em;
 
     @include media-breakpoint-up(sm) {
         font-size: 0.8rem;
@@ -104,11 +102,20 @@ h3,
     @include media-breakpoint-up(lg) {
         font-size: 0.9375rem; // 15px
     }
+
+    &.heading,
+    .heading {
+        font-size: 0.875rem; // 14px
+
+        @include media-breakpoint-up(lg) {
+            font-size: 0.9375rem; //15px
+        }
+    }
 }
 
 h4,
 .h4 {
-    font-size: 0.8125rem; // 14px
+    font-size: 0.8125rem; // 13px
     letter-spacing: 0.3em;
 
     @include media-breakpoint-up(md) {
@@ -211,6 +218,10 @@ hr,
     margin-bottom: $spacer;
     border: 0;
     border-top: $border-width solid rgba($black, 0.1);
+
+    &.t-white {
+      border-top: $border-width solid rgba($white, 0.1);
+    }
 }
 
 .divider {
@@ -259,6 +270,10 @@ small,
 .list-inline {
     padding-left: 0;
     list-style: none;
+
+    li {
+        list-style: none;
+    }
 }
 
 .list-inline-item {

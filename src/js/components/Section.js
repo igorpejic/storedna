@@ -1,10 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 import Button from './Button.js'
 
 export default class Section extends React.PureComponent {
   componentDidMount() {
-    window.addEventListener('scroll', this.applyOverlay.bind(this));
+    if (this.props.applyOverlay) {
+      window.addEventListener('scroll', this.applyOverlay.bind(this));
+    }
   }
 
   componentWillUnmount() {
@@ -19,8 +21,8 @@ export default class Section extends React.PureComponent {
     const rect = this.currentNode.getBoundingClientRect();
 
     if (rect.bottom > 0 && rect.bottom < rect.height / 2) {
-      const opacity =  1 - (rect.bottom / (rect.height / 2));
-      this.currentNode.style.backgroundColor = `rgba(150, 150, 150, ${opacity})`;
+      const opacity =  1.1 - (rect.bottom / (rect.height / 2));
+      this.currentNode.style.backgroundColor = `rgba(80, 80, 80, ${opacity})`;
     } else {
       this.currentNode.style.background = 'none';
     }
@@ -31,22 +33,30 @@ export default class Section extends React.PureComponent {
       return (
         <div className='t-center pos-relative z-10'>
           { buttons.map(btn =>
-            <Button key={ btn.label } label={ btn.label } href={ btn.href } onClick={ btn.onClick } />)
+            <Button
+              key={ btn.label }
+              label={ btn.label }
+              href={ btn.href }
+              onClick={ btn.onClick }
+              classAdditions="mx-4 mt-3 mt-md-5" />)
           }
         </div>
       )
     }
   }
 
+  renderOverlay = () =>
+    <div ref={ this.setCurrentNode } className="section--overlay pos-absolute pos-left pos-top w-100 h-100 z-5" />
+
   render() {
-    const { children, heading, buttons, padding } = this.props;
+    const { children, heading, buttons, padding, applyOverlay, className } = this.props;
 
     return (
-      <div className={ `section pos-relative w-100 px-2 py-4 p-md-${padding}` }>
+      <div className={ `${className} pos-relative w-100 px-2 py-4 p-md-${padding}` }>
         { heading && heading }
         { children }
         { this.renderButtons(buttons) }
-        <div ref={ this.setCurrentNode } className="section--overlay pos-absolute pos-left pos-top w-100 h-100 z-5" />
+        { applyOverlay && this.renderOverlay() }
       </div>
     );
   }
@@ -60,10 +70,14 @@ Section.propTypes = {
     onClick: PropTypes.func,
   })),
   padding: PropTypes.number,
+  applyOverlay: PropTypes.bool,
+  className: PropTypes.string,
 }
 
 Section.defaultProps = {
   heading: null,
   buttons: null,
   padding: 6,
+  applyOverlay: true,
+  className: 'section',
 }
