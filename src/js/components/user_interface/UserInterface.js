@@ -25,7 +25,6 @@ export default class UserInterface extends React.PureComponent {
 
   startScrollAnimation() {
     const rect = this.container.getBoundingClientRect();
-    console.log(rect);
     const scrollY = (rect.top - 200) * -1;
 
     if (scrollY > 0) {
