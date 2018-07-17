@@ -1,7 +1,6 @@
 import React from 'react';
 import CycleNavItem from './CycleNavItem.js'
 import Screen from './Screen.js'
-import Section from '../Section.js'
 import { screens as items, title } from '../../data/userInterface.json'
 
 export default class UserInterface extends React.PureComponent {
@@ -107,7 +106,7 @@ export default class UserInterface extends React.PureComponent {
 
   render() {
     return (
-      <Section padding={ 5 } applyOverlay={ false }>
+      <div className='pos-relative o-hidden w-100 py-4 p-md-5'>
         <h1 className="heading mb-0">{ title }</h1>
         <div className="optimisation-cycle pos-relative w-100 z-6">
           <div className="interface--container">
@@ -118,7 +117,7 @@ export default class UserInterface extends React.PureComponent {
             { this.renderCycleNavItems() }
           </div>
         </div>
-      </Section>
+      </div>
     );
   }
 }

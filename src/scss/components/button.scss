@@ -1,3 +1,13 @@
+button:focus {
+    outline: none;
+}
+
 .btn {
   cursor: pointer;
+}
+
+.btn-unstyled {
+  border: none;
+  background: none;
+  padding: 0;
 }

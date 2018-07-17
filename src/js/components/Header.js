@@ -29,7 +29,7 @@ export default class Header extends React.PureComponent {
         <div className="d-flex align-items-center justify-content-center" style={{ minHeight: '22px' }}>
           <button
             style={{ lineHeight: '15px' }}
-            className="d-md-none pl-3 btn-unstyled pos-absolute pos-left"
+            className="d-md-none pl-3 btn-unstyled pos-absolute pos-left pos-v-center"
             onClick={ this.toggleMenu }>
             <img
               src={ `/assets/svg/${this.state.openMenu ? 'close' : 'menu'}.svg` }
@@ -41,17 +41,17 @@ export default class Header extends React.PureComponent {
             <img className="d-none d-lg-inline-block mr-md-4" src="/assets/svg/logo_white.svg" alt="storedna logo" height="30px" />
             <img className="d-lg-none mr-md-4" src="/assets/svg/logo_icon_white.svg" alt="storedna logo" height="22px" />
           </a>
-        </div>
 
-        <button
-          style={{ lineHeight: '15px' }}
-          className="d-md-none pr-3 btn-unstyled pos-absolute pos-right"
-          onClick={ () => window.location.href = '/contact' }>
-          <img
-            src={ `/assets/svg/contact.svg` }
-            alt="storedna contact"
-            height="20px" />
-        </button>
+          <button
+            style={{ lineHeight: '15px' }}
+            className="d-md-none pr-3 btn-unstyled pos-absolute pos-right pos-v-center"
+            onClick={ () => window.location.href = '/info' }>
+            <img
+              src={ `/assets/svg/info.svg` }
+              alt="storedna contact"
+              height="20px" />
+          </button>
+        </div>
 
         <ul className={ `menu ${this.state.openMenu ? 'my-6 mx-4' : 'd-none'} list-unstyled d-md-flex m-md-0` }>
           { this.renderNavigationTabs() }
