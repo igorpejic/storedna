@@ -40,8 +40,9 @@ $yellow-100: #ffd54f !default;
 $yellow-200: $yellow !default;
 $yellow-300: lighten($yellow, 20%) !default;
 
-$brand:  #6AC1B8 !default;
-$brand-primary:  #6AC1B8 !default;
+$brand: #6AC1B8 !default;
+$brand-light: lighten($brand, 10%) !default;
+$brand-primary: #6AC1B8 !default;
 $brand-secondary: $black !default;
 
 //
@@ -54,8 +55,9 @@ $spacers: (
     1: ($spacer * 0.25),
     2: ($spacer * 0.5),
     3: $spacer,
-    4: ($spacer * 1.5),
-    5: ($spacer * 3)
+    4: ($spacer * 2),
+    5: ($spacer * 3),
+    6: ($spacer * 4)
 ) !default;
 
 // This variable affects the `.h-*` and `.w-*` classes
@@ -129,11 +131,13 @@ $font-size-sm: 0.6rem !default;    // 10px
 $font-size-lg: 0.875rem !default;   // 14px
 $font-size-xl: 1rem !default;     // 16px
 $font-size-xxl: 1.125rem !default; // 18px
+$font-size-xxxl: 1.5rem !default;
+$font-size-xxxxl: 2rem !default;
 
 $font-weight-normal: normal !default;
 $font-weight-bold:  bold !default;
 
-$line-height:   1.5 !default;
+$line-height:   1.4 !default;
 $line-height-sm: 1.5 !default;
 $line-height-lg: 1.5 !default;
 

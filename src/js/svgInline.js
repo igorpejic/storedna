@@ -1,10 +1,13 @@
 import React from 'react';
 
-export const defaultBox = (color) => {
+export const defaultBox = (color, id) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.99 126" className="overlay-box pos-absolute w-100">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267.99 126" className="overlay-box pos-absolute pos-left w-100">
+    <style>
+      {`#${id} { fill: ${color};}`}
+    </style>
       <g id="box">
-        <rect id="box" className="box" style={{fill:color}} width="267.99" height="126"/>
+        <rect id={id} className="box" width="267.99" height="126"/>
       </g>
     </svg>
   );
@@ -13,7 +16,7 @@ export const defaultBox = (color) => {
 
 export const peeledBoxLeft = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 267.99 126" className="overlay-box pos-absolute w-100">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 267.99 126" className="overlay-box pos-absolute pos-left w-100">
       <defs>
         <linearGradient id="linear-gradient" x1="747.76" y1="43.95" x2="686.39" y2="-31.65" gradientTransform="matrix(1, 0, 0, -1, -656.62, 95.25)" gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#fff"/>
@@ -36,7 +39,7 @@ export const peeledBoxLeft = () => {
 
 export const peeledBoxRight = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 267.99 126" className="overlay-box pos-absolute w-100">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 267.99 126" className="overlay-box pos-absolute pos-left w-100">
       <defs>
         <linearGradient id="linear-gradient" x1="747.76" y1="43.95" x2="686.39" y2="-31.65" gradientTransform="translate(924.62 95.25) rotate(180)" gradientUnits="userSpaceOnUse">
           <stop offset="0" stopColor="#fff"/>

@@ -1,27 +1,34 @@
-export const lazyPlayVideos = () => {
-  const videos = document.getElementsByTagName("video"),
-  fraction = 0.5;
+export const playLazyVideos = () => {
+  const lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
 
-  for(var i = 0; i < videos.length; i++) {
-    const video = videos[i];
-    const x = video.offsetLeft,
-      y = video.offsetTop,
-      w = video.offsetWidth,
-      h = video.offsetHeight,
-      r = x + w, //right
-      b = y + h; //bottom
-    let visibleX, visibleY, visible;
+  if ("IntersectionObserver" in window) {
+    const lazyVideoObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((video) => {
+        if (video.isIntersecting) {
+          video.target.play()
+            .then(_ => video.target.classList.add("loaded"))
+            .catch();
+        } else if (video.target.classList.contains("loaded")){
+          video.target.pause();
+        }
+      });
+    });
 
-    visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
-    visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
-    visible = visibleX * visibleY / (w * h);
-
-    if (visible > fraction) {
-        video.play();
-        console.log('play');
-    } else {
-        video.pause();
-        console.log('pause');
-    }
+    lazyVideos.forEach((video) => {
+      lazyVideoObserver.observe(video);
+    });
+  } else { // IntersectionObserver api does not work in Safari
+    lazyVideos.forEach((video) => {
+      document.addEventListener('scroll', () => {
+        const rect = video.getBoundingClientRect()
+        if (rect.top < 200 && rect.bottom > 0) {
+          video.play()
+            .then(_ => video.classList.add("loaded"))
+            .catch();
+        } else if (video.classList.contains("loaded")){
+          video.pause();
+        }
+      })
+    })
   }
 }
