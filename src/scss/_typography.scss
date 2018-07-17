@@ -45,15 +45,19 @@ h1,
 
     &.heading,
     .heading {
-        font-size: 1.75rem; // 28px
-        letter-spacing: 0.05em;
+        font-size: 1.25rem;
+        letter-spacing: 0.03em;
+        margin-bottom: $spacer * 1.5;
+        text-align: center;
 
         @include media-breakpoint-up(md) {
-            font-size: 2rem; // 32px
+            font-size: 1.5rem;
+            padding: 0 10vw;
         }
 
         @include media-breakpoint-up(lg) {
-            font-size: 2.25rem; // 40px
+            font-size: 1.75rem;
+            margin-bottom: $spacer * 3;
         }
     }
 }
@@ -61,7 +65,7 @@ h1,
 h2,
 .h2 {
     font-size: 0.875rem; // 14px
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
 
     @include media-breakpoint-up(md) {
         font-size: 1rem; // 16px
@@ -74,7 +78,6 @@ h2,
     &.heading,
     .heading {
         font-size: 1.125rem; // 18px
-        letter-spacing: 0.05em;
 
         @include media-breakpoint-up(md) {
             font-size: 1.25rem; // 20px
@@ -89,7 +92,6 @@ h2,
 h3,
 .h3 {
     font-size: 0.5rem;
-    letter-spacing: 0.05em;
 
     @include media-breakpoint-up(sm) {
         font-size: 0.8rem;
@@ -102,11 +104,20 @@ h3,
     @include media-breakpoint-up(lg) {
         font-size: 0.9375rem; // 15px
     }
+
+    &.heading,
+    .heading {
+        font-size: 0.875rem; // 14px
+
+        @include media-breakpoint-up(lg) {
+            font-size: 0.9375rem; //15px
+        }
+    }
 }
 
 h4,
 .h4 {
-    font-size: 0.8125rem; // 14px
+    font-size: 0.8125rem; // 13px
     letter-spacing: 0.3em;
 
     @include media-breakpoint-up(md) {
@@ -149,13 +160,6 @@ h6 {
     }
 }
 
-// Heading
-.heading {
-    font-weight: $font-weight-normal;
-    letter-spacing: 0.02em;
-    text-transform: none;
-}
-
 //
 // Links
 //
@@ -169,7 +173,7 @@ a {
     &:hover,
     &:focus {
         color: $link-hover-color;
-        text-decoration: underline;
+        // text-decoration: underline;
 
         h1,
         h2,
@@ -216,6 +220,10 @@ hr,
     margin-bottom: $spacer;
     border: 0;
     border-top: $border-width solid rgba($black, 0.1);
+
+    &.t-white {
+      border-top: $border-width solid rgba($white, 0.1);
+    }
 }
 
 .divider {
@@ -264,6 +272,10 @@ small,
 .list-inline {
     padding-left: 0;
     list-style: none;
+
+    li {
+        list-style: none;
+    }
 }
 
 .list-inline-item {
