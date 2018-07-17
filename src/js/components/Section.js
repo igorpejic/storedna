@@ -52,7 +52,7 @@ export default class Section extends React.PureComponent {
     const { children, heading, buttons, padding, applyOverlay, className } = this.props;
 
     return (
-      <div className={ `${className} pos-relative w-100 px-2 py-4 p-md-${padding}` }>
+      <div className={ `${className} pos-relative o-hidden w-100 px-3 py-4 p-md-${padding}` }>
         { heading && heading }
         { children }
         { this.renderButtons(buttons) }

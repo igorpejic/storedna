@@ -8,8 +8,8 @@ const Intro = () => {
   }
 
   return (
-    <Section applyOverlay={ false } className="section section--intro">
-      <div className="col-md-4 h-100 d-flex flex-column justify-content-between">
+    <Section applyOverlay={ false } className="section--intro bg-grey">
+      <div className="col-md-4 p-0 h-100 d-flex flex-column justify-content-between">
         <div />
         <div>
           <p className="t-1">

@@ -57,7 +57,6 @@
 .t-underline { text-decoration: underline !important; }
 .t-none { text-decoration: none !important; }
 .t-underline--fancy-hover { @extend %underline--fancy-hover; }
-
 .t-underline--fancy {
     @extend %underline--fancy-hover;
     @extend %underline--fancy;

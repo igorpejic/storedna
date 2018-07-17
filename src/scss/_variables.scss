@@ -41,7 +41,7 @@ $yellow-200: $yellow !default;
 $yellow-300: lighten($yellow, 20%) !default;
 
 $brand: #6AC1B8 !default;
-$brand-light: lighten($brand, 5%) !default;
+$brand-light: lighten($brand, 10%) !default;
 $brand-primary: #6AC1B8 !default;
 $brand-secondary: $black !default;
 
@@ -55,7 +55,7 @@ $spacers: (
     1: ($spacer * 0.25),
     2: ($spacer * 0.5),
     3: $spacer,
-    4: ($spacer * 1.5),
+    4: ($spacer * 2),
     5: ($spacer * 3),
     6: ($spacer * 4)
 ) !default;

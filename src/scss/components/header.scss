@@ -11,3 +11,13 @@
     }
   }
 }
+
+.nav-tab {
+  @include media-breakpoint-down(sm) {
+    display: block;
+
+    &::before {
+      content: none;
+    }
+  }
+}

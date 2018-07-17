@@ -12,9 +12,11 @@ export default class Header extends React.PureComponent {
 
   renderNavigationTabs = () =>
     tabs.map((tab, index) =>
-      <li key={ index } className='mr-2 mr-md-3 clickable'>
+      <li
+        key={ index }
+        className={ `nav-tab mr-2 mr-md-3 t-brand t-underline--fancy-hover clickable${window.location.pathname === tab.href ? ' t-underline--fancy' : ''}` }>
         <a className="btn t-white" href={ tab.href }>
-          <h3 className="heading mb-md-0">{ tab.label }</h3>
+          <h3 className="heading my-md-1 mb-md-0">{ tab.label }</h3>
         </a>
         <hr className="t-white d-md-none"/>
       </li>
@@ -30,7 +32,6 @@ export default class Header extends React.PureComponent {
             className="d-md-none pl-3 btn-unstyled pos-absolute pos-left"
             onClick={ this.toggleMenu }>
             <img
-              className="d-md-none"
               src={ `/assets/svg/${this.state.openMenu ? 'close' : 'menu'}.svg` }
               alt="storedna logo"
               height="15px" />
@@ -42,14 +43,24 @@ export default class Header extends React.PureComponent {
           </a>
         </div>
 
+        <button
+          style={{ lineHeight: '15px' }}
+          className="d-md-none pr-3 btn-unstyled pos-absolute pos-right"
+          onClick={ () => window.location.href = '/contact' }>
+          <img
+            src={ `/assets/svg/contact.svg` }
+            alt="storedna contact"
+            height="20px" />
+        </button>
+
         <ul className={ `menu ${this.state.openMenu ? 'my-6 mx-4' : 'd-none'} list-unstyled d-md-flex m-md-0` }>
           { this.renderNavigationTabs() }
         </ul>
 
         <ol className="d-none d-md-flex align-items-center mb-0 ml-auto list-unstyled">
-          <li className='mr-2 mr-sm-3 clickable'>
+          <li className='mr-2 mr-sm-3 clickable t-brand t-underline--fancy-hover'>
             <a className="t-white" href='logIn'>
-              <h3 className="heading mb-md-0">Log in</h3>
+              <h3 className="heading my-md-1 mb-md-0">Log in</h3>
             </a>
           </li>
           <li>

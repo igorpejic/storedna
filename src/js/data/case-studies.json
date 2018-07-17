@@ -1,0 +1,28 @@
+{
+  "cases": [
+    {
+      "logo": "/assets/svg/category.svg",
+      "name": "Nike London",
+      "level": "women's category",
+      "result": "+36%",
+      "metric": "revenue",
+      "href": "/study1"
+    },
+    {
+      "logo": "/assets/svg/category.svg",
+      "name": "Den Hague",
+      "level": "store",
+      "result": "+21%",
+      "metric": "conversion",
+      "href": "/study2"
+    },
+    {
+      "logo": "/assets/svg/category.svg",
+      "name": "Amsterdam",
+      "level": "flagship showroom",
+      "result": "+29%",
+      "metric": "conversion",
+      "href": "/study3"
+    }
+  ]
+}

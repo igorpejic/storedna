@@ -1,8 +1,11 @@
 .section--intro {
   height: 100vh;
-  background-color: $grey-700;
   background-image: url('/assets/images/intro.png');
-  background-position: bottom right;
-  background-size: contain;
   background-repeat: no-repeat;
+  background-position: bottom right 60%;
+  background-size: contain;
+
+  @include media-breakpoint-up(md) {
+    background-size: cover;
+  }
 }

@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Button = ({ label, href, onClick, classAdditions }) => {
-  const onBtnClick = () => {
+  const onBtnClick = (e) => {
+    e && e.preventDefault();
     onClick ? onClick() : window.location.href = href;
   }
 

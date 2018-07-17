@@ -7,7 +7,7 @@ const Methodology = () =>
     { steps.map((step, index) =>
       <Section key={ index }>
         <div className="pos-relative d-flex flex-column z-0">
-          <div className="container d-md-flex">
+          <div className="container p-0 d-md-flex">
             <h2 className="heading mt-2 p-0 col-md-3 mr-md-4">{ step.title }</h2>
             <p className="t-0">{ step.description }</p>
           </div>

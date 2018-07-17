@@ -1,6 +1,7 @@
 import React from 'react';
 import CycleNavItem from './CycleNavItem.js'
 import Screen from './Screen.js'
+import Section from '../Section.js'
 import { screens as items, title } from '../../data/userInterface.json'
 
 export default class UserInterface extends React.PureComponent {
@@ -13,10 +14,9 @@ export default class UserInterface extends React.PureComponent {
     this.container = document.querySelector('.optimisation-cycle');
     this.macbook = document.querySelector('.interface--container');
     this.cycleNavItems = document.querySelectorAll('.cycle-nav-item');
-    const rect = this.container.getBoundingClientRect();
-    this.offsetY = rect.top
-    this.isClickable = false
+    this.isClickable = false;
 
+    this.startScrollAnimation.bind(this);
     window.addEventListener('scroll', this.startScrollAnimation.bind(this));
   }
 
@@ -25,12 +25,14 @@ export default class UserInterface extends React.PureComponent {
   }
 
   startScrollAnimation() {
-    const scrollY = window.scrollY - this.offsetY;
+    const rect = this.container.getBoundingClientRect();
+    console.log(rect);
+    const scrollY = (rect.top - 200) * -1;
 
     if (scrollY > 0) {
       const macHeight = this.macbook.offsetHeight;
       const { innerHeight, innerWidth } = window;
-      const scale = scrollY * 0.003 + 0.3;
+      let scale = scrollY * 0.003 + 0.3;
       const translateMac = scrollY + (innerHeight/2*0.07*scale);
       const translateNav = innerWidth > 767 ? 250 : 120 + innerWidth * scrollY * 0.0002;
       const translateNavX = macHeight * 0.55 * scale
@@ -62,6 +64,10 @@ export default class UserInterface extends React.PureComponent {
         this.cycleNavItems.forEach((item) => item.classList.remove('clickable', 'active'));
         this.isClickable = false;
       }
+    } else {
+      this.container.style = {};
+      this.macbook.style = {};
+      this.cycleNavItems.forEach((item, index) => item.style = {});
     }
   }
 
@@ -101,7 +107,7 @@ export default class UserInterface extends React.PureComponent {
 
   render() {
     return (
-      <React.Fragment>
+      <Section padding={ 5 } applyOverlay={ false }>
         <h1 className="heading mb-0">{ title }</h1>
         <div className="optimisation-cycle pos-relative w-100 z-6">
           <div className="interface--container">
@@ -112,7 +118,7 @@ export default class UserInterface extends React.PureComponent {
             { this.renderCycleNavItems() }
           </div>
         </div>
-      </React.Fragment>
+      </Section>
     );
   }
 }

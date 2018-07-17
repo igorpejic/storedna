@@ -47,15 +47,17 @@ h1,
     .heading {
         font-size: 1.25rem;
         letter-spacing: 0.03em;
+        margin-bottom: $spacer * 1.5;
         text-align: center;
 
         @include media-breakpoint-up(md) {
             font-size: 1.5rem;
-            padding: 0 20vw;
+            padding: 0 10vw;
         }
 
         @include media-breakpoint-up(lg) {
             font-size: 1.75rem;
+            margin-bottom: $spacer * 3;
         }
     }
 }
@@ -171,7 +173,7 @@ a {
     &:hover,
     &:focus {
         color: $link-hover-color;
-        text-decoration: underline;
+        // text-decoration: underline;
 
         h1,
         h2,
