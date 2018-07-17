@@ -186,14 +186,6 @@ module.exports = {
                       },
                     },
                     {
-                      loader: require.resolve('scss-loader'),
-                      options: {
-                        importLoaders: 1,
-                        minimize: true,
-                        sourceMap: shouldUseSourceMap,
-                      },
-                    },
-                    {
                       loader: require.resolve('postcss-loader'),
                       options: {
                         // Necessary for external CSS imports to work
@@ -213,6 +205,7 @@ module.exports = {
                         ],
                       },
                     },
+                    require.resolve('sass-loader'),
                   ],
                 },
                 extractTextPluginOptions
