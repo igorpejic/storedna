@@ -12,7 +12,7 @@ export default class Screen extends React.PureComponent {
         preload="none"
         poster="/assets/images/3D_heatmap.png"
         className="interface-video lazy pos-relative pos-h-center"
-        src="https://s3-eu-west-1.amazonaws.com/storedna-videos/3D_heatmap.mp4" />
+        src="assets/video/3D_heatmap.mp4" />
     );
   }
 

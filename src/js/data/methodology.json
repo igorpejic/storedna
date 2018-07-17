@@ -4,25 +4,25 @@
     {
       "title": "Existing video feed",
       "description": "Use existing or easy to install cameras to analyze shopper behavior.",
-      "video": "https://s3-eu-west-1.amazonaws.com/storedna-videos/video_feed.mp4",
+      "video": "/assets/video/video_feed.mp4",
       "poster": "/assets/images/video_feed.png"
     },
     {
       "title": "Measure sku engagement",
       "description": "StoreDNA machine learning algorithm detects exact number of engagements beetween shopper and product.",
-      "video": "https://s3-eu-west-1.amazonaws.com/storedna-videos/sku_engagement.mp4",
+      "video": "/assets/video/sku_engagement.mp4",
       "poster": "/assets/images/sku_engagement.png"
     },
     {
       "title": "Connect with sales data",
       "description": "Use sales data to connect product interaction (intention to buy) with actual sales results.",
-      "video": "https://s3-eu-west-1.amazonaws.com/storedna-videos/sales.mp4",
+      "video": "/assets/video/sales.mp4",
       "poster": "/assets/images/sales.png"
     },
     {
       "title": "StoreDNA insights",
       "description": "Actionable recommendations drive increased shoe wall productivity.",
-      "video": "https://s3-eu-west-1.amazonaws.com/storedna-videos/recommendations.mp4",
+      "video": "/assets/video/recommendations.mp4",
       "poster": "/assets/images/recommendations.png"
     }
   ]
