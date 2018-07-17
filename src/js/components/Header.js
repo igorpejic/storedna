@@ -29,7 +29,7 @@ export default class Header extends React.PureComponent {
         <div className="d-flex align-items-center justify-content-center" style={{ minHeight: '22px' }}>
           <button
             style={{ lineHeight: '15px' }}
-            className="d-md-none pl-3 btn-unstyled pos-absolute pos-left pos-v-center"
+            className="d-md-none pl-3 btn-unstyled pos-absolute pos-left"
             onClick={ this.toggleMenu }>
             <img
               src={ `/assets/svg/${this.state.openMenu ? 'close' : 'menu'}.svg` }
@@ -44,7 +44,7 @@ export default class Header extends React.PureComponent {
 
           <button
             style={{ lineHeight: '15px' }}
-            className="d-md-none pr-3 btn-unstyled pos-absolute pos-right pos-v-center"
+            className="d-md-none pr-3 btn-unstyled pos-absolute pos-right"
             onClick={ () => window.location.href = '/info' }>
             <img
               src={ `/assets/svg/info.svg` }
