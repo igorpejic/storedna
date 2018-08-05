@@ -20,8 +20,9 @@ export const playLazyVideos = () => {
   } else { // IntersectionObserver api does not work in Safari
     lazyVideos.forEach((video) => {
       document.addEventListener('scroll', () => {
-        const rect = video.getBoundingClientRect()
-        if (rect.top < 200 && rect.bottom > 0) {
+        const rect = video.getBoundingClientRect();
+        console.log(video, rect)
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
           video.play()
             .then(_ => video.classList.add("loaded"))
             .catch();

@@ -6,14 +6,13 @@ import { screens as items, title } from '../../data/userInterface.json'
 export default class UserInterface extends React.PureComponent {
   constructor() {
     super();
+
     this.state = { activeScreen: 'video'};
   }
 
   componentDidMount() {
-    this.container = document.querySelector('.optimisation-cycle');
-    this.macbook = document.querySelector('.interface--container');
-    this.cycleNavItems = document.querySelectorAll('.cycle-nav-item');
     this.isClickable = false;
+    this.cycleNavItems = Array.prototype.slice.call(this.refs.cycleNav.children);
 
     this.startScrollAnimation.bind(this);
     window.addEventListener('scroll', this.startScrollAnimation.bind(this));
@@ -24,11 +23,11 @@ export default class UserInterface extends React.PureComponent {
   }
 
   startScrollAnimation() {
-    const rect = this.container.getBoundingClientRect();
-    const scrollY = (rect.top - 200) * -1;
+    const rect = this.refs.section.getBoundingClientRect();
+    const scrollY = (rect.top + 100) * -1;
 
     if (scrollY > 0) {
-      const macHeight = this.macbook.offsetHeight;
+      const macHeight = this.refs.macbook.offsetHeight;
       const { innerHeight, innerWidth } = window;
       let scale = scrollY * 0.003 + 0.3;
       const translateMac = scrollY + (innerHeight/2*0.07*scale);
@@ -38,13 +37,13 @@ export default class UserInterface extends React.PureComponent {
 
       if (scale < maxScale) {
         requestAnimationFrame(() => {
-          this.container.style.transform = `translateY(${translateMac}px)`;
-          this.macbook.style.transform = `scale(${scale - 0.09})`;
-          this.cycleNavItems.forEach((item, index) => {
+          this.refs.container.style.transform = `translateY(${translateMac}px)`;
+          this.refs.macbook.style.transform = `scale(${scale - 0.09})`;
+          this.cycleNavItems.map((item, index) => {
             if (scale < 0.7) {
-              item.style.transform = `rotate(${(index - 1) * 60 - 30}deg) translate(0, ${translateNav - scrollY}px) rotate(${-(index - 1) * 60 + 30}deg) scale(${1.5 - scale}`;
+              return item.style.transform = `rotate(${(index - 1) * 60 - 30}) translate(0, ${translateNav - scrollY}px) rotate(${-(index - 1) * 60 + 30}) scale(${1.5 - scale}`;
             } else {
-              item.style.transform = `rotate(90deg) translate(${translateNavX}px, ${(35-(14 * index)) * (scale-0.1)}vw) rotate(-90deg) scale(${1.7 - scale})`;
+              return item.style.transform = `rotate(90deg) translate(${translateNavX}px, ${(35-(14 * index)) * (scale-0.1)}vw) rotate(-90deg) scale(${1.7 - scale})`;
             }
           });
         });
@@ -52,41 +51,39 @@ export default class UserInterface extends React.PureComponent {
 
       if (!this.isClickable && scale > 0.9) {
         this.setState({ activeScreen: 'fleet' });
-        this.cycleNavItems.forEach((item) => item.classList.add('clickable'));
+        this.cycleNavItems.map((item) => item.classList.add('clickable'));
         this.isClickable = true;
-        document.querySelector('.cycle-nav-item--fleet').classList.add('active');
+        this.cycleNavItems[0].classList.add('active');
       }
 
       if (this.isClickable && scale <= 0.9) {
         this.setState({ activeScreen: 'video' });
-        this.cycleNavItems.forEach((item) => item.classList.remove('clickable', 'active'));
+        this.cycleNavItems.map((item) => item.classList.remove('clickable', 'active'));
         this.isClickable = false;
       }
     } else {
-      this.container.style = {};
-      this.macbook.style = {};
-      this.cycleNavItems.forEach((item, index) => item.style = {});
+      this.refs.container.style.transform = '';
+      this.refs.macbook.style.transform = '';
+      this.cycleNavItems.map((item, index) => item.style.transform = '');
     }
   }
 
   onItemClick = (name) => {
-    const cycleNavItems = document.querySelectorAll('.cycle-nav-item');
-
     this.setState({ activeScreen: name });
-    cycleNavItems.forEach((item) => item.classList.remove('active'));
+    this.cycleNavItems.map((item) => item.classList.remove('active'));
     if (name !== 'video') {
       document.querySelector(`.cycle-nav-item--${name}`).classList.add('active');
     }
   }
 
   renderCycleNavItems() {
-    return items.map((item) => { // eslint-disable-line array-callback-return
+    return items.map((item, index) => { // eslint-disable-line array-callback-return
       if (item.title) {
         return (
           <CycleNavItem
             key={ item.name }
-            name={ item.name }
             label={ item.name }
+            name={ item.name }
             onClick={ this.onItemClick.bind(this) } />
         );
       };
@@ -99,20 +96,20 @@ export default class UserInterface extends React.PureComponent {
     return (
       <Screen
         data={ itemData }
-        onClick={ this.onItemClick } />
+        onClick={ this.onItemClick.bind(this) } />
     );
   }
 
   render() {
     return (
-      <div className='section--interface pos-relative o-hidden w-100 py-4'>
-        <h1 className="heading t-center mb-0 px-3">{ title }</h1>
-        <div className="optimisation-cycle pos-relative w-100 z-6">
-          <div className="interface--container">
+      <div ref="section" className='section--interface pos-relative o-hidden w-100 py-4 px-md-4 py-md-6'>
+        <h1 className="heading t-center mb-0">{ title }</h1>
+        <div ref="container" className="optimisation-cycle pos-relative w-100 z-6">
+          <div ref="macbook" className="interface--container">
               <img src='/assets/images/macbook.png' className="interface--macbook img--fluid" alt="macbook" />
               { this.renderScreen() }
           </div>
-          <div className="cycle-nav t-grey">
+          <div ref="cycleNav" className="cycle-nav t-grey">
             { this.renderCycleNavItems() }
           </div>
         </div>

@@ -4,6 +4,7 @@ import Methodology from '../components/Methodology.js';
 import Funnel from '../components/Funnel.js';
 import UserInterface from '../components/user_interface/UserInterface.js';
 import CaseStudies from '../components/CaseStudies.js';
+import Epub from '../components/Epub.js';
 import { playLazyVideos } from '../utils.js'
 
 class Homepage extends React.PureComponent {
@@ -19,6 +20,7 @@ class Homepage extends React.PureComponent {
         <Funnel />
         <UserInterface />
         <CaseStudies />
+        <Epub />
       </div>
     );
   }

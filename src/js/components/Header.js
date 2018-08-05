@@ -1,4 +1,5 @@
 import React from 'react'
+import ButtonForm from './ButtonForm';
 import { tabs } from '../data/navigation.json'
 
 export default class Header extends React.PureComponent {
@@ -24,7 +25,9 @@ export default class Header extends React.PureComponent {
 
   render() {
     return (
-      <div className={ `header${this.state.openMenu ? ' opened' : ''} w-100 t-white d-flex flex-column flex-md-row align-items-md-center py-1 py-md-2 px-3 px-lg-6 pos-fixed pos-top z-11` }>
+      <div className={ `header${this.state.openMenu ? ' opened' : ''}
+        w-100 t-white d-flex flex-column flex-md-row align-items-md-center justify-content-md-between
+        py-1 py-md-2 px-3 px-lg-6 pos-absolute pos-top z-11` }>
 
         <div className="d-flex align-items-center justify-content-center" style={{ minHeight: '22px' }}>
           <button
@@ -53,18 +56,18 @@ export default class Header extends React.PureComponent {
           </button>
         </div>
 
-        <ul className={ `menu ${this.state.openMenu ? 'my-6 mx-4' : 'd-none'} list-unstyled d-md-flex m-md-0` }>
+        {/* <ul className={ `menu ${this.state.openMenu ? 'my-6 mx-4' : 'd-none'} list-unstyled d-md-flex m-md-0` }>
           { this.renderNavigationTabs() }
-        </ul>
+        </ul> */}
 
-        <ol className="d-none d-md-flex align-items-center mb-0 ml-auto list-unstyled">
-          <li className='mr-2 mr-sm-3 clickable t-brand t-underline--fancy-hover'>
+        <ol className="d-none d-md-flex align-items-center mb-0 list-unstyled">
+          <li className="mr-2 mr-sm-3">
+            <ButtonForm label="Ask for demo" height={ 30 } />
+          </li>
+          <li className='clickable t-brand t-underline--fancy-hover'>
             <a className="t-white" href='logIn'>
               <h3 className="heading my-md-1 mb-md-0">Log in</h3>
             </a>
-          </li>
-          <li>
-            <button className="btn btn-unstyled t-white">Ask for demo</button>
           </li>
         </ol>
 
