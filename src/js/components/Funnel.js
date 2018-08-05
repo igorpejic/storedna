@@ -50,8 +50,8 @@ export default class Funnel extends React.PureComponent {
           { label: "Find out more", href: '/more' },
         ]}
         className="bg-grey">
-        <h1 className="heading">
-          WORLD’S FIRST DECISION MAKING PLATFORM WHICH IMPACTS EVERY PART OF THE <span className="t-brand">SHOPPER FUNNEL</span>
+        <h1 className="heading t-center">
+          World’s  first decision making platform which impacts every part of the <span className="t-brand">shopper funnel</span>
         </h1>
         { this.renderAssetsCards() }
         { this.renderShortFunnel() }

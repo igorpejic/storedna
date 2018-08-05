@@ -1,11 +1,21 @@
 .section--intro {
   height: 100vh;
-  background-image: url('/assets/images/intro.png');
+  background-image: url('/assets/svg/intro-bg.svg');
   background-repeat: no-repeat;
-  background-position: bottom right 60%;
-  background-size: contain;
+  background-position: center center;
+  background-size: cover;
 
-  @include media-breakpoint-up(md) {
-    background-size: cover;
+  .heading {
+    text-transform: none;
+    font-size: 2.75rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 4rem;
+    }
   }
+}
+
+.intro__text {
+  flex-grow: 1;
+  max-width: 500px;
 }

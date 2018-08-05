@@ -18,21 +18,12 @@ export default class ActionBoard extends React.PureComponent {
     }
   };
 
-
-
   locationPins() {
     const { stores } = this.props.data;
 
     return (
-      <div className="actionboard-item store-items">
-        { stores.map((store) => {
-          return (
-            <div key={ store } className={ `store-item ${store} pos-absolute d-flex flex-column align-items-center` }>
-              { locationPin(store) }
-              <h6 className="store-item-label mb-0">{ store }</h6>
-            </div>
-          );
-        }) }
+      <div className="store-items actionboard-item">
+        { stores.map((store) => locationPin(store)) }
       </div>
     );
   }

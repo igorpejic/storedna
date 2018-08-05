@@ -16,21 +16,21 @@ export default class Opportunities extends React.PureComponent {
     return (
       <div className="matrix-boxes w-100 h-100 d-flex flex-wrap t-center p-1 fade-in">
         <div className="matrix-boxes-top w-100 d-flex">
-          <div className="matrix-box pos-relative m-sm-1 d-flex justify-content-center align-items-center">
+          <div className="matrix-box pos-relative d-flex justify-content-center align-items-center">
             { defaultBox('#EFE64B', 'yellow') }
             <h3 className="mb-0 z-8 matrix-label">{ action1 }</h3>
           </div>
-          <div className="matrix-box pos-relative m-sm-1 d-flex justify-content-center align-items-center">
+          <div className="matrix-box pos-relative d-flex justify-content-center align-items-center">
             { defaultBox('#69BFB7', 'green' ) }
             <h3 className="mb-0 z-8 matrix-label">{ action2 }</h3>
           </div>
         </div>
         <div className="matrix-boxes-bottom w-100 d-flex">
-          <div className="matrix-box pos-relative m-sm-1 d-flex justify-content-center align-items-center">
+          <div className="matrix-box pos-relative d-flex justify-content-center align-items-center">
             { defaultBox('#EA4445', 'red') }
             <h3 className="mb-0 z-8 matrix-label">{ action3 }</h3>
           </div>
-          <div className="matrix-box pos-relative m-sm-1 clickable d-flex justify-content-center align-items-center" onClick={ this.goToNextLevel }>
+          <div className="matrix-box pos-relative clickable d-flex justify-content-center align-items-center" onClick={ this.goToNextLevel }>
             { name === 'category' ? defaultBox('#f59b41', 'orange') :  name === 'store' ? peeledBoxLeft() : peeledBoxRight() }
             <h3 className="mb-0 z-8 matrix-label">{ action4 }</h3>
           </div>

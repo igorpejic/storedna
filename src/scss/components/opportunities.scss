@@ -14,8 +14,8 @@
 }
 
 .interface-matrix {
-  border-left: 1.5px solid black;
-  border-bottom: 1.5px solid black;
+  border-left: 1px solid $grey-400;
+  border-bottom: 1px solid $grey-400;
 
   &::before,
   &::after {
@@ -29,7 +29,7 @@
   &::before {
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid $grey-400;
     top: -2px;
     left: -6px;
   }
@@ -37,7 +37,7 @@
   &::after {
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-    border-left: 5px solid black;
+    border-left: 5px solid $grey-400;
     bottom: -6px;
     right: -2px;
   }
@@ -59,6 +59,7 @@
 }
 
 .matrix-box {
+  margin: 2px;
   flex: 1;
   overflow: hidden;
 }
@@ -91,7 +92,7 @@
 
   &.faded-in-transparent {
     .overlay-box {
-      opacity: 0.95;
+      opacity: 0.85;
     }
 
     .matrix-box {
@@ -118,6 +119,6 @@
   }
 
   .matrix-box {
-    margin: 1px;
+    margin: 2px;
   }
 }

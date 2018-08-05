@@ -1,23 +1,23 @@
 {
   "tabs": [
     {
-      "label": "platform",
+      "label": "Platform",
       "href": "/platform"
     },
     {
-      "label": "verticals",
+      "label": "Verticals",
       "href": "/verticals"
     },
     {
-      "label": "resources",
+      "label": "Resources",
       "href": "resources"
     },
     {
-      "label": "company",
+      "label": "Company",
       "href": "/company"
     },
     {
-      "label": "support",
+      "label": "Support",
       "href": "/support"
     }
   ]

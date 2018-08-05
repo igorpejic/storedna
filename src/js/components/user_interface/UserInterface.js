@@ -33,7 +33,7 @@ export default class UserInterface extends React.PureComponent {
       let scale = scrollY * 0.003 + 0.3;
       const translateMac = scrollY + (innerHeight/2*0.07*scale);
       const translateNav = innerWidth > 767 ? 250 : 120 + innerWidth * scrollY * 0.0002;
-      const translateNavX = macHeight * 0.55 * scale
+      const translateNavX = macHeight * 0.52 * scale
       const maxScale = innerWidth > 600 ? 1.1 : 1.3;
 
       if (scale < maxScale) {
@@ -105,14 +105,14 @@ export default class UserInterface extends React.PureComponent {
 
   render() {
     return (
-      <div className='pos-relative o-hidden w-100 py-4 p-md-5'>
-        <h1 className="heading mb-0">{ title }</h1>
+      <div className='section--interface pos-relative o-hidden w-100 py-4'>
+        <h1 className="heading t-center mb-0 px-3">{ title }</h1>
         <div className="optimisation-cycle pos-relative w-100 z-6">
           <div className="interface--container">
               <img src='/assets/images/macbook.png' className="interface--macbook img--fluid" alt="macbook" />
               { this.renderScreen() }
           </div>
-          <div className="cycle-nav">
+          <div className="cycle-nav t-grey">
             { this.renderCycleNavItems() }
           </div>
         </div>

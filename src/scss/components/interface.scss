@@ -1,11 +1,22 @@
+.section--interface {
+  h2, h3, h6 {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
 .macbook--screen {
   position: absolute;
   z-index: 6;
-  top: 7.6%;
-  left: 13.3%;
-  width: 73.2%;
-  height: 81%;
+  top: 7.2%;
+  left: 14.8%;
+  width: 70.5%;
+  height: 78%;
   background-color: $black;
+}
+
+.screen--interface {
+  box-shadow: inset 0 0 3px $grey;
 }
 
 .optimisation-cycle {
@@ -34,7 +45,7 @@
   transform: scale(0.3);
   will-change: transform;
   transition: transform 0.2s ease;
-  max-width: 140vh;
+  max-width: 150vh;
   z-index: 5;
 
   @include media-breakpoint-down(xs) {
@@ -44,6 +55,7 @@
 
 .interface-header {
   height: 7%;
+  box-shadow: inset 0 0 2px $grey;
 
   .interface-header-logo {
     width: 6%;

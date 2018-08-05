@@ -57,6 +57,19 @@
                 }
             }
 
+            // `$columns - 1` because offsetting by the width of an entire row isn't possible
+            @for $i from 0 through ($columns - 1) {
+                @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset-0
+                    .offset#{$infix}-#{$i} {
+                        @include make-col-offset($i, $columns);
+                    }
+
+                    .offset-right#{$infix}-#{$i} {
+                        @include make-col-offset-right($i, $columns);
+                    }
+                }
+            }
+
             @for $i from 1 through $columns {
                 .order#{$infix}-#{$i} {
                     order: $i;
@@ -64,4 +77,14 @@
             }
         }
     }
+}
+
+@mixin make-col-offset($size, $columns: $grid-columns) {
+    $num: $size / $columns;
+    margin-left: if($num == 0, 0, percentage($num));
+}
+
+@mixin make-col-offset-right($size, $columns: $grid-columns) {
+    $num: $size / $columns;
+    margin-right: if($num == 0, 0, percentage($num));
 }
