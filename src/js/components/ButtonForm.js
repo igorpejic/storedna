@@ -45,10 +45,10 @@ export default class ButtonForm extends React.PureComponent {
       }
 
       this.setState({
-        label: "THANK YOU!",
         active: false,
         submitted: true,
         inputValid: false,
+        label: this.props.successLabel,
       })
     }).catch((err) => {
       this.refs.input.value = ''
@@ -83,7 +83,7 @@ export default class ButtonForm extends React.PureComponent {
           : null
         }
         <form
-          className={ `btn--form d-inline-flex bg-white ${active ? 'active' : ''}` }
+          className={ `btn--form d-inline-flex ${active ? 'active' : ''}` }
           name="download_publication_form"
           onSubmit={ this.onSubmit }
           style={{ height: `${height}px`}}>
@@ -96,11 +96,10 @@ export default class ButtonForm extends React.PureComponent {
               type="text"
               name="email" />
             <button
-              className={ `t-bold ${active ? "t-white bg-brand" : "t-black bg-white"}` }
               disabled={ !inputValid }
               onClick={ active ? this.onSubmit : this.onClick }
               type={ active ? 'submit' : 'button' }>
-              { label }
+              <h3 className="heading m-0">{ label }</h3>
             </button>
         </form>
       </React.Fragment>
@@ -111,6 +110,7 @@ export default class ButtonForm extends React.PureComponent {
 ButtonForm.propTypes = {
   label: PropTypes.string.isRequired,
   initialLabel: PropTypes.string,
+  successLabel: PropTypes.string,
   placeholder: PropTypes.string,
   href: PropTypes.string,
   onClick: PropTypes.func,
@@ -120,6 +120,7 @@ ButtonForm.propTypes = {
 
 ButtonForm.defaultProps = {
   placeholder: "Email address.",
+  successLabel: "Thank you!",
   initialLabel: '',
   href: '',
   classAdditions: '',

@@ -19,6 +19,7 @@ export default class Epub extends React.PureComponent {
             </p>
             <ButtonForm
               initialLabel="DOWNLOAD FREE E-BOOK"
+              successLabel="THANK YOU!"
               label="DOWNLOAD"
               fileName="Monolith_Deloitte_Store_Of_The_Future.pdf"
               href="/assets/Monolith_Deloitte_Store_Of_The_Future.pdf"/>

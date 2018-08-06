@@ -1,5 +1,5 @@
 input::-webkit-input-placeholder {
-  color: $brand;
+  color: $grey-400;
 }
 
 input, a, button {
@@ -7,6 +7,7 @@ input, a, button {
 }
 
 .btn--form {
+  border: 2px solid white;
   border-radius: 25px;
   transition: width .2s ease-in-out;
   cursor: pointer;
@@ -16,7 +17,31 @@ input, a, button {
     box-shadow: 0 2px 8px rgba(0,0,0,.09),0 4px 40px rgba(0,0,0,.24);
   }
 
+  button {
+    outline: none;
+    float: right;
+    padding: 0 15px;
+    height: 100%;
+    border-radius: 25px;
+    border: 0;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    background-color: transparent;
+    color: white;
+  }
+
+  input {
+    border: 0;
+    border-radius: 25px;
+    width: 0px;
+    height: 100%;
+    padding: 0;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
   &.active {
+    background-color: white;
     width: 300px;
     transition: width .2s ease-in-out;
     cursor: default;
@@ -28,8 +53,17 @@ input, a, button {
     }
 
     input {
-      width: 100%;
+      flex-grow: 1;
       padding-left: 15px;
+    }
+
+    button {
+      background-color: rgba(50, 50, 50, 1);
+
+      &:disabled {
+        background-color: rgba(50, 50, 50, 0.1);
+        cursor: auto;
+      }
     }
   }
 
@@ -39,32 +73,6 @@ input, a, button {
     &:focus {
       -webkit-box-shadow:0 0 0 50px white inset;
     }
-  }
-}
-
-.btn--form input {
-  border: 0;
-  border-radius: 25px;
-  width: 0px;
-  height: 100%;
-  padding: 0;
-  outline: none;
-}
-
-.btn--form button {
-  outline: none;
-  float: right;
-  padding: 0 15px;
-  height: calc(100% - 4px);
-  border-radius: 25px;
-  border: 0;
-  margin: 2px;
-  cursor: pointer;
-  transition: all .2s ease-in-out;
-
-  &:disabled {
-    opacity: .4;
-    cursor: auto;
   }
 }
 
@@ -89,5 +97,13 @@ input, a, button {
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+.section--epub {
+  .btn--form:not(.active) {
+    button {
+      color: $black;
+    }
   }
 }
