@@ -23,12 +23,12 @@ export default class UserInterface extends React.PureComponent {
   }
 
   startScrollAnimation() {
+    const { innerHeight, innerWidth } = window;
     const rect = this.refs.section.getBoundingClientRect();
     const scrollY = (rect.top + 100) * -1;
 
     if (scrollY > 0) {
       const macHeight = this.refs.macbook.offsetHeight;
-      const { innerHeight, innerWidth } = window;
       let scale = scrollY * 0.003 + 0.3;
       const translateMac = scrollY + (innerHeight/2*0.07*scale);
       const translateNav = innerWidth > 767 ? 250 : 120 + innerWidth * scrollY * 0.0002;
@@ -102,14 +102,14 @@ export default class UserInterface extends React.PureComponent {
 
   render() {
     return (
-      <div ref="section" className='section--interface pos-relative o-hidden w-100 py-4 px-md-4 py-md-6'>
+      <div ref="section" className='section--interface pos-relative o-hidden w-100 py-4 px-lg-4 py-md-6'>
         <h1 className="heading t-center mb-0">{ title }</h1>
         <div ref="container" className="optimisation-cycle pos-relative w-100 z-6">
           <div ref="macbook" className="interface--container">
               <img src='/assets/images/macbook.png' className="interface--macbook img--fluid" alt="macbook" />
               { this.renderScreen() }
           </div>
-          <div ref="cycleNav" className="cycle-nav t-grey">
+          <div ref="cycleNav" className="cycle-nav">
             { this.renderCycleNavItems() }
           </div>
         </div>

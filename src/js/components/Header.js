@@ -35,14 +35,14 @@ export default class Header extends React.PureComponent {
             className="d-md-none pl-3 btn-unstyled pos-absolute pos-left"
             onClick={ this.toggleMenu }>
             <img
-              src={ `/assets/svg/${this.state.openMenu ? 'close' : 'menu'}.svg` }
+              src={ `/assets/svg/icons/${this.state.openMenu ? 'close' : 'menu'}.svg` }
               alt="storedna logo"
               height="15px" />
           </button>
 
           <a href="/">
-            <img className="d-none d-lg-inline-block mr-md-4" src="/assets/svg/logo_white.svg" alt="storedna logo" height="30px" />
-            <img className="d-lg-none mr-md-4" src="/assets/svg/logo_icon_white.svg" alt="storedna logo" height="22px" />
+            <img className="d-none d-md-inline-block mr-md-4" src="/assets/svg/logos/logo_white.svg" alt="storedna logo" height="30px" />
+            <img className="d-md-none mr-md-4" src="/assets/svg/logos/logo_icon_white.svg" alt="storedna logo" height="22px" />
           </a>
 
           <button
@@ -50,7 +50,7 @@ export default class Header extends React.PureComponent {
             className="d-md-none pr-3 btn-unstyled pos-absolute pos-right"
             onClick={ () => window.location.href = '/info' }>
             <img
-              src={ `/assets/svg/info.svg` }
+              src={ `/assets/svg/icons/info.svg` }
               alt="storedna contact"
               height="20px" />
           </button>

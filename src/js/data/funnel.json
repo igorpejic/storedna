@@ -3,32 +3,32 @@
     {
       "title": "Windows",
       "description": "Drive effective window communication.",
-      "icon": "/assets/svg/window.svg"
+      "icon": "/assets/svg/icons/window.svg"
     },
     {
       "title": "Assortment",
       "description": "Present shopper-right assortment connect.",
-      "icon": "/assets/svg/assortment.svg"
+      "icon": "/assets/svg/icons/assortment.svg"
     },
     {
       "title": "In-store promos",
       "description": "Improve in-store promotion effectivness.",
-      "icon": "/assets/svg/promos.svg"
+      "icon": "/assets/svg/icons/promos.svg"
     },
     {
       "title": "Navigation",
       "description": "Create connected shopper journey. ",
-      "icon": "/assets/svg/navigation.svg"
+      "icon": "/assets/svg/icons/navigation.svg"
     },
     {
       "title": "Sales staff",
       "description": "Optimize sales staff interactions.",
-      "icon": "/assets/svg/staff.svg"
+      "icon": "/assets/svg/icons/staff.svg"
     },
     {
       "title": "Memberships",
       "description": "Drive strong member relationships.",
-      "icon": "/assets/svg/memberships.svg"
+      "icon": "/assets/svg/icons/memberships.svg"
     }
   ],
   "funnel": [

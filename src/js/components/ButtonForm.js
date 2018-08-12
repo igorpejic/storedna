@@ -77,7 +77,7 @@ export default class ButtonForm extends React.PureComponent {
             href={ href }
             download={ fileName }
             target="_blank" id="hidden_download"
-            className="hidden_download" type="submit">
+            className="d-none " type="submit">
             <span />
           </a>
           : null

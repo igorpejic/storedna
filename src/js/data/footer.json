@@ -1,0 +1,124 @@
+{
+  "sections": [
+    {
+      "title": "Company",
+      "tabs": [
+        {
+          "label": "About us",
+          "href": "/about"
+        },
+        {
+          "label": "Purpose",
+          "href": "/purpose"
+        },
+        {
+          "label": "News",
+          "href": "/news"
+        },
+        {
+          "label": "Investors",
+          "href": "/investors"
+        },
+        {
+          "label": "Contact us",
+          "href": "/contact"
+        }
+      ]
+    },
+    {
+      "title": "Platform",
+      "tabs": [
+        {
+          "label": "Ask for demo",
+          "href": "/demo"
+        },
+        {
+          "label": "Computer Vision",
+          "href": "/computer_vision"
+        },
+        {
+          "label": "Retail DNA",
+          "href": "/retail_dna"
+        }
+      ]
+    },
+    {
+      "title": "Privacy",
+      "tabs": [
+        {
+          "label": "Privacy policy",
+          "href": "privacy_policy"
+        },
+        {
+          "label": "Online policy",
+          "href": "online_policy"
+        },
+        {
+          "label": "Privacy by Design",
+          "href": "privacy_by_design"
+        }
+      ]
+    },
+    {
+      "title": "Security",
+      "tabs": [
+        {
+          "label": "Privacy policy",
+          "href": "privacy_policy"
+        },
+        {
+          "label": "Online policy",
+          "href": "online_policy"
+        },
+        {
+          "label": "Privacy by Design",
+          "href": "privacy_by_design"
+        }
+      ]
+    },
+    {
+      "title": "Knowledge",
+      "tabs": [
+        {
+          "label": "Blog",
+          "href": "/blog"
+        },
+        {
+          "label": "Shopability",
+          "href": "/shopability"
+        },
+        {
+          "label": "Use Cases",
+          "href": "/use_cases"
+        }
+      ]
+    },
+    {
+      "title": "Recent Posts",
+      "tabs": [
+        {
+          "label": "Airports: a retailer's dream come true",
+          "href": "/blog#1"
+        },
+        {
+          "label": "Bulletproof experiments in retail spaces",
+          "href": "/blog#2"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Privacy Policy",
+      "href": "/privacy_policy"
+    },
+    {
+      "label": "Terms of Use",
+      "href": "/terms_of_use"
+    },
+    {
+      "label": "Site Map",
+      "href": "/map"
+    }
+  ]
+}

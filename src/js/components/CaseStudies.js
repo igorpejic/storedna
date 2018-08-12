@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from './Section'
-import { cases } from '../data/case-studies.json'
+import { cases } from '../data/references.json'
 
 const CaseStudies = () => {
   const renderCases = () =>

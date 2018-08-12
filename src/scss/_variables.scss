@@ -17,6 +17,7 @@ $grey:  #d1d1d1 !default;
 $red:   #e53935 !default;
 $green: #9ccc65 !default;
 $yellow: #ffd54f !default;
+$blue: #006b80 !default;
 
 $grey-100: #212529 !default;
 $grey-200: #3e3e3e !default;
@@ -40,8 +41,10 @@ $yellow-100: #ffd54f !default;
 $yellow-200: $yellow !default;
 $yellow-300: lighten($yellow, 20%) !default;
 
+$blue-light: #bde2e6 !default;
+
 $brand: #6AC1B8 !default;
-$brand-light: lighten($brand, 10%) !default;
+$brand-light: #a5e6db !default;
 $brand-primary: #6AC1B8 !default;
 $brand-secondary: $black !default;
 
@@ -96,11 +99,6 @@ $grid-breakpoints: (
 
 $grid-columns: 12 !default;
 $grid-gutter-width: 20px !default;
-
-$container-max-widths: (
-    lg: 960px,
-    xl: 1140px
-) !default;
 
 //
 // Common component variables

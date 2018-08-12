@@ -1,0 +1,21 @@
+.case-card {
+  .case-card__wrapper {
+    background-color: $blue;
+    color: $brand-light;
+  }
+
+  &:nth-child(odd) {
+    .case-card__wrapper {
+      background-color: $brand-light;
+      color: $blue;
+    }
+  }
+}
+
+.case-card__result {
+  font-size: 3rem
+}
+
+.case-card__metric {
+  font-size: 2rem;
+}

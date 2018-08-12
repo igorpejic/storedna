@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LazyLoad from 'react-lazy-load'
 import ActionBoard from './ActionBoard.js';
 import Opportunities from './Opportunities.js'
 import KnowledgeCenter from './KnowledgeCenter.js'
@@ -7,12 +8,13 @@ import KnowledgeCenter from './KnowledgeCenter.js'
 export default class Screen extends React.PureComponent {
   renderVideo() {
     return (
-      <video
-        muted playsInline autoPlay loop
-        preload="none"
-        poster="/assets/images/3D_heatmap.png"
-        className="interface-video lazy pos-relative pos-h-center"
-        src="assets/video/3D_heatmap.mp4" />
+      <LazyLoad offsetVertical={ 300 } debounce={ false }>
+        <video
+          muted playsInline autoPlay loop
+          poster="/assets/images/3D_heatmap.png"
+          className="interface-video pos-relative pos-h-center"
+          src="assets/video/3D_heatmap.mp4" />
+      </LazyLoad>
     );
   }
 

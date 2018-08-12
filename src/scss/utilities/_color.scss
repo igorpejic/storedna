@@ -11,6 +11,9 @@
 .bg-white       { background-color: $white !important; }
 .bg-transparent { background-color: transparent !important; }
 .bg-brand       { background-color: $brand !important; }
+.bg-brand-light { background-color: $brand-light !important; }
+.bg-blue        { background-color: $blue !important; }
+.bg-blue-light  { background-color: $blue-light !important; }
 .bg-fade-edge {
   background-image:
   linear-gradient(white, white 1%, rgba(255, 255, 255, 0.3) 4%, rgba(255, 255, 255, 0) 8%, rgba(255, 255, 255, 0) 92%, rgba(255, 255, 255, 0.3) 96%, white 99%, white),

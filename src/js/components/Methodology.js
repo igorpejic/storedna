@@ -1,4 +1,5 @@
 import React from 'react'
+import LazyLoad from 'react-lazy-load'
 import Section from './Section'
 import { steps } from '../data/methodology.json'
 
@@ -14,13 +15,15 @@ const Methodology = () =>
           </div>
           <div className={ `d-inline-block pos-relative align-self-center col-md-8 p-0
             ${index % 2 ? 't-right' : 't-left'}` }>
-            <video
-              className="z-0 lazy"
-              style={{maxHeight: '80vh', maxWidth: '100%'}}
-              preload="none"
-              poster={ step.poster }
-              src={ step.video }
-              muted playsInline loop />
+            <LazyLoad offsetVertical={ 500 } debounce={ false }>
+              <video
+                className="z-0"
+                style={{maxHeight: '80vh', maxWidth: '100%'}}
+                // preload="none"
+                poster={ step.poster }
+                src={ step.video }
+                muted playsInline loop autoPlay />
+            </LazyLoad>
             <div className="bg-fade-edge pos-absolute z-1 w-100 h-100 pos-top pos-left" />
           </div>
         </div>

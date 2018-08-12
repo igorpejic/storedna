@@ -30,13 +30,12 @@
   align-items: center;
   margin-bottom: 300px;
 
-  @include media-breakpoint-down(md) {
-    overflow: hidden;
+  @include media-breakpoint-down(lg) {
+    overflow-x: hidden;
     height: 70vh;
   }
 
   @include media-breakpoint-down(sm) {
-    overflow: hidden;
     height: 75vh;
   }
 }

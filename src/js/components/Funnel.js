@@ -36,7 +36,7 @@ export default class Funnel extends React.PureComponent {
           <div className="clickable" onClick={ () => console.log(index) } >
             <h3 className="heading my-3 my-md-0">{ step.title }</h3>
           </div>
-          { index < funnel.length - 1 && <img className="funnel-arrow d-md-none d-lg-inline-block" alt="arrow" src="/assets/svg/arrow-right.svg" height="20px" /> }
+          { index < funnel.length - 1 && <img className="funnel-arrow d-md-none d-lg-inline-block" alt="arrow" src="/assets/svg/icons/arrow-right.svg" height="20px" /> }
         </React.Fragment>
       ) }
     </div>

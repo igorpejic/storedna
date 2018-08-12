@@ -5,7 +5,7 @@ import ButtonForm from './ButtonForm';
 export default class Epub extends React.PureComponent {
   render() {
     return (
-      <Section className="section--epub d-flex bg-grey" applyOverlay={ false }>
+      <Section className="section--epub d-flex bg-blue-light" applyOverlay={ false }>
           <img className="d-none d-sm-inline-block" height="350" alt="Deloitte retail study" src="assets/images/study_cover.png" />
           <div className="mx-sm-6">
             <h1 className="heading t-left p-0 mb-4">How to increase shopability and profitability of your fleet?</h1>
@@ -22,7 +22,7 @@ export default class Epub extends React.PureComponent {
               successLabel="THANK YOU!"
               label="DOWNLOAD"
               fileName="Monolith_Deloitte_Store_Of_The_Future.pdf"
-              href="/assets/Monolith_Deloitte_Store_Of_The_Future.pdf"/>
+              href="/assets/pdf/Monolith_Deloitte_Store_Of_The_Future.pdf"/>
           </div>
       </Section>
     );
