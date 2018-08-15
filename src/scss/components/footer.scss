@@ -1,0 +1,48 @@
+@include media-breakpoint-down(sm) {
+  .section--footer {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .footer__sections {
+    margin-bottom: 20px;
+  }
+
+  .footer__list-header {
+    padding: 10px 8px 10px 0 !important;
+  }
+
+  .footer__list {
+    border-bottom: 1px solid $grey !important;
+
+    .footer__list-item {
+      display: inline-block;
+      padding: 8px 0 8px 20px;
+    }
+
+    .footer__list-items {
+      margin-bottom: 20px;
+    }
+
+    .footer__list-wrapper {
+      max-height: 0px;
+      transition: max-height 0.3s ease;
+      margin-bottom: 0;
+      overflow: hidden;
+    }
+
+    .toggle-dropdown {
+      transition: transform 0.3s ease;
+    }
+
+    &.active {
+      .footer__list-wrapper {
+        max-height: 500px;
+      }
+
+      .toggle-dropdown {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

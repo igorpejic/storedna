@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CaseCard = ({ props }) => {
-  const { client, metric, result, isDark } = props;
+  const { client, metric, result } = props;
 
   return (
     <div className="case-card col-12 col-sm-6 p-2">

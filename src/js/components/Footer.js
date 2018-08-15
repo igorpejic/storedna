@@ -7,29 +7,52 @@ export default class Footer extends React.PureComponent {
   constructor() {
     super()
 
-    // this.state = { openMenu: false }
+    this.state = { sections }
   }
 
-  // toggleMenu = () => this.setState({ openMenu: !this.state.openMenu })
+  onToggle = (index) => {
+    console.log(index);
+    const updatedSections = this.state.sections;
+    updatedSections[index].active = !this.state.sections[index].active;
+    console.log(index, updatedSections[index].active, this.state.sections[index].active);
+
+
+    this.setState({ sections: updatedSections }, console.log(updatedSections[index], this.state.sections[index]));
+    this.forceUpdate()
+  }
 
   renderSections() {
-    return sections.map((section, index, array) =>
+    const footerSections = this.state.sections;
+
+    return footerSections.map((section, index, array) =>
       <div
         key={ index }
-        className={ `${index === array.length - 1 ? '' : 'mr-md-3 mr-lg-5'}` }
+        className={
+          `footer__list ${index === array.length - 1 ? '' : 'mr-md-3 mr-lg-5'}
+          ${section.active ? ' active' : ''}`
+        }
         style={{ minWidth: '80px' }}>
-        <p className="t-black mb-3">
+        <p className="d-none d-md-block t-black mb-3">
           { section.title }
         </p>
-        <ul className="list-unstyled">
-          { section.tabs.map((tab) =>
-            <li key={ tab.label }>
-              <a className="link--unstyled t-grey" href={ tab.href }>
-                { tab.label }
-              </a>
-            </li>
-          ) }
-        </ul>
+        <button
+          className="footer__list-header btn btn-unstyled w-100 d-flex d-md-none
+          justify-content-between align-items-center"
+          onClick={ this.onToggle.bind(this, index) }>
+          <span>{ section.title }</span>
+          <img className="toggle-dropdown" alt="toggle footer section" src="/assets/svg/icons/plus.svg" height="8px" />
+        </button>
+        <div className="footer__list-wrapper">
+          <ul className="footer__list-items list-unstyled">
+            { section.tabs.map((tab) =>
+              <li key={ tab.label }>
+                <a className="footer__list-item link--unstyled t-grey" href={ tab.href }>
+                  { tab.label }
+                </a>
+              </li>
+            ) }
+          </ul>
+        </div>
       </div>
     )
   };
@@ -62,10 +85,10 @@ export default class Footer extends React.PureComponent {
         </Section>
         <Section applyOverlay={ false } padding={ 5 } className="section--footer bg-grey t-grey t-center">
           <div className="d-inline-flex flex-column">
-            <div className="d-none d-md-inline-flex justify-content-center t-left">
+            <div className="footer__sections d-flex flex-column d-md-inline-flex flex-md-row justify-content-center t-left">
               { this.renderSections() }
             </div>
-            <hr className="w-100" />
+            <hr className="d-none d-md-block w-100" />
             <div className="d-flex flex-column flex-lg-row justify-content-between align-items-center">
               <p>Copyright © 2018 Monolith International BV All rights reserved.</p>
               { this.renderBottomLinks() }
