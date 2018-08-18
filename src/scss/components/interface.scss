@@ -23,7 +23,7 @@
   will-change: transform;
   transition: transform 0.2s ease;
   width: 100%;
-  height: 110vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,10 +38,17 @@
   @include media-breakpoint-down(sm) {
     height: 75vh;
   }
+
+  .heading {
+      @include media-breakpoint-down(sm) {
+          position: absolute;
+          top: 10px;
+      }
+  }
 }
 
 .interface--container {
-  transform: scale(0.3);
+  transform: scale(0.23);
   will-change: transform;
   transition: transform 0.2s ease;
   max-width: 150vh;
