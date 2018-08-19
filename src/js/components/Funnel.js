@@ -97,7 +97,7 @@ export default class Funnel extends React.Component {
           { funnel.map((step, index) =>
             <div key={ step.label } className="col-sm-7 col-lg-6 col-xl-4 offset-sm-5 offset-xl-7 d-flex flex-column align-items-start mt-1">
               { this.isMobile &&
-                <h1 className="funnel-mobile-title t-white t-uppercase w-100 mb-3 z-10">
+                <h1 className="funnel-mobile-title t-white t-uppercase t-left w-100 px-3 mb-3 z-10">
                   { `${index + 1}. ${ step.label }` }
                 </h1>
               }
