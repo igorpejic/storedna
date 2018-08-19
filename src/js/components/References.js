@@ -16,11 +16,8 @@ const References = () => {
 
   const renderLogos = () => {
     return partners.map((partner) =>
-      <div key={partner} className="px-2 px-md-4 w-25 ">
-        <img
-          alt={ partner }
-          src={ `assets/svg/logos/${partner}.svg`}
-          width="100%" />
+      <div key={partner} className="partner-logo mx-2 mx-md-4">
+        <img alt={ partner } src={ `assets/svg/logos/${partner}.svg`} />
       </div>
     );
   }
@@ -32,11 +29,15 @@ const References = () => {
         { renderCases() }
         <div className="p-2 w-100">
           <Epub />
-          <div className="bg-blue-light px-2 py-4 px-md-6 pb-md-6 pt-md-4">
+          <div
+            className="px-2 py-4 px-md-6 pb-md-6 pt-md-4"
+            style={{ backgroundColor: "#cbe8ec"}}>
             <h1 className="heading mb-md-5 t-center t-normal">
               Working together to transform retail
             </h1>
-            <div className="d-flex align-items-center px-lg-6">
+            <div
+              className="d-flex align-items-center justify-content-center px-lg-6">
+              {/* style={{ maxWidth: "800px", margin: "0 auto"}}> */}
               { renderLogos() }
             </div>
           </div>

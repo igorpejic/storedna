@@ -48,7 +48,7 @@
       "result": "10% increase in activity, 21.4% increase in revenue",
       "labelX": "Activity",
       "labelY": "Revenue per sqf",
-      "background": "/assets/svg/backgrounds/test-bg.svg",
+      "background": "/assets/svg/backgrounds/test.svg",
       "before": "Apr 3 - Apr 17",
       "after": "Apr 17 - May 1",
       "tab": "actionboard"
@@ -60,7 +60,7 @@
       "result": "10.7% average increase revenue of Men's Running Shoes",
       "labelX": "Category activity",
       "labelY": "Category revenue",
-      "background": "/assets/svg/backgrounds/verify-bg.svg",
+      "background": "/assets/svg/backgrounds/verify.svg",
       "before": "May 3 - May 17",
       "after": "May 17 - Jun 1",
       "tab": "actionboard",

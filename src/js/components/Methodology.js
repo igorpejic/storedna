@@ -1,15 +1,19 @@
 import React from 'react'
 import LazyLoad from 'react-lazy-load'
 import Section from './Section'
-import { steps } from '../data/methodology.json'
+import { steps, title } from '../data/methodology.json'
 
 const Methodology = () =>
   <div className="section--methodology">
+    <h1 className="heading t-0 t-center px-3 pt-4 px-md-6 pt-md-6 mb-0">
+      { title }
+    </h1>
     { steps.map((step, index) =>
       <Section key={ index } padding={ 5 }>
         <div className="pos-relative d-flex flex-column flex-md-row z-0">
           <div className={`container p-0 d-md-flex flex-column justify-content-center col-md-3
             ${index === 0 ? 'offset-md-2' : index % 2 ? 'offset-right-md-1 order-md-2':'offset-md-1'}`}>
+            <p>Step { index + 1 }</p>
             <h1 className="heading t-left p-0 mb-2">{ step.title }</h1>
             <p className="t-2">{ step.description }</p>
           </div>

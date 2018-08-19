@@ -18,9 +18,11 @@ export default class Epub extends React.PureComponent {
               Peek inside and learn how leading companies like Ahold, IKEA, Adidas, and Vodafone are thinking about creating the most engaging shopping experiences.
             </p>
             <ButtonForm
-              initialLabel="DOWNLOAD FREE E-BOOK"
-              successLabel="THANK YOU!"
-              label="DOWNLOAD"
+              initialLabel="Download Free E-Book"
+              successLabel="Thank you!"
+              label="Download"
+              btnColor="black"
+              showArrow={ true }
               fileName="Monolith_Deloitte_Store_Of_The_Future.pdf"
               href="/assets/pdf/Monolith_Deloitte_Store_Of_The_Future.pdf"/>
           </div>

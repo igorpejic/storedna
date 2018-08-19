@@ -2,8 +2,11 @@
   height: 100vh;
   background-image: url('/assets/svg/backgrounds/intro-bg.svg');
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-position: top center;
+  background-size: 85%;
+  background-color: $blue;
+  // uncomment for lighter variant
+  background-color: #1e94a0;
 
   .heading {
     text-transform: none;

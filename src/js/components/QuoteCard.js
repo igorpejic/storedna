@@ -17,8 +17,9 @@ const QuoteCard = ({ props }) => {
             <ButtonForm
               initialLabel="Download Case Study"
               successLabel="Thank you!"
-              label=""
+              label="Download"
               showArrow={ true }
+              btnColor="brand"
               fileName={ pdf }
               href={ `/assets/pdf/${pdf}` } />
           </div>

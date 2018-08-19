@@ -3,12 +3,14 @@
     {
       "client": "Oxford Street Sport Flagship Store",
       "result": "+36%",
-      "metric": "REVENUE"
+      "metric": "REVENUE",
+      "image": "/assets/svg/illustrations/girl.svg"
     },
     {
       "client": "Amsterdam Flagship showroom.",
       "result": "+29%",
-      "metric": "CONVERSION"
+      "metric": "CONVERSION",
+      "image": "/assets/svg/illustrations/guy.svg"
     }
   ],
   "quotes": [

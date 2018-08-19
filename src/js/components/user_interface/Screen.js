@@ -44,7 +44,7 @@ export default class Screen extends React.PureComponent {
       <div className="macbook--screen">
         <div className="screen--interface bg-white w-100 h-100 o-hidden">
           <div className="interface-header w-100 bg-brand t-white d-flex py-md-1 px-1 px-md-2 t-5">
-            <img className="interface-header-logo mr-2 mr-sm-3" src="/assets/svg/logo_icon_white.svg" alt="storedna logo" />
+            <img className="interface-header-logo mr-2 mr-sm-3" src="/assets/svg/logos/logo_icon_white.svg" alt="storedna logo" />
             <ul className="interface-header-tabs d-none d-sm-inline-block d-sm-flex list-unstyled mb-0 mt-sm-1">
               <li className={ `mr-2 mr-sm-3 interface-header-tab clickable ${tab === 'opportunities' ? ' active' : ''}` } onClick={ onClick.bind(this,'fleet') }>Opportunities</li>
               <li className={ `mr-2 mr-sm-3 interface-header-tab clickable ${tab === 'actionboard' ? ' active' : ''}` } onClick={ onClick.bind(this,'test') }>ActionBoard</li>

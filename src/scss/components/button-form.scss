@@ -7,7 +7,7 @@ input, a, button {
 }
 
 .btn--form {
-  border: 2px solid white;
+  border: 1px solid white;
   border-radius: 5px;
   transition: width .2s ease-in-out;
   box-shadow: 0 1px 6px rgba(0,0,0,.06),0 2px 32px rgba(0,0,0,.16);
@@ -20,8 +20,9 @@ input, a, button {
     outline: none;
     float: right;
     padding: 0 15px;
-    height: 100%;
-    border-radius: 5px;
+    margin: 2px;
+    height: calc(100% - 4px);
+    border-radius: 3px;
     border: 0;
     transition: all .2s ease-in-out;
     background-color: transparent;
@@ -104,6 +105,34 @@ input, a, button {
   .btn--form:not(.active) {
     button {
       color: $black;
+    }
+  }
+}
+
+// black color variant
+.btn--black {
+  border-color: $black;
+
+  &:not(.active) {
+    button {
+      color: $black;
+    }
+  }
+}
+
+// brand color variant
+.btn--brand {
+  border-color: $brand;
+
+  &:not(.active) {
+    button {
+      color: $brand;
+    }
+  }
+
+  &.active {
+    button {
+      background-color: $brand;
     }
   }
 }

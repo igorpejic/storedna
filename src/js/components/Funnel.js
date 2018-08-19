@@ -3,7 +3,7 @@ import Section from './Section.js'
 import { Carousel } from 'react-responsive-carousel';
 import { assets, funnel } from '../data/funnel.json'
 
-export default class Funnel extends React.PureComponent {
+export default class Funnel extends React.Component {
   isMobile = window.innerWidth < 576
   state = { opened: this.isMobile, activeLevel: 0 }
 
@@ -15,10 +15,10 @@ export default class Funnel extends React.PureComponent {
   componentDidUpdate(prevProps, prevState) {
     if ((prevState.opened !== this.state.opened) && this.state.opened) {
       setTimeout(function() {
-        document.querySelector('.funnel-container').scrollIntoView({
-          block: "start",
+        document.querySelector('.funnel-bottomNav').scrollIntoView({
+          block: "end",
           inline: "nearest",
-          behaviour: "smooth"
+          behavior: "smooth"
         })
       }, 50)
     }
@@ -47,7 +47,7 @@ export default class Funnel extends React.PureComponent {
 
   renderFunnelNavigation = () =>
     <div className="funnel-bottomNav d-flex flex-column align-items-center t-white">
-      <div className="funnel-bottomNav d-flex w-100 justify-content-between mb-4">
+      <div className="d-flex w-100 justify-content-between mb-4">
         { funnel.map((step, index) => {
           if (!this.state.opened && step.isExtra) {
             return null
@@ -142,12 +142,12 @@ export default class Funnel extends React.PureComponent {
           </h1>
           { this.renderAssetsCards() }
         </div>
-        <div ref="funnel" className={ `funnel o-hidden bg-dark-grey${this.state.opened ? ' opened' : ''}` }>
+        <div className={ `funnel o-hidden bg-dark-grey${this.state.opened ? ' opened' : ''}` }>
           { this.renderFunnel() }
         </div>
         {
           !this.isMobile &&
-          <Section applyOverlay={ false } padding={ 0 } className="bg-lightdark-grey">
+          <Section applyOverlay={ false } padding={ 0 } className="funnel-bottomNav bg-lightdark-grey">
             { this.renderFunnelNavigation() }
           </Section>
         }
