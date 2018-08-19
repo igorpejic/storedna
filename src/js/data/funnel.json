@@ -2,43 +2,204 @@
   "assets": [
     {
       "title": "Windows",
-      "description": "Drive effective window communication.",
+      "description": "Drive effective window communication",
       "icon": "/assets/svg/icons/window.svg"
     },
     {
       "title": "Assortment",
-      "description": "Present shopper-right assortment connect.",
+      "description": "Present shopper-right assortment connect",
       "icon": "/assets/svg/icons/assortment.svg"
     },
     {
       "title": "In-store promos",
-      "description": "Improve in-store promotion effectivness.",
+      "description": "Improve in-store promotion effectivness",
       "icon": "/assets/svg/icons/promos.svg"
     },
     {
       "title": "Navigation",
-      "description": "Create connected shopper journey. ",
+      "description": "Create connected shopper journey",
       "icon": "/assets/svg/icons/navigation.svg"
     },
     {
       "title": "Sales staff",
-      "description": "Optimize sales staff interactions.",
+      "description": "Optimize sales staff interactions",
       "icon": "/assets/svg/icons/staff.svg"
     },
     {
       "title": "Memberships",
-      "description": "Drive strong member relationships.",
+      "description": "Drive strong member relationships",
       "icon": "/assets/svg/icons/memberships.svg"
     }
   ],
   "funnel": [
-    { "title": "discover" },
-    { "title": "plan" },
-    { "title": "browse" },
-    { "title": "choose" },
-    { "title": "try" },
-    { "title": "decide" },
-    { "title": "purchase" },
-    { "title": "(re)connect" }
+    {
+      "label": "discover",
+      "title": "Shopping zone consumers",
+      "image": "/assets/svg/illustrations/discover.svg",
+      "insight": "When shopper processes all inspiration and assess her shopping options for added value versus time and money spent.",
+      "metrics": [],
+      "isExtra": false
+    },
+    {
+     "label": "mission",
+     "title": "Traffic baseline and uplift",
+     "image": "/assets/svg/illustrations/mission.svg",
+     "insight": "Why are shoppers passing the store without entering?",
+     "metrics": [
+       {
+         "icon": "/assets/svg/icons/men-men.svg",
+         "description": "Trafic split on demographics"
+       },
+       {
+         "icon": "/assets/svg/icons/display.svg",
+         "description": "Promo impact"
+       },
+       {
+         "icon": "/assets/svg/icons/graph.svg",
+         "description": "Predicted vs actual trafic"
+       }
+     ],
+     "isExtra": false
+    },
+    {
+      "label": "visit",
+      "title": "Shoppers entering the store",
+      "image": "/assets/svg/illustrations/visit.svg",
+      "insight": "Are shoppers bouncing out of the store after entering and why?",
+      "metrics": [
+        {
+          "icon": "/assets/svg/icons/circle-arrows.svg",
+          "description": "Total store engagement"
+        },
+        {
+          "icon": "/assets/svg/icons/men-fixture.svg",
+          "description": "# shoppers with dwell > 1 minute"
+        }
+      ],
+      "isExtra": true
+    },
+    {
+      "label": "browse",
+      "title": "Shoppers staying more than 30 sec",
+      "image": "/assets/svg/illustrations/browse.svg",
+      "insight": "Are shoppers avoiding certain zones or only browsing without engaging and why?",
+      "metrics": [
+        {
+          "icon": "/assets/svg/icons/men-fixture.svg",
+          "description": "Category & zone engagement vs spend"
+        },
+        {
+          "icon": "/assets/svg/icons/graph.svg",
+          "description": "Pathing analysis"
+        },
+        {
+          "icon": "/assets/svg/icons/circle-arrows.svg",
+          "description": "Sales/space share vs engagement"
+        }
+      ],
+      "isExtra": false
+    },
+    {
+      "label": "choose",
+      "title": "Shoppers browsing",
+      "image": "/assets/svg/illustrations/choose.svg",
+      "insight": "Are shoppers  engaging too little with select fixtures or not engaging optimally with select skus and why?",
+      "metrics": [
+        {
+          "icon": "/assets/svg/icons/men-sku.svg",
+          "description": "Fixture & sku engagement vs spend"
+        },
+        {
+          "icon": "/assets/svg/icons/clock.svg",
+          "description": "Wait-time for boh product pick"
+        },
+        {
+          "icon": "/assets/svg/icons/men-fixture.svg",
+          "description": "Shoppers engaged with any fixture"
+        }
+      ],
+      "isExtra": false
+    },
+    {
+      "label": "experience",
+      "title": "Traffic to promos and brand experiences",
+      "image": "/assets/svg/illustrations/experience.svg",
+      "insight": "Are shoppers engaging with promotions and what is the impact on revenue?",
+      "metrics": [
+        {
+          "icon": "/assets/svg/icons/circle-arrows.svg",
+          "description": "Promo & experience engagement vs spend"
+        }
+      ],
+      "isExtra": true
+    },
+    {
+      "label": "interact",
+      "title": "Staff interactions",
+      "image": "/assets/svg/illustrations/interact.svg",
+      "insight": "Do we have enough staffers to serve visitors?",
+      "metrics": [
+        {
+          "icon": "/assets/svg/icons/men-men.svg",
+          "description": "Staff interaction"
+        }
+      ],
+      "isExtra": true
+    },
+    {
+      "label": "try",
+      "title": "Shoppers trying products",
+      "image": "/assets/svg/illustrations/try.svg",
+      "insight": "Are shoppers satisfied with wait times for the fitting rooms?",
+      "metrics": [
+        {
+          "icon": "/assets/svg/icons/men-fitting.svg",
+          "description": "Fitting room engagement vs spend"
+        },
+        {
+          "icon": "/assets/svg/icons/men-fitting-queue.svg",
+          "description": "Fitting room queuing vs spend"
+        }
+      ],
+      "isExtra": false
+    },
+    {
+      "label": "trail",
+      "title": "Shoppers trialing products",
+      "image": "/assets/svg/illustrations/trail.svg",
+      "insight": "Are shoppers using trial experiences as expected?",
+      "metrics": [
+        {
+          "icon": "/assets/svg/icons/men-sku.svg",
+          "description": "Trial engagement vs spend"
+        },
+        {
+          "icon": "/assets/svg/icons/men-sku-load.svg",
+          "description": "Trial queuing vs spend"
+        }
+      ],
+      "isExtra": true
+    },
+    {
+      "label": "decide",
+      "title": "Shoppers going for check-out",
+      "image": "/assets/svg/illustrations/decide.svg",
+      "insight": "Are shoppers checking out as expected and is there a drop-off rate at the cash desk?",
+      "metrics": [
+        {
+          "icon": "/assets/svg/icons/payment.svg",
+          "description": "Check-out queuing vs spend"
+        }
+      ],
+      "isExtra": false
+    },
+    {
+      "label": "buy",
+      "title": "Shoppers purchasing products",
+      "image": "/assets/svg/illustrations/buy.svg",
+      "insight": "Are shoppers happy with post-buy services and coming back to stores?",
+      "metrics": [],
+      "isExtra": false
+    }
   ]
 }

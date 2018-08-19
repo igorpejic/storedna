@@ -1,35 +1,243 @@
 .funnel-card {
-  background-color: $brand;
+  height: 180px;
+  width: 50%;
+  border-top: 1px solid $grey;
 
-  @include media-breakpoint-up(md) {
-    &:nth-child(even) {
-      background-color: $brand-light;
+  &:nth-child(odd) {
+     border-right: 1px solid $grey;
+   }
+
+  @include media-breakpoint-up(sm) {
+    height: 240px;
+    width: auto;
+    flex: 1 1 0;
+    border: none;
+
+    &:not(:last-child) {
+      border-right: 1px solid $grey;
+    }
+  }
+}
+
+.funnel {
+  max-height: 0;
+  transition: max-height 0.1s ease;
+
+  &.opened {
+    max-height: 600px;
+  }
+}
+
+// overwrites styles from react-responsive-carousel module
+.carousel {
+  .slide {
+    background: #343439;
+    height: 440px;
+    overflow: hidden;
+
+    @include media-breakpoint-up(sm) {
+      height: 380px //number * height of funnel levels
+    }
+
+    img {
+      width: auto;
+    }
+
+    .legend {
+      position: relative;
+      left: 0;
+      bottom: 0;
+      margin-left: 0;
+      width: auto;
+      background: none;
+      text-align: left;
+      padding: 10px 20px 0;
+
+      hr {
+        border-top: 1px solid rgba(246, 246, 246, 0.1);
+      }
+
+      @include media-breakpoint-up(sm) {
+        padding: 0;
+        padding-top: 10px;
+      }
+
+
+      @include media-breakpoint-up(md) {
+        h1 {
+          font-size: 1.25rem;
+        }
+      }
+
+      @include media-breakpoint-up(xl) {
+        padding-top: 20px;
+      }
+    }
+
+    &.selected {
+      .legend {
+        opacity: 1;
+      }
     }
   }
 
-  @include media-breakpoint-down(sm) {
-    &:nth-child(2),
-    &:nth-child(3),
-    &:nth-child(6) {
-      background-color: $brand-light;
+  &.carousel-slider {
+    .control-arrow {
+      display: none;
+
+        @include media-breakpoint-up(sm) {
+          display: block;
+        }
+
+      &:hover {
+        background: none;
+      }
+    }
+
+    .control-dots {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .funnel-mobile-title {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 23px;
+      background-color: #343439;
+    }
+  }
+
+  .funnel-slide-content {
+    @include media-breakpoint-down(sm) {
+      padding: 0 20px;
+    }
+  }
+
+  .funnel-slide-title {
+    margin-bottom: 25px;
+    position: relative;
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .funnel-metric-item {
+    .funnel-metric-item__image {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #565f65;
+      padding: 10px;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+
+  .funnel-metric-item__label {
+    line-height: 1.1;
+  }
+}
+
+.funnel-sideNav {
+  width: 250px;
+  left: 20px;
+
+  @include media-breakpoint-up(xl) {
+    width: 300px;
+    right: 50%;
+    left: auto;
+  }
+}
+
+.funnel-sideNav__item {
+  opacity: 0.2;
+  transition: all 0.2s ease;
+  position: relative;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0;
+  border-left-width: 5px;
+  border-right-width: 5px;
+  border-top-width: 33px;
+
+  @for $i from 1 through 11 {
+      &:nth-child(#{$i}) {
+        width: calc(100% - (10px * #{$i}));
+      }
+  }
+
+  &:nth-child(even) {
+    border-top-color: $grey-400;
+  }
+
+  &:nth-child(odd) {
+    border-top-color: $grey-700;
+  }
+
+  &.active {
+    opacity: 1;
+    border-top-color: $brand-light;
+  }
+
+  h1 {
+    bottom: 5px;
+  }
+}
+
+.funnel-bottomNav {
+  .funnel-arrow {
+    transition: transform 0.3s ease;
+  }
+
+  &.opened {
+    .funnel-arrow {
+      transform: rotate(180deg);
     }
   }
 }
 
-.funnel-card-top {
-  flex-grow: 1;
-}
+.funnel-bottomNav__item {
+  flex: 1 1 0;
 
-.funnel-card-bottom {
-  height: 80px;
-
-  @include media-breakpoint-down(md) {
-    height: 70px;
+  &:first-child .funnel-bottomNav__dot::before,
+  &:last-child .funnel-bottomNav__dot::after {
+    display: none;
   }
 }
 
-.funnel-arrow {
-  @include media-breakpoint-down(sm) {
-    transform: rotate(90deg);
+.funnel-bottomNav__dot {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin: 10px auto 0;
+
+  &::before,
+  &::after {
+    content:"";
+    position: absolute;
+    display: inline-block;
+    height: 1px;
+    bottom: 5.5px;
+    width: calc(50% - 6px);
+    background-color: white;
+  }
+
+  &::before{
+    right: calc(50% + 6px);
+  }
+
+  &::after{
+    left: calc(50% + 6px);
   }
 }
