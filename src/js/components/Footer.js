@@ -2,12 +2,23 @@ import React from 'react'
 import Section from './Section'
 import ButtonForm from './ButtonForm'
 import { sections, links } from '../data/footer.json'
+import { BLOG_URL } from '../utils'
 
 export default class Footer extends React.PureComponent {
   constructor() {
     super()
 
     this.state = { sections }
+  }
+  componentWillMount() {
+    fetch('https://' + window.ghost.url.api('posts', {limit: 3})).then(res => {
+      if (!res) return
+      res.json().then(body => {
+        if (!body || !body.posts) return
+        this.setState({ 'posts': body.posts})
+      })
+    })
+
   }
 
   onToggle = (index) => {
@@ -44,13 +55,22 @@ export default class Footer extends React.PureComponent {
         </button>
         <div className="footer__list-wrapper">
           <ul className="footer__list-items list-unstyled">
-            { section.tabs.map((tab) =>
-              <li key={ tab.label }>
-                <a className="footer__list-item link--unstyled t-grey" href={ tab.href }>
-                  { tab.label }
-                </a>
-              </li>
-            ) }
+            { section.title === 'Recent Posts' && this.state.posts ?
+               this.state.posts.map((post) =>
+                <li key={ post.id }>
+                  <a className="footer__list-item link--unstyled t-grey" href={ BLOG_URL + post.url }>
+                    { post.title }
+                  </a>
+                </li>
+              )
+              : section.tabs.map((tab) =>
+                <li key={ tab.label }>
+                  <a className="footer__list-item link--unstyled t-grey" href={ tab.href }>
+                    { tab.label }
+                  </a>
+                </li>
+              )
+            }
           </ul>
         </div>
       </div>

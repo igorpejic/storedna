@@ -33,3 +33,5 @@ export const playLazyVideos = () => {
     })
   }
 }
+
+export const BLOG_URL = 'https://blog.monolith.co'
