@@ -34,7 +34,7 @@ export default class KnowledgeCenter extends React.PureComponent {
           </div>
         </div>
         <div className="search-bar bg-white w-100 p-2 mb-1 mb-md-3 d-flex">
-          <img className="card-image" src="/assets/svg/search.svg" alt="search icon" />
+          <img className="card-image" src="/assets/svg/icons/search.svg" alt="search icon" />
           <div className="pl-2 search-label">Search the knowledge center</div>
         </div>
         <div className="cards-wrapper container">
