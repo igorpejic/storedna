@@ -16,11 +16,11 @@ export default class Funnel extends React.Component {
     if ((prevState.opened !== this.state.opened) && this.state.opened) {
       setTimeout(function() {
         document.querySelector('.funnel-bottomNav').scrollIntoView({
-          block: "end",
+          block: "start",
           inline: "nearest",
           behavior: "smooth"
         })
-      }, 50)
+      }, 0)
     }
   }
 

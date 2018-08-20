@@ -4,24 +4,29 @@
       "title": "Company",
       "tabs": [
         {
-          "label": "About us",
-          "href": "/about"
+          "type": "article",
+          "label": "Our DNA",
+          "href": "our_dna",
+          "html": "our_dna",
+          "title": "Our DNA",
+          "subtitle": "dshdushydus dsiuy disu yiudsy isdkuh",
+          "illustration": ""
         },
         {
           "label": "Purpose",
-          "href": "/purpose"
+          "href": "purpose"
         },
         {
           "label": "News",
-          "href": "/news"
+          "href": "news"
         },
         {
           "label": "Investors",
-          "href": "/investors"
+          "href": "investors"
         },
         {
           "label": "Contact us",
-          "href": "/contact"
+          "href": "contact"
         }
       ]
     },
@@ -29,16 +34,21 @@
       "title": "Platform",
       "tabs": [
         {
-          "label": "Ask for demo",
-          "href": "/demo"
+          "type": "video",
+          "label": "3D Engagement Map",
+          "href": "3d_engagement_map",
+          "title": "3D Engagement Map",
+          "subtitle": "3D Engagement Map",
+          "video": "/assets/video/3D_heatmap.mp4",
+          "poster": "/assets/images/3D_heatmap.png"
         },
         {
           "label": "Computer Vision",
-          "href": "/computer_vision"
+          "href": "computer_vision"
         },
         {
           "label": "Retail DNA",
-          "href": "/retail_dna"
+          "href": "retail_dna"
         }
       ]
     },
@@ -81,44 +91,41 @@
       "tabs": [
         {
           "label": "Blog",
-          "href": "/blog"
+          "href": "blog"
         },
         {
           "label": "Shopability",
-          "href": "/shopability"
+          "href": "shopability"
         },
         {
-          "label": "Use Cases",
-          "href": "/use_cases"
+          "type": "download",
+          "label": "Shopper Funnel",
+          "href": "use_cases",
+          "image": ".png",
+          "pdf": "shopper_funnel_pdf",
+          "title": "kgygyigygig  u iu ugg",
+          "blogUrl": "/jhfh",
+          "description": "djhskd dshkdshdsudsu ds"
         }
       ]
     },
     {
       "title": "Recent Posts",
-      "tabs": [
-        {
-          "label": "Airports: a retailer's dream come true",
-          "href": "/blog#1"
-        },
-        {
-          "label": "Bulletproof experiments in retail spaces",
-          "href": "/blog#2"
-        }
-      ]
+      "tabs": []
     }
   ],
   "links": [
     {
       "label": "Privacy Policy",
-      "href": "/privacy_policy"
+      "href": "privacy_policy"
     },
     {
       "label": "Terms of Use",
-      "href": "/terms_of_use"
+      "href": "terms_of_use"
     },
     {
       "label": "Site Map",
-      "href": "/map"
+      "href": "map"
     }
   ]
 }

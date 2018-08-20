@@ -22,13 +22,10 @@ export default class Footer extends React.PureComponent {
   }
 
   onToggle = (index) => {
-    console.log(index);
     const updatedSections = this.state.sections;
     updatedSections[index].active = !this.state.sections[index].active;
-    console.log(index, updatedSections[index].active, this.state.sections[index].active);
 
-
-    this.setState({ sections: updatedSections }, console.log(updatedSections[index], this.state.sections[index]));
+    this.setState({ sections: updatedSections })
     this.forceUpdate()
   }
 
@@ -65,7 +62,7 @@ export default class Footer extends React.PureComponent {
               )
               : section.tabs.map((tab) =>
                 <li key={ tab.label }>
-                  <a className="footer__list-item link--unstyled t-grey" href={ tab.href }>
+                  <a className="footer__list-item link--unstyled t-grey" href={ `/${tab.type}/${tab.href}` }>
                     { tab.label }
                   </a>
                 </li>

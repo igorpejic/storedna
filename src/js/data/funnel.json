@@ -128,7 +128,7 @@
       "metrics": [
         {
           "icon": "/assets/svg/icons/circle-arrows.svg",
-          "description": "Promo & experience engagement vs spend"
+          "description": "Promo & experience vs spend"
         }
       ],
       "isExtra": true

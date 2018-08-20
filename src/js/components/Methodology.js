@@ -4,7 +4,7 @@ import Section from './Section'
 import { steps, title } from '../data/methodology.json'
 
 const Methodology = () =>
-  <div className="section--methodology">
+  <div className="section--methodology scroll-1">
     <h1 className="heading t-0 t-center px-3 pt-4 px-md-6 pt-md-6 mb-0">
       { title }
     </h1>

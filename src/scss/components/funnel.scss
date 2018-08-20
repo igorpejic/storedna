@@ -36,7 +36,7 @@
     overflow: hidden;
 
     @include media-breakpoint-up(sm) {
-      height: 380px //number * height of funnel levels
+      height: 430px //number * height of funnel levels
     }
 
     img {
@@ -52,6 +52,7 @@
       background: none;
       text-align: left;
       padding: 10px 20px 0;
+      font-size: 13px;
 
       hr {
         border-top: 1px solid rgba(246, 246, 246, 0.1);
@@ -168,7 +169,7 @@
   border-width: 0;
   border-left-width: 5px;
   border-right-width: 5px;
-  border-top-width: 33px;
+  border-top-width: 36px;
 
   @for $i from 1 through 11 {
       &:nth-child(#{$i}) {
@@ -190,7 +191,7 @@
   }
 
   h1 {
-    bottom: 5px;
+    bottom: 5.5px;
   }
 }
 

@@ -49,10 +49,12 @@ export default class Section extends React.PureComponent {
     <div ref={ this.setCurrentNode } className="section--overlay pos-absolute pos-left pos-top w-100 h-100 z-5" />
 
   render() {
-    const { children, heading, buttons, padding, applyOverlay, className } = this.props;
+    const { children, heading, buttons, padding, applyOverlay, className, bgImg } = this.props;
 
     return (
-      <div className={ `pos-relative o-hidden w-100 px-3 py-4 p-md-${padding} ${className}` }>
+      <div
+        className={ `pos-relative o-hidden w-100 px-3 py-4 p-md-${padding} ${className}` }
+        style={{ backgroundImage: bgImg ? `url(${bgImg})` : 'none' }}>
         { heading && heading }
         { children }
         { this.renderButtons(buttons) }
@@ -72,6 +74,7 @@ Section.propTypes = {
   padding: PropTypes.number,
   applyOverlay: PropTypes.bool,
   className: PropTypes.string,
+  bgImg: PropTypes.string,
 }
 
 Section.defaultProps = {
@@ -80,4 +83,5 @@ Section.defaultProps = {
   padding: 6,
   applyOverlay: true,
   className: 'section',
+  bgImg: '',
 }

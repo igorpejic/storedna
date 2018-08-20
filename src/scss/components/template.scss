@@ -1,0 +1,50 @@
+.section--template {
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 1.125rem;
+    padding-top: 30px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  ol {
+    @extend .list-unstyled;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  li {
+    width: calc(50% - 20px);
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #1e94a0;
+    color: white;
+
+    strong {
+      font-size: 16px;
+      display: block;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+
+  .template {
+    background-color: $grey-700;
+    padding: 40px 60px;
+  }
+}

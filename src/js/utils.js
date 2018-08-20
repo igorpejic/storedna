@@ -1,3 +1,5 @@
+import { sections } from './data/footer.json'
+
 export const playLazyVideos = () => {
   const lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
 
@@ -35,3 +37,7 @@ export const playLazyVideos = () => {
 }
 
 export const BLOG_URL = 'https://blog.monolith.co'
+
+export const getFooterItem = (matchHref) =>
+  sections.reduce((a,b) => a.concat(b.tabs), [])
+          .filter((tab) => tab.href === matchHref)[0]
