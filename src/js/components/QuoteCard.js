@@ -6,14 +6,16 @@ const QuoteCard = ({ props }) => {
 
   return (
     <div className="col-12 col-sm-6 p-2">
-      <div className="p-4 pt-5 bg-grey t-center h-100 d-flex flex-column">
+      <div
+        className="p-4 pt-5 bg-grey t-center h-100 d-flex flex-column justify-content-center"
+        style={{ minHeight: '25vw' }}>
         <img className="mb-3 mx-auto w-50" alt={`${name} logo`} src={logo} height="50px"/>
         <p className="t-center">
           { quote }
         </p>
-        { credentials && <p className="t-5 mt-auto">{ credentials }</p> }
+        { credentials && <p className="t-5 mt-3 mt-lg-4">{ credentials }</p> }
         { pdf &&
-          <div>
+          <div className="mt-3 mt-lg-4">
             <ButtonForm
               initialLabel="Download Case Study"
               successLabel="Thank you!"
