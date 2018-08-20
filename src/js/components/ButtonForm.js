@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { arrowDown } from '../svgInline'
 
 const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -67,8 +68,8 @@ export default class ButtonForm extends React.PureComponent {
   }
 
   render() {
-    const { placeholder, label, active, inputValid } = this.state;
-    const { href, fileName, height, btnColor } = this.props;
+    const { placeholder, label, active, inputValid, submitted } = this.state;
+    const { href, fileName, height, btnColor, showArrow } = this.props;
 
     return (
       <React.Fragment>
@@ -99,7 +100,10 @@ export default class ButtonForm extends React.PureComponent {
               disabled={ !inputValid }
               onClick={ active ? this.onSubmit : this.onClick }
               type={ active ? 'submit' : 'button' }>
-              <h3 className="heading m-0">{ label }</h3>
+              <h3 className="heading m-0 d-flex">
+                { label }
+                { showArrow && !submitted && arrowDown() }
+              </h3>
             </button>
         </form>
       </React.Fragment>
@@ -117,6 +121,7 @@ ButtonForm.propTypes = {
   fileName: PropTypes.string,
   height: PropTypes.number,
   btnColor: PropTypes.string,
+  showArrow: PropTypes.bool,
 }
 
 ButtonForm.defaultProps = {
@@ -128,4 +133,5 @@ ButtonForm.defaultProps = {
   fileName: '',
   onClick: null,
   height: 40,
+  showArrow: false,
 }

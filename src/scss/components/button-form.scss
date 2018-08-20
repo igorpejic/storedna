@@ -10,10 +10,10 @@ input, a, button {
   border: 1px solid white;
   border-radius: 5px;
   transition: width .2s ease-in-out;
-  box-shadow: 0 1px 6px rgba(0,0,0,.06),0 2px 32px rgba(0,0,0,.16);
+  box-shadow: 0 1px 6px rgba(0,0,0,.06),0 2px 32px rgba(0,0,0,.06);
 
   &:hover {
-    box-shadow: 0 2px 8px rgba(0,0,0,.09),0 4px 40px rgba(0,0,0,.24);
+    box-shadow: 0 2px 8px rgba(0,0,0,.09),0 4px 40px rgba(0,0,0,.1);
   }
 
   button {
@@ -77,6 +77,21 @@ input, a, button {
   }
 }
 
+.arrow-download {
+  width: 10px;
+  height: 100%;
+  margin-left: 8px;
+  margin-top: 2px;
+}
+
+.arrow-download__path {
+  fill: none;
+  stroke: white;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+
 @media screen and (max-width:767px) {
   /* removes zoom on focus */
   input[type="text"]:focus, select:focus {
@@ -117,6 +132,10 @@ input, a, button {
     button {
       color: $black;
     }
+
+    .arrow-download__path {
+      stroke: $black;
+    }
   }
 }
 
@@ -127,6 +146,10 @@ input, a, button {
   &:not(.active) {
     button {
       color: $brand;
+    }
+
+    .arrow-download__path {
+      stroke: $brand;
     }
   }
 

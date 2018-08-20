@@ -1,5 +1,4 @@
 import React from 'react';
-import LazyLoad from 'react-lazy-load'
 import Intro from '../components/Intro.js';
 import Methodology from '../components/Methodology.js';
 import Funnel from '../components/Funnel.js';
@@ -11,9 +10,7 @@ const Homepage = () =>
     <Intro />
     <Methodology />
     <Funnel />
-    <LazyLoad offsetVertical={ 500 }>
-      <UserInterface />
-    </LazyLoad>
+    <UserInterface />
     <References />
   </div>
 

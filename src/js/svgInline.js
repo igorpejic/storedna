@@ -91,21 +91,28 @@ export const categoryItem = () => {
 export const locationPin = (label) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78.45 63.42" key={label} className="store-item pos-absolute">
-    <defs>
-      {/* <style>
-        .cls-1{fill:#6ac1b8;}
-        .cls-2{fill:#8ad5cf;stroke:#6ac1b8;stroke-miterlimit:10;stroke-width:1.07px;}
-        .cls-3{font-size:12px;fill:#fff;font-family:ProximaNova-Semibold, Proxima Nova;font-weight:700;}
-      </style> */}
-    </defs>
-    <title>store-item</title>
-    <g id="Layer_2" data-name="Layer 2">
-      <g id="Design">
-        <path id="svg_1" data-name="svg 1" className="item__path store-item-pin" d="M51.2,12.27c0,6.77-12,23-12,23s-12-16.23-11.95-23a12,12,0,1,1,23.95,0Zm-12-5.19a5.16,5.16,0,1,0,5,5.16,5.1,5.1,0,0,0-5-5.16Z"/>
-        <rect className="item__path item__lblbg" x="0.54" y="38.39" width="77.38" height="24.5" rx="11.71" ry="11.71"/>
-        <text className="item__path item__label" transform="translate(19.26 54.13)">{ label }</text>
+      <title>store-item</title>
+      <g id="Layer_2" data-name="Layer 2">
+        <g id="Design">
+          <path id="svg_1" data-name="svg 1" className="item__path store-item-pin" d="M51.2,12.27c0,6.77-12,23-12,23s-12-16.23-11.95-23a12,12,0,1,1,23.95,0Zm-12-5.19a5.16,5.16,0,1,0,5,5.16,5.1,5.1,0,0,0-5-5.16Z"/>
+          <rect className="item__path item__lblbg" x="0.54" y="38.39" width="77.38" height="24.5" rx="11.71" ry="11.71"/>
+          <text className="item__path item__label" transform="translate(19.26 54.13)">{ label }</text>
+        </g>
       </g>
-    </g>
-  </svg>
+    </svg>
+  )
+}
+
+export const arrowDown = () => {
+  return (
+    <svg className="arrow-download" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.92 17.71">
+      <title>arrow-download</title>
+      <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+          <line className="arrow-download__path" x1="7.46" x2="7.46" y2="16.42"/>
+          <polyline className="arrow-download__path" points="14.22 9.54 7.46 16.29 0.71 9.54"/>
+        </g>
+      </g>
+    </svg>
   )
 }
