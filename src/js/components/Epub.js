@@ -4,21 +4,31 @@ import ButtonForm from './ButtonForm';
 import Button from './Button';
 
 const Epub = ({ title, description, image, pdf, blogUrl }) =>
-  <Section className="section--epub d-flex bg-blue-light" applyOverlay={ false }>
-      <img className="d-none d-sm-inline-block" height="350" alt={ title } src={ image } />
-      <div className="mx-sm-6">
-        <h1 className="heading t-left p-0 mb-4">{ title }</h1>
-        { description }
-        <div>
-          <ButtonForm
-            initialLabel="Download Free E-Book"
-            successLabel="Thank you!"
-            label="Download"
-            btnColor="black"
-            showArrow={ true }
-            fileName={ pdf }
-            href={ `/assets/pdf/${pdf}` } />
-          { blogUrl && <Button label="Read more" href={ blogUrl } /> }
+  <Section className="section--epub d-flex bg-blue-light" applyOverlay={ false } >
+      <div
+        className="epub-wrapper w-100 row"
+        style={{ backgroundImage: 'url("/assets/svg/illustrations/coffee.svg")' }}>
+        <div
+          className="d-none d-sm-block epub-image-container"
+          style={{ backgroundImage: 'url("/assets/svg/illustrations/ipad.svg")' }}>
+          <img className=""
+            alt={ title }
+            src={ image } />
+        </div>
+        <div className="epub-text-container col-12 col-sm-5 mt-lg-4">
+          <h1 className="heading t-left p-0 mb-4">{ title }</h1>
+          { description }
+          <div>
+            <ButtonForm
+              initialLabel="Download Free E-Book"
+              successLabel="Thank you!"
+              label="Download"
+              btnColor="black"
+              showArrow={ true }
+              fileName={ pdf }
+              href={ `/assets/pdf/${pdf}` } />
+            { blogUrl && <Button label="Read more" href={ blogUrl } /> }
+          </div>
         </div>
       </div>
   </Section>

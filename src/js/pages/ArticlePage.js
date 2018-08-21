@@ -6,16 +6,12 @@ import { getFooterItem } from '../utils.js'
 
 const ArticlePage = ({match}) => {
   const article = getFooterItem(match.params.articleId)
-  const { html, title, subtitle, illustration } = article;
 
   return (
     <div className="page">
-      <Intro
-        title={ title }
-        subtitle={ subtitle }
-        illustration={ illustration } />
+      <Intro { ...article } />
       <Section className="section--template scroll-1" applyOverlay={false}>
-        { renderTemplate(html) }
+        { renderTemplate(article.html) }
       </Section>
     </div>
   )

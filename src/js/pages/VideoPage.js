@@ -4,8 +4,8 @@ import Intro from '../components/Intro.js';
 import { getFooterItem } from '../utils.js'
 
 const VideoPage = ({match}) => {
-  const article = getFooterItem(match.params.videoId)
-  const { video, title, subtitle, poster, illustration } = article;
+  const props = getFooterItem(match.params.videoId)
+  const { video, title, subtitle, poster, illustration } = props;
 
   return (
     <div className="page">
