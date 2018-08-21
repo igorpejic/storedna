@@ -114,6 +114,7 @@ export default class Footer extends React.PureComponent {
                   label="Ask for demo"
                   successLabel="Thank you"
                   btnColor="black"
+                  kind="ask-for-demo-footer"
                   height={ 30 }/>
               </div>
             </div>

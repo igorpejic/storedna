@@ -62,7 +62,7 @@ export default class Header extends React.PureComponent {
 
         <ol className="d-none d-md-flex align-items-center mb-0 list-unstyled">
           <li className="mr-2 mr-sm-3">
-            <ButtonForm label="Ask for demo" height={ 30 } />
+            <ButtonForm label="Ask for demo" kind="ask-for-demo-header" height={ 30 } />
           </li>
           <li className='clickable t-brand t-underline--fancy-hover'>
             <a className="t-white" href='logIn'>

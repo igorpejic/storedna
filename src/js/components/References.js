@@ -50,6 +50,7 @@ const References = () => {
             <ButtonForm
               initialLabel="Ask for Case Studies"
               successLabel="Request sent"
+              kind="case-studies"
               label="Send" />
           </div>
         </div>

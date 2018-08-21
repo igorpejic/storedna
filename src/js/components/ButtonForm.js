@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { arrowDown } from '../svgInline'
+import { sendEmail } from '../utils'
 
 const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -14,6 +15,7 @@ export default class ButtonForm extends React.PureComponent {
       active: false,
       inputValid: true,
       submitted: false,
+      kind: this.props.kind
     }
   }
 
@@ -34,9 +36,8 @@ export default class ButtonForm extends React.PureComponent {
   onSubmit = (e) => {
     e && e.preventDefault();
     const email = this.refs.input.value;
-    const fakeRequest = () => Promise.resolve();
 
-    fakeRequest(email).then(() => {
+    sendEmail(email, this.state.kind).then(() => {
       if (this.props.href && this.props.fileName) {
         if (this.isLegacyBrowser()) {
           window.open(this.props.href, '_blank').focus();
