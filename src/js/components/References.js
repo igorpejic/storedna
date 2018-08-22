@@ -45,7 +45,7 @@ const References = () => {
         <div className="p-2 w-100">
           <div className="p-4 p-md-6 bg-blue t-center">
             <h1 className="heading t-center t-white t-normal mb-md-5">
-              Learn more how leading retailers are using Store dna to increase their profitability.
+              Learn more how leading retailers are using StoreDNA to increase their profitability.
             </h1>
             <ButtonForm
               initialLabel="Ask for Case Studies"
