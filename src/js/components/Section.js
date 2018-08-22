@@ -53,7 +53,7 @@ export default class Section extends React.PureComponent {
 
     return (
       <div
-        className={ `pos-relative o-hidden w-100 px-3 py-4 p-md-${padding} ${className}` }
+        className={ `pos-relative o-hidden w-100 px-3 py-4 p-md-${padding} ${className} methodology-wrapper` }
         style={{ backgroundImage: bgImg ? `url(${bgImg})` : 'none' }}>
         { heading && heading }
         { children }
