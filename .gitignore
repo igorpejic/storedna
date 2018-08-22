@@ -9,7 +9,7 @@
 # production
 /build
 /public/assets/video
-
+/public/assets/pdf
 
 # misc
 .DS_Store
