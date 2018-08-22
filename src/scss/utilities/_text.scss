@@ -4,10 +4,10 @@
 
 // Size
 .t-0 {
-  font-size: $font-size-xl !important;
+  font-size: 1.5rem !important;
 
   @include media-breakpoint-up(md) {
-      font-size: $font-size-xxl !important;
+      font-size: 1.75rem !important;
   }
 
   @include media-breakpoint-up(lg) {

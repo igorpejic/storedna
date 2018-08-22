@@ -26,8 +26,16 @@
 
 .epub-text-container {
   padding-left: 30px;
+  background-color: rgba(189, 226, 230, 0.7);
 
   @include media-breakpoint-up(sm) {
+    background-color: none;
+    padding-left: 0;
     margin-left: auto;
+    padding-right: 0
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-left: 30px;
   }
 }

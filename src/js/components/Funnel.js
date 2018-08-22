@@ -136,7 +136,7 @@ export default class Funnel extends React.Component {
   render() {
     return (
     <React.Fragment>
-        <div className="pos-relative o-hidden w-100 pt-4 pt-md-6 pb-md-3">
+        <div className="pos-relative o-hidden w-100 pt-4 pt-md-6 pb-md-3 bg-grey">
           <h1 className="heading t-center px-3">
             World’s first decision making platform which impacts every part of the <span className="t-brand">shopper funnel</span>
           </h1>
