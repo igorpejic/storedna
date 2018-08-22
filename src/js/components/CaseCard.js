@@ -6,7 +6,7 @@ const CaseCard = ({ props }) => {
   return (
     <div className="case-card col-12 col-sm-6 p-2">
       <div className='case-card__wrapper pl-4 pl-xl-5 t-1 h-100 d-flex'>
-        <div className="d-flex pt-5 pb-6 flex-column col-7 col-xl-6 z-10" style={{ minHeight: '30vw' }}>
+        <div className="case-card__text-wrapper d-flex pt-5 pb-6 flex-column justify-content-center col-7 col-xl-6 z-10">
           <h1 className='case-card__result mb-0'>{ result }</h1>
           <h1 className='case-card__metric'>{ metric }</h1>
           <p className=''>{ client }</p>

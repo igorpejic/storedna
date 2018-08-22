@@ -11,7 +11,7 @@ const ArticlePage = ({match}) => {
     <div className="page">
       <Intro { ...article } />
       <Section className="section--template scroll-1" applyOverlay={false}>
-        { renderTemplate(article.html) }
+        { renderTemplate(article.href) }
       </Section>
     </div>
   )

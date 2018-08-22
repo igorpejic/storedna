@@ -1,3 +1,13 @@
+.page--epub {
+  .epub-wrapper {
+    margin-top: 30px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 46px;
+    }
+  }
+}
+
 .epub-wrapper {
   background-repeat: no-repeat;
   background-position: top center;
@@ -6,6 +16,14 @@
   @include media-breakpoint-up(sm) {
     background-position: left 30px;
     background-size: 54%;
+  }
+
+  @include media-breakpoint-up(xl) {
+    background-size: 52%;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    background-size: 45%;
   }
 }
 
@@ -19,7 +37,7 @@
   max-width: 350px;
 
   img {
-    padding: 15% 15% 15% 12%;
+    padding: 15% 15% 17% 12%;
     width: 100%;
   }
 }

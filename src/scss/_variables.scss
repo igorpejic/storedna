@@ -94,7 +94,8 @@ $grid-breakpoints: (
     sm: 576px,
     md: 768px,
     lg: 992px,
-    xl: 1200px
+    xl: 1200px,
+    xxl: 1400px
 ) !default;
 
 $grid-columns: 12 !default;
@@ -124,8 +125,8 @@ $font-family-sans-serif: "Proxima Nova", -apple-system, BlinkMacSystemFont, "Seg
 $font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family:           $font-family-sans-serif !default;
 
-$font-size:  0.8125rem !default;  // 13px
-$font-size-sm: 0.6rem !default;    // 10px
+$font-size:  0.938rem !default;
+$font-size-sm: 0.7rem !default;    // 11px
 $font-size-lg: 0.875rem !default;   // 14px
 $font-size-xl: 1rem !default;     // 16px
 $font-size-xxl: 1.125rem !default; // 18px

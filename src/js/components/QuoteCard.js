@@ -7,15 +7,15 @@ const QuoteCard = ({ props }) => {
   return (
     <div className="col-12 col-sm-6 p-2">
       <div
-        className="p-4 pt-5 bg-grey t-center h-100 d-flex flex-column justify-content-center"
+        className="p-4 p-lg-5 bg-grey t-center h-100 d-flex flex-column justify-content-center"
         style={{ minHeight: '25vw' }}>
-        <img className="mb-3 mx-auto w-50" alt={`${name} logo`} src={logo} height="50px"/>
-        <p className="t-center">
+        <img className="mb-3 mx-auto w-50" alt={`${name} logo`} src={logo} style={{maxHeight: '50px'}}/>
+        <p className="t-center mx-auto" style={{ maxWidth: '550px' }}>
           { quote }
         </p>
-        { credentials && <p className="t-5 mt-3 mt-lg-4">{ credentials }</p> }
+        { credentials && <p className="t-5 mb-3 mb-lg-4">{ credentials }</p> }
         { pdf &&
-          <div className="mt-3 mt-lg-4">
+          <div>
             <ButtonForm
               initialLabel="Download Case Study"
               successLabel="Thank you!"
@@ -23,6 +23,7 @@ const QuoteCard = ({ props }) => {
               showArrow={ true }
               btnColor="brand"
               fileName={ pdf }
+              kind="case-studies"
               href={ `/assets/pdf/${pdf}` } />
           </div>
         }

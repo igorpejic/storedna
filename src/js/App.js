@@ -13,9 +13,9 @@ const App = () => (
       <Header />
 
       <Route exact path="/" component={ HomePage }/>
-      <Route path="/video/:videoId" component={ VideoPage }/>
-      <Route path="/download/:downloadId" component={ EpubPage }/>
-      <Route path="/article/:articleId" component={ ArticlePage }/>
+      <Route exact path="/video/:videoId" component={ VideoPage }/>
+      <Route exact path="/download/:downloadId" component={ EpubPage }/>
+      <Route exact path="/article/:articleId" component={ ArticlePage }/>
 
       <Footer />
     </div>

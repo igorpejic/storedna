@@ -29,6 +29,15 @@ export default class Footer extends React.PureComponent {
     this.forceUpdate()
   }
 
+  getTabLink(tab) {
+    if (tab && tab.href && tab.href.includes('https://')) {
+      console.log(tab, "is link")
+      return tab.href
+    } else {
+      return '/' + tab.type + '/' + tab.href
+    }
+  }
+
   renderSections() {
     const footerSections = this.state.sections;
 
@@ -62,7 +71,7 @@ export default class Footer extends React.PureComponent {
               )
               : section.tabs.map((tab) =>
                 <li key={ tab.label }>
-                  <a className="footer__list-item link--unstyled t-grey" href={ `/${tab.type}/${tab.href}` }>
+                  <a className="footer__list-item link--unstyled t-grey" href={this.getTabLink(tab)}>
                     { tab.label }
                   </a>
                 </li>
@@ -109,11 +118,12 @@ export default class Footer extends React.PureComponent {
             <div className="d-flex flex-column flex-lg-row justify-content-between align-items-center">
               <p>Copyright © 2018 Monolith International BV All rights reserved.</p>
               { this.renderBottomLinks() }
-              <div className="mb-3">
+              <div className="col-12 col-md-auto mb-3">
                 <ButtonForm
                   label="Ask for demo"
                   successLabel="Thank you"
                   btnColor="black"
+                  kind="ask-for-demo-footer"
                   height={ 30 }/>
               </div>
             </div>

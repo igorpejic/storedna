@@ -12,6 +12,15 @@
   }
 }
 
+.case-card__text-wrapper {
+  height: 250px;
+
+  @include media-breakpoint-up(sm) {
+    height: 30vw;
+    max-height: 500px;
+  }
+}
+
 .case-card__result {
   font-size: 3rem
 }

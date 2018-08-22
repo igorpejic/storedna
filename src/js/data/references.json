@@ -17,13 +17,14 @@
     {
       "name": "Audi",
       "logo": "/assets/svg/logos/Audi.svg",
-      "quote": "With Monolith, we have a better understanding of our customer's behaviour which leads to a more optimised showroom in terms of layout and workforce.",
+      "quote": "With StoreDNA, we have a better understanding of our customer's behaviour which leads to a more optimised showroom in terms of layout and workforce.",
       "credentials": "Axel Geijtenbeek, Managing Director Audi Center Amsterdam"
     },
     {
       "name": "Samsung",
       "logo": "/assets/svg/logos/Samsung.svg",
-      "quote": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      "quote": "We wanted not only to get the data insights but also to apply business actions rapidly. The agility of retailers to adapt stores to the needs of their customers is a key capability",
+      "credentials": "Sander Rooda, Samsung Project Lead",
       "pdf": "Future_Of_Store_Innovation_Samsung.pdf"
     }
   ],

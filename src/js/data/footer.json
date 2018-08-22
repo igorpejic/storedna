@@ -7,105 +7,165 @@
           "type": "article",
           "label": "Our DNA",
           "href": "our_dna",
-          "html": "our_dna",
-          "title": "Our DNA",
-          "subtitle": "dshdushydus dsiuy disu yiudsy isdkuh",
+          "html": "/assets/templates/our_dna.html",
+          "title": "StoreDNA's DNA",
+          "subtitle": "Find out more about how StoreDNA works",
           "illustration": ""
         },
+
         {
+          "type": "article",
           "label": "Purpose",
-          "href": "purpose"
+          "href": "purpose",
+          "html": "/assets/templates/purpose.html",
+          "title": "Why do we exist",
+          "subtitle": "Find out more about StoreDNA's mission, vision and purpose.",
+          "illustration": ""
         },
+
         {
-          "label": "News",
-          "href": "news"
-        },
-        {
-          "label": "Investors",
-          "href": "investors"
-        },
-        {
-          "label": "Contact us",
-          "href": "contact"
+          "type": "article",
+          "label": "Contact StoreDNA",
+          "href": "contact",
+          "html": "/assets/templates/contact.html",
+          "title": "Contact StoreDNA",
+          "subtitle": "StoreDNA experts are here to answer your questions, provide more information and create effective solutions for your needs.",
+          "illustration": ""
         }
+
       ]
     },
+
+
     {
       "title": "Platform",
       "tabs": [
         {
+          "type": "download",
+          "label": "ActionBoard Overview",
+          "href": "actionboard_overview",
+          "blogUrl": "",
+          "image": "/assets/images/actionboard_overview.png",
+          "pdf": "actionboard_overview.pdf",
+          "title": "ActionBoard Overview",
+          "description": "1000 stores at the palm of your hand. Find out how to detect and remove friction at every step of the purhase path."
+        },
+
+        {
           "type": "video",
           "label": "3D Engagement Map",
-          "href": "3d_engagement_map",
-          "title": "3D Engagement Map",
-          "subtitle": "3D Engagement Map",
-          "video": "/assets/video/3D_heatmap.mp4",
-          "poster": "/assets/images/3D_heatmap.png"
+          "href": "engagement_map",
+          "title": "Introducing 3D Engagement Map",
+          "subtitle": "World's first shopper behavior analytics overlaid on top of real 3D-scanned store",
+          "video": "/assets/video/3d_heatmap.mp4",
+          "illustration": ""
         },
         {
+          "type": "download",
           "label": "Computer Vision",
-          "href": "computer_vision"
-        },
-        {
-          "label": "Retail DNA",
-          "href": "retail_dna"
+          "href": "computer_vision",
+          "blogUrl": "",
+          "image": "/assets/images/computer_vision.png",
+          "pdf": "computer_vision.pdf",
+          "title": "StoreDNA's computer vision algorithms",
+          "description": "Find out more about how StoreDNA turns existing video feeds into shopper behavior insights."
         }
       ]
     },
-    {
-      "title": "Privacy",
-      "tabs": [
-        {
-          "label": "Privacy policy",
-          "href": "privacy_policy"
-        },
-        {
-          "label": "Online policy",
-          "href": "online_policy"
-        },
-        {
-          "label": "Privacy by Design",
-          "href": "privacy_by_design"
-        }
-      ]
-    },
-    {
-      "title": "Security",
-      "tabs": [
-        {
-          "label": "Privacy policy",
-          "href": "privacy_policy"
-        },
-        {
-          "label": "Online policy",
-          "href": "online_policy"
-        },
-        {
-          "label": "Privacy by Design",
-          "href": "privacy_by_design"
-        }
-      ]
-    },
+
+
     {
       "title": "Knowledge",
       "tabs": [
         {
-          "label": "Blog",
-          "href": "blog"
+          "type": "link",
+          "href": "https://blog.storedna.co",
+          "label": "Shopability Issue"
         },
+
         {
-          "label": "Shopability",
-          "href": "shopability"
+          "type": "download",
+          "label": "How it works",
+          "href": "data_to_decision_making",
+          "blogUrl": "https://www.linkedin.com/pulse/how-shift-from-data-decision-making-brick-mortar-retail-martin-birač/",
+          "image": "/assets/images/decision_making.png",
+          "pdf": "FromDataToDecisionMaking.pdf",
+          "title": "Get from Data Straight to Decision Making",
+          "description": "6 simple steps to turn existing data into actionable insights which increase the revenues right away."
         },
         {
           "type": "download",
-          "label": "Shopper Funnel",
-          "href": "use_cases",
-          "image": "/assets/images/study_cover.png",
-          "pdf": "shopper_funnel_pdf",
-          "title": "kgygyigygig  u iu ugg",
-          "blogUrl": "/jhfh",
-          "description": "djhskd dshkdshdsudsu ds"
+          "label": "Shopper funnel",
+          "href": "shopper_funnel",
+          "blogUrl": "https://www.linkedin.com/pulse/how-remove-friction-every-step-purchase-path-martin-birač/",
+          "image": "/assets/images/shopper_funnel.png",
+          "pdf": "shopper_funnel.pdf",
+          "title": "StoreDNA's Friction-less Shopper Funnel",
+          "description": "Find out how to detect and remove fricion at every step of the purchase path. "
+        },
+
+        {
+          "type": "article",
+          "label": "ActionBoard Manifesto",
+          "href": "manifesto",
+          "html": "/assets/templates/manifesto.html",
+          "title": "ActionBoard Manifesto",
+          "subtitle": "Find out more about design principles and core beliefs we use while designing our flagship product. ",
+          "illustration": ""
+        }
+      ]
+    },
+
+    {
+      "title": "Privacy",
+      "tabs": [
+        {
+          "type": "download",
+          "label": "Privacy Policy",
+          "href": "privacy_policy",
+          "blogUrl": "",
+          "image": "/assets/images/privacy_policy.png",
+          "pdf": "policy.pdf",
+          "title": "StoreDNA is committed to protecting your privacy.",
+          "description": "This Privacy Policy explains our data processing practices and your options regarding the ways in which your personal data is used. If you have any requests concerning your personal information or any queries please contact us at info@storedna.co."
+        },
+
+        {
+          "type": "download",
+          "label": "Data Processor Statement",
+          "href": "data_processor_statement",
+          "blogUrl": "",
+          "image": "/assets/images/privacy_statement.png",
+          "pdf": "statement.pdf",
+          "title": "Data Processor Statement",
+          "description": "StoreDNA is committed to protecting shopper's privacy. This Data Processing Statement explains our data processing practices and StoreDNA Zero Images Stored policies when it comes to computer vision algorithms. "
+        }
+      ]
+    },
+
+    {
+      "title": "Security",
+      "tabs": [
+        {
+          "type": "download",
+          "label": "Closed Loop System",
+          "href": "closed_loop_system",
+          "blogUrl": "",
+          "image": "/assets/images/closed_loop_system.png",
+          "pdf": "closed_loop_system.pdf",
+          "title": "StoreDNA Closed Loop System",
+          "description": "Find out more about Zero Images Stored privacy protection algorithms and privacy policies."
+        },
+
+        {
+          "type": "download",
+          "label": "On-premises guidelines",
+          "href": "on_premises",
+          "blogUrl": "",
+          "image": "/assets/images/on_premises.png",
+          "pdf": "on_premises.pdf",
+          "title": "On Premises Technical requirements",
+          "description": "Download technical spec-sheet for on-premises StoreDNA installations."
         }
       ]
     },

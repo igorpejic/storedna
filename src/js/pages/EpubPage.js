@@ -6,8 +6,8 @@ const EpubPage = ({match}) => {
   const props = getFooterItem(match.params.downloadId)
 
   return (
-    <div className="page">
-      <Epub { ...props } />
+    <div className="page page--epub">
+      <Epub btnLabel="Download" { ...props } />
     </div>
   )
 }

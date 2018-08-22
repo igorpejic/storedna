@@ -13,14 +13,14 @@ const VideoPage = ({match}) => {
         title={ title }
         subtitle={ subtitle }
         illustration={ illustration } />
-      <div className="bg-brand-dark p-6">
+      <div className="scroll-1 p-6" style={{ backgroundColor: "#b8b6b4" }}>
         <LazyLoad offsetVertical={ 500 } debounce={ false } className="d-flex">
           <video
-            className="scroll-1 mx-auto"
-            style={{maxHeight: '100vh', maxWidth: '100%'}}
+            className="mx-auto"
+            style={{ maxHeight: '80vh', maxWidth: '100%' }}
             poster={ poster }
             src={ video }
-            muted playsInline loop autoPlay />
+            muted controls playsInline />
         </LazyLoad>
       </div>
     </div>
