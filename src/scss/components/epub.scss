@@ -7,6 +7,14 @@
     background-position: left 30px;
     background-size: 54%;
   }
+
+  @include media-breakpoint-up(xl) {
+    background-size: 52%;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    background-size: 45%;
+  }
 }
 
 .epub-image-container {

@@ -29,6 +29,14 @@ export default class Footer extends React.PureComponent {
     this.forceUpdate()
   }
 
+  getTabLink(tab) {
+    if (tab && tab.href && tab.href.includes('https://')) {
+      return tab.href
+    } else {
+      return '/' + tab.type + '/' + tab.href
+    }
+  }
+
   renderSections() {
     const footerSections = this.state.sections;
 
@@ -62,7 +70,7 @@ export default class Footer extends React.PureComponent {
               )
               : section.tabs.map((tab) =>
                 <li key={ tab.label }>
-                  <a className="footer__list-item link--unstyled t-grey" href={ `/${tab.type}/${tab.href}` }>
+                  <a className="footer__list-item link--unstyled t-grey" href={this.getTabLink(tab)}>
                     { tab.label }
                   </a>
                 </li>
@@ -114,6 +122,7 @@ export default class Footer extends React.PureComponent {
                   label="Ask for demo"
                   successLabel="Thank you"
                   btnColor="black"
+                  kind="ask-for-demo-footer"
                   height={ 30 }/>
               </div>
             </div>

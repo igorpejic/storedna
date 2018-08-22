@@ -24,6 +24,7 @@ const Epub = ({ title, description, image, pdf, blogUrl }) =>
               successLabel="Thank you!"
               label="Download"
               btnColor="black"
+              kind="deloitte-study"
               showArrow={ true }
               fileName={ pdf }
               href={ `/assets/pdf/${pdf}` } />

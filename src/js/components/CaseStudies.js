@@ -38,7 +38,7 @@ const CaseStudies = () => {
         [{ label: "Talk with expert", onClick: () => {console.log('hi, I`m expert')} }]
       }>
       <h1 className="heading t-center t-white">
-        Learn more how leading retailers are using store dna to
+        Learn more how leading retailers are using StoreDNA to
         <span className="t-brand"> increase their profitability</span>
       </h1>
       { renderCases() }

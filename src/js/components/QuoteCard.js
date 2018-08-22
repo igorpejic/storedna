@@ -23,6 +23,7 @@ const QuoteCard = ({ props }) => {
               showArrow={ true }
               btnColor="brand"
               fileName={ pdf }
+              kind="case-studies"
               href={ `/assets/pdf/${pdf}` } />
           </div>
         }
