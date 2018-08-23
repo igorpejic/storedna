@@ -173,17 +173,5 @@
     }
   ],
   "links": [
-    {
-      "label": "Privacy Policy",
-      "href": "privacy_policy"
-    },
-    {
-      "label": "Terms of Use",
-      "href": "terms_of_use"
-    },
-    {
-      "label": "Site Map",
-      "href": "map"
-    }
   ]
 }

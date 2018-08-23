@@ -86,10 +86,6 @@ export const PurposeTemplate = () =>
 
 export const ContactTemplate = () =>
 	<div className="template template--contact">
-		<h1>Ask a StoreDNA expert how can we help</h1>
-		<p>StoreDNA SaaS technology and expert consulting services enable retailers to easily implement and manage a program to drive continuous improvement in brick and mortar retail locations by providing a data-driven approach to ongoing optimization across a number of key areas, including product assortments, layouts and navigation, visual merchandising, staff deployment and effectiveness, and other dimensions.</p>
-		<p>The StoreDNA solution leverages standard feeds from any merchant high resolution video collection device and existing point-of-sale systems, processing data in near real time with proprietary, high fidelity analytical systems and methods.</p>
-		<p>Results of this analysis are presented in the StoreDNA Action Board, which is an interactive management console that provides merchandisers and executives with a graphical view of performance and a data-science driven set of specific recommended actions that can be reviewed, refined, implemented, managed and measured with the Action Board. Users can navigate the Action Board to view baseline and forward performance at the SKU, aisle/department, store, format, and global level.</p>
 		<Contact />
 	</div>
 
