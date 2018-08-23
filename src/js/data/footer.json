@@ -50,7 +50,6 @@
           "title": "ActionBoard Overview",
           "description": "1000 stores at the palm of your hand. Find out how to detect and remove friction at every step of the purhase path."
         },
-
         {
           "type": "video",
           "label": "3D Engagement Map",
@@ -58,6 +57,15 @@
           "title": "Introducing 3D Engagement Map",
           "subtitle": "World's first shopper behavior analytics overlaid on top of real 3D-scanned store",
           "video": "/assets/video/3d_heatmap.mp4",
+          "illustration": ""
+        },
+        {
+          "type": "article",
+          "label": "ActionBoard Manifesto",
+          "href": "manifesto",
+          "html": "/assets/templates/manifesto.html",
+          "title": "ActionBoard Manifesto",
+          "subtitle": "Find out more about design principles and core beliefs we use while designing our flagship product. ",
           "illustration": ""
         },
         {
@@ -91,7 +99,7 @@
           "image": "/assets/images/decision_making.png",
           "pdf": "FromDataToDecisionMaking.pdf",
           "title": "Get from Data Straight to Decision Making",
-          "description": "6 simple steps to turn existing data into actionable insights which increase the revenues right away."
+          "description": "6 simple steps to turn existing data into actionable insights which increase revenue right away."
         },
         {
           "type": "download",
@@ -102,16 +110,6 @@
           "pdf": "shopper_funnel.pdf",
           "title": "StoreDNA's Friction-less Shopper Funnel",
           "description": "Find out how to detect and remove fricion at every step of the purchase path. "
-        },
-
-        {
-          "type": "article",
-          "label": "ActionBoard Manifesto",
-          "href": "manifesto",
-          "html": "/assets/templates/manifesto.html",
-          "title": "ActionBoard Manifesto",
-          "subtitle": "Find out more about design principles and core beliefs we use while designing our flagship product. ",
-          "illustration": ""
         }
       ]
     },
