@@ -31,7 +31,6 @@ export default class Footer extends React.PureComponent {
 
   getTabLink(tab) {
     if (tab && tab.href && tab.href.includes('https://')) {
-      console.log(tab, "is link")
       return tab.href
     } else {
       return '/' + tab.type + '/' + tab.href
