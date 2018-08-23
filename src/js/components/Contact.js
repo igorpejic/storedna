@@ -64,7 +64,7 @@ const Contact = () =>
     <div className="t-center bg-white mb-3 p-3">
       <h3 className="mb-3 pt-0">Customer Support</h3>
       <p>Get in touch with our customer support for assistance with your ActionBoard implementation and usage.</p>
-      <p className="expected-response-time">(expected response time: within minutes during working hours)</p>
+      <p className="expected-response-time">(expected response time: within minutes during CET working hours)</p>
     
       <Button
         btnColor="black"
