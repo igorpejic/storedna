@@ -8,6 +8,12 @@
    }
 
   @include media-breakpoint-up(sm) {
+    width: 33.33%;
+    border-right: 1px solid $grey;
+  }
+
+
+  @include media-breakpoint-up(md) {
     height: 240px;
     width: auto;
     flex: 1 1 0;

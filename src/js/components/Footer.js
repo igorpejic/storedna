@@ -101,7 +101,9 @@ export default class Footer extends React.PureComponent {
     return (
       <React.Fragment>
         <Section applyOverlay={ false } padding={ 5 } className="t-center">
-          <img alt="storeDNA logo" src="/assets/svg/logos/logo.svg" width="200px"/>
+          <a href="/">
+            <img alt="storeDNA logo" src="/assets/svg/logos/logo.svg" width="200px"/>
+          </a>
           <p className="pt-3 px-sm-6 mx-auto" style={{ maxWidth: '700px' }}>
             For retail executives overwhelmed by piles of data, StoreDNA is the
             integrated decision-making platform which delivers dramatically improved

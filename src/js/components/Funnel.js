@@ -4,7 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { assets, funnel } from '../data/funnel.json'
 
 export default class Funnel extends React.Component {
-  isMobile = window.innerWidth < 576
+  isMobile = window.innerWidth < 768
   state = { opened: this.isMobile, activeLevel: 0 }
 
   toggleFunnel = () =>
@@ -33,7 +33,7 @@ export default class Funnel extends React.Component {
 
   renderAssetsCards = () => {
     return (
-      <div className="d-flex flex-wrap flex-sm-nowrap">
+      <div className="d-flex flex-wrap flex-md-nowrap">
         { assets.map((asset, index) =>
           <div key={ index } className='funnel-card d-flex flex-column justify-content-between px-3 t-center'>
             <p className="t-bold mt-3 mt-sm-1">{ asset.title }</p>
@@ -74,7 +74,7 @@ export default class Funnel extends React.Component {
 
   renderFunnel = () =>
     <div className="funnel-container pos-relative py-4 px-md-4 py-md-5">
-      <div className="funnel-sideNav pos-absolute mx-4 z-10 d-none d-sm-flex flex-column align-items-center">
+      <div className="funnel-sideNav pos-absolute mx-4 z-10 d-none d-md-flex flex-column align-items-center">
         { funnel.map((step, index) =>
           <div
             key={ step.label }
@@ -95,14 +95,14 @@ export default class Funnel extends React.Component {
         useKeyboardArrows
         emulateTouch>
           { funnel.map((step, index) =>
-            <div key={ step.label } className="col-sm-7 col-lg-6 col-xl-4 offset-sm-5 offset-xl-7 d-flex flex-column align-items-start mt-1">
+            <div key={ step.label } className="col-md-7 col-lg-6 col-xl-4 offset-md-5 offset-xl-7 d-flex flex-column align-items-start mt-1">
               { this.isMobile &&
                 <h1 className="funnel-mobile-title t-white t-uppercase t-left w-100 px-3 mb-3 z-10">
                   { `${index + 1}. ${ step.label }` }
                 </h1>
               }
               <img className="funnel-slide-content" alt={ step.title } src={ step.image } height={ 110 } />
-              <div className="funnel-slide-content t-white t-left legend pr-sm-4 pr-lg-auto">
+              <div className="funnel-slide-content t-white t-left legend pr-md-4 pr-lg-auto">
                 <h1 className="funnel-slide-title t-brand t-normal">{ step.title }</h1>
                 <h2 className="t-brand t-bold mb-0">
                   { index === 0 ? "CRITICAL MOMENT" : "KEY INSIGHT" }

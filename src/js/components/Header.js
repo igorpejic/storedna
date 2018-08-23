@@ -30,7 +30,7 @@ export default class Header extends React.PureComponent {
         py-1 py-md-2 px-3 px-lg-6 pos-absolute pos-top z-11` }>
 
         <div className="d-flex align-items-center justify-content-center" style={{ minHeight: '22px' }}>
-          <button
+          {/* <button
             style={{ lineHeight: '15px' }}
             className="d-md-none pl-3 btn-unstyled pos-absolute pos-left"
             onClick={ this.toggleMenu }>
@@ -38,7 +38,7 @@ export default class Header extends React.PureComponent {
               src={ `/assets/svg/icons/${this.state.openMenu ? 'close' : 'menu'}.svg` }
               alt="storedna logo"
               height="15px" />
-          </button>
+          </button> */}
 
           <a href="/">
             <img className="d-none d-md-inline-block mr-md-4" src="/assets/svg/logos/logo_white.svg" alt="storedna logo" height="30px" />
@@ -48,7 +48,7 @@ export default class Header extends React.PureComponent {
           <button
             style={{ lineHeight: '15px' }}
             className="d-md-none pr-3 btn-unstyled pos-absolute pos-right"
-            onClick={ () => window.location.href = '/info' }>
+            onClick={ () => window.location.href = '/article/contact' }>
             <img
               src={ `/assets/svg/icons/info.svg` }
               alt="storedna contact"

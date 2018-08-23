@@ -1,9 +1,10 @@
 .section--intro {
-  height: 100vh;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 85%;
   background-color: #1e94a0;
+  height: 100vh;
+  max-height: 130vw;
 
   .heading {
     text-transform: none;
@@ -13,9 +14,13 @@
       font-size: 4rem;
     }
   }
-}
 
-.intro__text {
-  flex-grow: 1;
-  max-width: 500px;
+  @include media-breakpoint-up(sm) {
+    max-height: auto;
+
+    .intro__text {
+      flex-grow: 1;
+      max-width: 500px;
+    }
+  }
 }

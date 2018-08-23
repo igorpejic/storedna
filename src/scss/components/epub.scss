@@ -32,7 +32,6 @@
   background-position: top center;
   background-size: 100%;
   margin-left: 5%;
-  min-height: 377px;
   width: 33%;
   max-width: 350px;
 
@@ -47,7 +46,7 @@
   background-color: rgba(189, 226, 230, 0.7);
 
   @include media-breakpoint-up(sm) {
-    background-color: none;
+    background-color: transparent;
     padding-left: 0;
     margin-left: auto;
     padding-right: 0

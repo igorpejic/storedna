@@ -92,12 +92,10 @@ input, a, button {
 
 @media screen and (max-width:767px) {
   /* removes zoom on focus */
-  input[type="text"]:focus, select:focus {
+  input[type="text"], select {
     font-size: 16px;
   }
-  .btn--form {
-    margin: 0 auto;
-  }
+
   .btn--form.active {
     width: 100%;
   }

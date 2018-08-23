@@ -1,18 +1,17 @@
 import React from 'react'
-import ButtonForm from './components/ButtonForm'
-import Button from './components/Button'
+import Contact from './components/Contact'
 
 const renderTemplate = (template) => {
 	switch (template) {
-		case "our_dna": return ourDnaTemplate();
-		case "purpose": return purposeTemplate();
-		case "contact": return contactTemplate();
-		case "manifesto": return manifestoTemplate();
+		case "our_dna": return OurDnaTemplate();
+		case "purpose": return PurposeTemplate();
+		case "contact": return ContactTemplate();
+		case "manifesto": return ManifestoTemplate();
 		default: return null;
 	}
 }
 
-const ourDnaTemplate = () =>
+export const OurDnaTemplate = () =>
 	<div className="template template--ourDna">
 		<h1>StoreDNA's DNA</h1>
 		<h2>Company Manifesto</h2>
@@ -45,7 +44,7 @@ const ourDnaTemplate = () =>
 		<p className="t-center t-grey">By courtesy of John Evan-Jones and Torben Valsted</p>
 	</div>
 
-const purposeTemplate = () =>
+export const PurposeTemplate = () =>
 <div className="template template--purpose">
 	<h1>Purpose</h1>
 	<h3>Mission / why do we exist</h3>
@@ -60,69 +59,16 @@ const purposeTemplate = () =>
 	<p>Spaces that inspire — think human friendly kindergartens, hospitals, working spaces. Even cities. Human friendly citizenship. </p>
 </div>
 
-const contactTemplate = () =>
+export const ContactTemplate = () =>
 	<div className="template template--contact">
 		<h1>Ask a StoreDNA expert how can we help</h1>
 		<p>StoreDNA SaaS technology and expert consulting services enable retailers to easily implement and manage a program to drive continuous improvement in brick and mortar retail locations by providing a data driven approach to ongoing optimization across a number of key areas, including product assortments, layouts and navigation, visual merchandising, staff deployment and effectiveness, and other dimensions.</p>
 		<p>The StoreDNA solution leverages standard feeds from any merchant high resolution video collection device and existing point-of-sale systems, processing data in near real time with proprietary, high fidedivty analytical systems and methods.</p>
 		<p>Results of this analysis are presented in the StoreDNA Action Board, which is an interactive management console that provides merchandisers and executives with a graphical view of performance and a data-science driven set of specific recommended actions that can be reviewed, refined, implemented, managed and measured with the Action Board. Users can navigate the Action Board to view basedivne and forward performance at the SKU, aisle/department, store, format, and global level.</p>
-		<div className="d-flex flex-column flex-sm-row t-white my-4">
-			<div className="bg-brand-dark mb-3 mr-sm-3 p-3 p-md-4">
-				<h3 className="p-0">Global HQ</h3>
-				<span>Singel 542, Amsterdam, The Netherlands</span>
-				<span>Monolith International BV</span>
-				<span>grow@storedna.co</span>
-			</div>
-			<div className="bg-brand-dark mb-3 p-3 p-md-4">
-				<h3 className="p-0">USA Office</h3>
-				<span>StoreDNA is operated by Monolith Retail Solutions Inc</span>
-				<span>68 5th Ave, New York, NY 10011</span>
-				<span>grow@storedna.co</span>
-			</div>
-		</div>
-		<h2 className="pt-2">Reason for inquiry?</h2>
-		<div className="d-flex flex-column t-center">
-			<div className="t-center bg-white mb-3 p-3">
-				<h3 className="mb-3 pt-0">Request a Demo</h3>
-				<p>Request a demo for ActionBoard, and see how leading retailers are using it to improve their fleet performance.</p>
-					<ButtonForm
-						label="Request a Demo"
-						successLabel="Request sent"
-						btnColor="black"
-						kind="ask-for-demo-contact"
-						height={ 40 } />
-			</div>
-			<div className="t-center bg-white mb-3 p-3">
-				<h3 className="mb-3 pt-0">Sales Inquiry</h3>
-				<p>Reach out to our global sales teams for immediate assistance with all sales related inquiries.</p>
-				<div className="d-flex justify-content-center">
-					<Button
-						btnColor="black"
-						label="Contact USA"
-						href="mailto:scott@storedna.co" />
-					<Button
-						classAdditions="mx-3"
-						btnColor="black"
-						label="Contact EU"
-						href="mailto:martin@storedna.co" />
-					<Button
-						btnColor="black"
-						label="Contact MENA"
-						href="mailto:uros@storedna.co" />
-				</div>
-			</div>
-			<div className="t-center bg-white mb-3 p-3">
-				<h3 className="mb-3 pt-0">Customer Support</h3>
-				<p>Get in touch with our customer support for assistance with your ActionBoard implementation and usage.</p>
-				<Button
-					btnColor="black"
-					label="Contact Customer Support"
-					href="mailto:igor@storedna.co" />
-			</div>
-		</div>
+		<Contact />
 	</div>
 
-const manifestoTemplate = () =>
+export const ManifestoTemplate = () =>
 	<div className="template template--manifesto">
 		<h1>ActionBoard Manifesto</h1>
 		<p>This document outdivnes mission critical product vision details to be used as the core document to drive product development. ActionBoard is the most important part of StoreDNA organism, and Monodivth’s future vision of supplementing all human decision making related to spacial inteldivgence. In order to succeed, all StoreDNA’s proprietors have to invest time, energy, and inteldivgence in ActionBoard’s improvements. </p>

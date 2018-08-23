@@ -9,7 +9,9 @@ const QuoteCard = ({ props }) => {
       <div
         className="p-4 p-lg-5 bg-grey t-center h-100 d-flex flex-column justify-content-center"
         style={{ minHeight: '25vw' }}>
-        <img className="mb-3 mx-auto w-50" alt={`${name} logo`} src={logo} style={{maxHeight: '50px'}}/>
+        <div className="mb-auto">
+          <img className="mb-3 mx-auto w-50" alt={`${name} logo`} src={logo} style={{maxHeight: '50px'}}/>
+        </div>
         <p className="t-center mx-auto" style={{ maxWidth: '550px' }}>
           { quote }
         </p>
