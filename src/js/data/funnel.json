@@ -12,7 +12,7 @@
     },
     {
       "title": "In-store promos",
-      "description": "Improve in-store promotion effectivness",
+      "description": "Improve in-store promotion effectiveness",
       "icon": "/assets/svg/icons/promos.svg"
     },
     {
@@ -164,7 +164,7 @@
       "isExtra": false
     },
     {
-      "label": "trail",
+      "label": "trial",
       "title": "Shoppers trialing products",
       "image": "/assets/svg/illustrations/trail.svg",
       "insight": "Are shoppers using trial experiences as expected?",
