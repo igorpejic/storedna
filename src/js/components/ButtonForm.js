@@ -37,16 +37,18 @@ export default class ButtonForm extends React.PureComponent {
     e && e.preventDefault();
     const email = this.refs.input.value;
 
-    // const sendEmailFaux = () => Promise.resolve()
+    const sendEmailFaux = () => Promise.resolve()
 
     let windowReference = null
-    if (this.isLegacyBrowser()) {
+    if (this.isSafari()) {
       windowReference = window.open("about:blank", '_blank');
     }
     sendEmail(email, this.state.kind).then(() => {
       if (this.props.href && this.props.fileName) {
-        if (this.isLegacyBrowser()) {
+        if (this.isSafari()) {
           windowReference.location = this.props.href
+        } else if (this.isLegacyBrowser()) {
+          window.open(this.props.href, '_blank').focus();
         } else {
           this.refs.hiddenLink.click();
         }
@@ -65,9 +67,12 @@ export default class ButtonForm extends React.PureComponent {
     });
   }
 
+  isSafari () {
+    return /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window.safari.pushNotification));
+  }
   isLegacyBrowser() {
     const isOpera = (!!window.opr && !!window.opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-    const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window.safari.pushNotification));
+    const isSafari = this.isSafari();
     const iOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
     const isIE = /*@cc_on!@*/false || !!document.documentMode;
 
