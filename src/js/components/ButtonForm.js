@@ -55,7 +55,7 @@ export default class ButtonForm extends React.PureComponent {
     }).catch((err) => {
       this.refs.input.value = ''
       this.setState({ placeholder: "Sorry, try with another email" })
-      console.log(err, 'failed')
+      console.log(err.message)
     });
   }
 
