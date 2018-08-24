@@ -37,10 +37,13 @@ export default class ButtonForm extends React.PureComponent {
     e && e.preventDefault();
     const email = this.refs.input.value;
 
+    // const sendEmailFaux = () => Promise.resolve()
+
+    const windowReference = window.open("about:blank", '_blank');
     sendEmail(email, this.state.kind).then(() => {
       if (this.props.href && this.props.fileName) {
         if (this.isLegacyBrowser()) {
-          window.open(this.props.href, '_blank').focus();
+          windowReference.location = this.props.href
         } else {
           this.refs.hiddenLink.click();
         }
