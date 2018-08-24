@@ -98,7 +98,7 @@ export default class ButtonForm extends React.PureComponent {
               onChange={ this.onChange }
               placeholder={ placeholder }
               autoComplete="on"
-              type="text"
+              type="email"
               name="email" />
             <button
               disabled={ !inputValid }
