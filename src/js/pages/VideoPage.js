@@ -2,6 +2,7 @@ import React from 'react';
 import LazyLoad from 'react-lazy-load'
 import Intro from '../components/Intro.js';
 import { getFooterItem } from '../utils.js'
+import { S3_BUCKET_URL } from '../utils'
 
 const VideoPage = ({match}) => {
   const props = getFooterItem(match.params.videoId)
@@ -19,7 +20,7 @@ const VideoPage = ({match}) => {
             className="mx-auto"
             style={{ maxHeight: '80vh', maxWidth: '100%' }}
             poster={ poster }
-            src={ video }
+            src={ S3_BUCKET_URL + video }
             muted controls playsInline />
         </LazyLoad>
       </div>

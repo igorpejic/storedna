@@ -37,6 +37,7 @@ export const playLazyVideos = () => {
 }
 
 export const BLOG_URL = 'https://blog.storedna.co'
+export const S3_BUCKET_URL = 'http://storedna-website.s3-website-eu-west-1.amazonaws.com'
 
 export const getAwsSendEmailUrl = () => {
   const awsEndpoint = 'aHR0cHM6Ly9lbmQ5enR1djlqLmV4ZWN1dGUtYXBpLmV1LWNlbnRyYWwtMS5hbWF6b25hd3MuY29tL2RlZmF1bHQvU2VuZEVtYWlsU3RvcmVkbmE='

@@ -2,6 +2,7 @@ import React from 'react'
 import LazyLoad from 'react-lazy-load'
 import Section from './Section'
 import { steps, title } from '../data/methodology.json'
+import { S3_BUCKET_URL } from '../utils'
 
 const Methodology = () =>
   <div className="section--methodology scroll-1">
@@ -25,7 +26,7 @@ const Methodology = () =>
                 style={{maxHeight: '80vh', maxWidth: '100%'}}
                 // preload="none"
                 poster={ step.poster }
-                src={ step.video }
+                src={ S3_BUCKET_URL + step.video }
                 muted playsInline loop autoPlay />
             </LazyLoad>
             <div className="bg-fade-edge pos-absolute z-1 w-100 h-100 pos-top pos-left" />

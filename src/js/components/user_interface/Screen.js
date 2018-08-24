@@ -4,6 +4,7 @@ import LazyLoad from 'react-lazy-load'
 import ActionBoard from './ActionBoard.js';
 import Opportunities from './Opportunities.js'
 import KnowledgeCenter from './KnowledgeCenter.js'
+import { S3_BUCKET_URL } from '../../utils'
 
 export default class Screen extends React.PureComponent {
   renderVideo() {
@@ -13,7 +14,7 @@ export default class Screen extends React.PureComponent {
           muted playsInline autoPlay loop
           poster="/assets/images/3D_heatmap.png"
           className="interface-video pos-relative pos-h-center"
-          src="assets/video/3D_heatmap.mp4" />
+          src={ S3_BUCKET_URL + "/assets/video/3D_heatmap.mp4" } />
       </LazyLoad>
     );
   }
