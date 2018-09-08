@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { arrowDown } from '../svgInline'
 import { sendEmail } from '../utils'
 
+// eslint-disable-next-line no-useless-escape
 const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 export default class ButtonForm extends React.PureComponent {
@@ -37,12 +38,11 @@ export default class ButtonForm extends React.PureComponent {
     e && e.preventDefault();
     const email = this.refs.input.value;
 
-    const sendEmailFaux = () => Promise.resolve()
-
     let windowReference = null
     if (this.isSafari()) {
       windowReference = window.open("about:blank", '_blank');
     }
+
     sendEmail(email, this.state.kind).then(() => {
       if (this.props.href && this.props.fileName) {
         if (this.isSafari()) {
@@ -70,6 +70,7 @@ export default class ButtonForm extends React.PureComponent {
   isSafari () {
     return /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window.safari.pushNotification));
   }
+
   isLegacyBrowser() {
     const isOpera = (!!window.opr && !!window.opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
     const isSafari = this.isSafari();

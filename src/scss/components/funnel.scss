@@ -27,7 +27,7 @@
 
 .funnel {
   max-height: 0;
-  transition: max-height 0.1s ease;
+  transition: max-height 0.4s ease;
 
   &.opened {
     max-height: 600px;

@@ -39,6 +39,7 @@ export default class UserInterface extends React.PureComponent {
         requestAnimationFrame(() => {
           this.refs.container.style.transform = `translateY(${translateMac}px)`;
           this.refs.macbook.style.transform = `scale(${scale - 0.09})`;
+          // eslint-disable-next-line array-callback-return
           this.cycleNavItems.map((item, index) => {
             let step = scale * 600
             step = step > 240 ? step : 240

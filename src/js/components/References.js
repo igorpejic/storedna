@@ -28,7 +28,22 @@ const References = () => {
         { renderQuotes() }
         { renderCases() }
         <div className="p-2 w-100">
-          <Epub />
+          <Epub
+            btnLabel="Download Free E-Book"
+            title="How to increase shopability and profitability of your fleet?"
+            description={ [
+              <ul key="list" className="list-unstyled t-2 t-bold mb-3">
+                <li>What is the purpose of stores in the future?</li>
+                <li>How do I run experiments and scale them across the fleet?</li>
+                <li>How do I transform my current store fleet?</li>
+              </ul>,
+              <p key="peek" className="mb-4 t-2">
+                Peek inside and learn how leading companies like Ahold, IKEA, Adidas, and Vodafone are thinking about creating the most engaging shopping experiences.
+              </p>
+            ] }
+            image="assets/images/study_cover.png"
+            pdf="Monolith_Deloitte_Store_Of_The_Future.pdf"
+          />
           <div
             className="px-2 py-4 px-md-6 pb-md-6 pt-md-4"
             style={{ backgroundColor: "#cbe8ec"}}>
@@ -37,7 +52,6 @@ const References = () => {
             </h1>
             <div
               className="d-flex align-items-center justify-content-center px-lg-6">
-              {/* style={{ maxWidth: "800px", margin: "0 auto"}}> */}
               { renderLogos() }
             </div>
           </div>

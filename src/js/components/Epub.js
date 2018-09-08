@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import Section from './Section';
 import ButtonForm from './ButtonForm';
 import Button from './Button';
@@ -40,22 +41,23 @@ const Epub = ({ title, description, image, pdf, blogUrl, btnLabel, showImageOnMo
       </div>
   </Section>
 
+Epub.propTypes = {
+  title: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  description: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.node)
+  ]),
+  blogUrl: PropTypes.string,
+  btnLabel: PropTypes.string,
+  showImageOnMobile: PropTypes.bool,
+}
+
 Epub.defaultProps = {
-  btnLabel: 'Download Free E-Book',
-  title: 'How to increase shopability and profitability of your fleet?',
-  description: [
-    <ul key="list" className="list-unstyled t-2 t-bold mb-3">
-      <li>What is the purpose of stores in the future?</li>
-      <li>How do I run experiments and scale them across the fleet?</li>
-      <li>How do I transform my current store fleet?</li>
-    </ul>,
-    <p key="peek" className="mb-4 t-2">
-      Peek inside and learn how leading companies like Ahold, IKEA, Adidas, and Vodafone are thinking about creating the most engaging shopping experiences.
-    </p>
-  ] ,
+  btnLabel: 'Download',
   showImageOnMobile: false,
-  image: 'assets/images/study_cover.png',
-  pdf: 'Monolith_Deloitte_Store_Of_The_Future.pdf',
+  description: null,
+  blogUrl: null,
 }
 
 export default Epub

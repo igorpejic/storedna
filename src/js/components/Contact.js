@@ -70,7 +70,7 @@ const Contact = () =>
         btnColor="black"
         label="Contact Customer Support"
         classAdditions="drift-open-chat"
-        onClick={(e) => {e && e.preventDefault}}
+        onClick={(e) => {e && e.preventDefault}} // eslint-disable-line no-unused-expressions
       />
     </div>
   </div>
