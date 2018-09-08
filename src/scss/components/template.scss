@@ -1,6 +1,10 @@
 .section--template {
   padding-bottom: 0 !important;
 
+  @include media-breakpoint-down(xs) {
+    padding: 0 !important;;
+  }
+
   h1 {
     font-size: 2rem;
     letter-spacing: 0.02em;
@@ -11,7 +15,6 @@
   h2 {
     font-size: 1.5rem;
     text-align: center;
-    padding-top: 30px;
     margin-bottom: 30px;
   }
 
@@ -64,10 +67,15 @@
 
 .template--ourDna {
   li {
-    margin: 20px 0;
+    margin: 10px 0;
     padding: 20px;
-    width: calc(50% - 20px);
+    width: 100%;
     background-color: #1e94a0;
     color: white;
+
+    @include media-breakpoint-up(sm) {
+      margin: 20px 0;
+      width: calc(50% - 20px);
+    }
   }
 }

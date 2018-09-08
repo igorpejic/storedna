@@ -3,13 +3,13 @@ import Section from './Section';
 import ButtonForm from './ButtonForm';
 import Button from './Button';
 
-const Epub = ({ title, description, image, pdf, blogUrl, btnLabel }) =>
+const Epub = ({ title, description, image, pdf, blogUrl, btnLabel, showImageOnMobile }) =>
   <Section className="section--epub d-flex bg-blue-light" applyOverlay={ false } >
       <div
         className="epub-wrapper w-100 row"
         style={{ backgroundImage: 'url("/assets/svg/illustrations/coffee.svg")' }}>
         <div
-          className="d-none d-sm-block epub-image-container"
+          className={ `${showImageOnMobile ? 'd-block' : 'd-none d-sm-block'} epub-image-container` }
           style={{ backgroundImage: 'url("/assets/svg/illustrations/ipad.svg")' }}>
           <img alt={ title } src={ image } />
         </div>
@@ -53,6 +53,7 @@ Epub.defaultProps = {
       Peek inside and learn how leading companies like Ahold, IKEA, Adidas, and Vodafone are thinking about creating the most engaging shopping experiences.
     </p>
   ] ,
+  showImageOnMobile: false,
   image: 'assets/images/study_cover.png',
   pdf: 'Monolith_Deloitte_Store_Of_The_Future.pdf',
 }

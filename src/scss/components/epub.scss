@@ -39,6 +39,12 @@
     padding: 15% 15% 17% 12%;
     width: 100%;
   }
+
+  @include media-breakpoint-down(xs) {
+    margin-left: 6%;
+    width: 60%;
+    margin-bottom: 20px;
+  }
 }
 
 .epub-text-container {

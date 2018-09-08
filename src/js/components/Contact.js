@@ -26,7 +26,7 @@ const Contact = () =>
       <div>grow@storedna.co</div>
     </div>
   </div>
-  <h2 className="pt-2">Reason for inquiry?</h2>
+  <h2>Reason for inquiry?</h2>
   <div className="d-flex flex-column t-center">
     <div className="t-center bg-white mb-3 p-3">
       <h3 className="mb-3 pt-0">Request a Demo</h3>
@@ -65,7 +65,7 @@ const Contact = () =>
       <h3 className="mb-3 pt-0">Customer Support</h3>
       <p>Get in touch with our customer support for assistance with your ActionBoard implementation and usage.</p>
       <p className="expected-response-time">(expected response time: within minutes during CET working hours)</p>
-    
+
       <Button
         btnColor="black"
         label="Contact Customer Support"

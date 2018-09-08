@@ -13,8 +13,6 @@ const renderTemplate = (template) => {
 
 export const OurDnaTemplate = () =>
 	<div className="template template--ourDna">
-    <h1>StoreDNA's DNA</h1>
-
     <h2>Company Manifesto</h2>
 
     <p>This document is to be developed jointly by StoreDNA leadership to be used as the integral policy describing company's culture and values. StoreDNA manifesto is based on ActionBoard manifesto, which describes the beliefs and values of how StoreDNA designs, produces and delivers its core product. </p>
