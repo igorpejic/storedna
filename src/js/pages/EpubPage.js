@@ -7,7 +7,15 @@ const EpubPage = ({ match }) => {
 
   return (
     <div className="page page--epub">
-      <Epub showImageOnMobile={ true } btnLabel="Download" { ...props } />
+      <div className='pos-relative w-100'>
+        <img
+          src='/assets/svg/illustrations/workspace.svg'
+          alt='illustration'
+          className='epub__illustration' />
+        <div className='pos-absolute w-100 h-100 pos-top bg-blue' style={ { opacity: '0.25'} } />
+      </div>
+      <Epub showImage={ false } btnLabel="Download" { ...props } />
+      <hr />
     </div>
   )
 }

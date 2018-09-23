@@ -7,19 +7,13 @@
           "type": "article",
           "label": "Our DNA",
           "href": "our_dna",
-          "html": "/assets/templates/our_dna.html",
-          "title": "StoreDNA's DNA",
-          "subtitle": "Find out more about how StoreDNA works",
-          "illustration": ""
+          "illustration": "/assets/images/our_dna.png"
         },
 
         {
           "type": "article",
           "label": "Purpose",
           "href": "purpose",
-          "html": "/assets/templates/purpose.html",
-          "title": "Why do we exist",
-          "subtitle": "Find out more about StoreDNA's mission, vision and purpose.",
           "illustration": ""
         },
 
@@ -27,9 +21,6 @@
           "type": "article",
           "label": "Contact StoreDNA",
           "href": "contact",
-          "html": "/assets/templates/contact.html",
-          "title": "Contact StoreDNA",
-          "subtitle": "StoreDNA experts are here to answer your questions, provide more information and create effective solutions for your needs.",
           "illustration": ""
         }
 

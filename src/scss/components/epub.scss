@@ -1,17 +1,12 @@
-.page--epub {
-  .epub-wrapper {
-    margin-top: 30px;
-
-    @include media-breakpoint-up(md) {
-      margin-top: 46px;
-    }
-  }
+.section--epub {
+  background-color: $blue-light;
 }
 
-.epub-wrapper {
+.epub-wrapper:not(.no_image) {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 100%;
+  background-image: url("/assets/svg/illustrations/coffee.svg");
 
   @include media-breakpoint-up(sm) {
     background-position: left 30px;
@@ -24,6 +19,27 @@
 
   @include media-breakpoint-up(xxl) {
     background-size: 45%;
+  }
+
+  .heading {
+    text-align: left;
+  }
+
+  .epub-text-container {
+    padding-left: 30px;
+    background-color: rgba(189, 226, 230, 0.7);
+    text-align: left;
+
+    @include media-breakpoint-up(sm) {
+      background-color: transparent;
+      padding-left: 0;
+      margin-left: auto;
+      padding-right: 0
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 30px;
+    }
   }
 }
 
@@ -47,18 +63,18 @@
   }
 }
 
-.epub-text-container {
-  padding-left: 30px;
-  background-color: rgba(189, 226, 230, 0.7);
-
-  @include media-breakpoint-up(sm) {
-    background-color: transparent;
-    padding-left: 0;
-    margin-left: auto;
-    padding-right: 0
+.page--epub {
+  .section--epub {
+    background: none;
   }
 
-  @include media-breakpoint-up(lg) {
-    padding-left: 30px;
+  .epub-text-container {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 500px;
+
+    .t-2 {
+      font-size: 13px;
+    }
   }
 }

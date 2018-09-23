@@ -27,7 +27,7 @@ export default class Header extends React.PureComponent {
     return (
       <div className={ `header${this.state.openMenu ? ' opened' : ''}
         w-100 t-white d-flex flex-column flex-md-row align-items-md-center justify-content-md-between
-        py-1 py-md-2 px-3 px-lg-6 pos-absolute pos-top z-11` }>
+        py-1 px-3 px-lg-6 pos-absolute pos-top z-11` }>
 
         <div className="d-flex align-items-center justify-content-center" style={{ minHeight: '22px' }}>
           {/* <button
