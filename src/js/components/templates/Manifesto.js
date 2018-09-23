@@ -18,8 +18,8 @@ const Manifesto = () =>
 
 			<p>
 				At StoreDNA, we design systems which encourage growth. <br /> To achieve our mission we have to Design with
-				<h2> 7 Principles of ActionBoard Design:</h2>
 			</p>
+			<h2> 7 Principles of ActionBoard Design:</h2>
 
 			<div className="article__list">
 				<ol className="pt-4">
