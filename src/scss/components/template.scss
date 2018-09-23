@@ -156,7 +156,7 @@
     }
 
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(xs) {
       text-align: left !important;
       margin-left: 20px !important;
       padding: 30px !important;
@@ -185,7 +185,7 @@
       max-height: 90px;
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(xs) {
       &:last-child() {
         padding: 0 !important;
         margin: 0 !important;
