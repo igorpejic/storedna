@@ -106,7 +106,7 @@
     },
 
     {
-      "title": "Privacy",
+      "title": "Key Policies",
       "tabs": [
         {
           "type": "download",
@@ -128,6 +128,16 @@
           "pdf": "statement.pdf",
           "title": "Data Processor Statement",
           "description": "StoreDNA is committed to protecting shopper's privacy. This Data Processing Statement explains our data processing practices and StoreDNA Zero Images Stored policies when it comes to computer vision algorithms. "
+        },
+        {
+          "type": "download",
+          "label": "Modern Slavery Policy",
+          "href": "modern_slavery_policy",
+          "blogUrl": "",
+          "image": "/assets/images/privacy_statement.png",
+          "pdf": "Modern_Slavery_Policy_StoreDNA.pdf",
+          "title": "Modern Slavery Policy",
+          "description": "StoreDNA is committed to ensuring that its business activities, workforce and supply chains are free from any kind of slavery, forced labor and human trafficking."
         }
       ]
     },
