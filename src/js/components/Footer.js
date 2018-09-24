@@ -11,6 +11,9 @@ export default class Footer extends React.PureComponent {
     this.state = { sections }
   }
   componentWillMount() {
+    if (!window.ghost) {
+      return
+    }
     fetch('https://' + window.ghost.url.api('posts', {limit: 3})).then(res => {
       if (!res) return
       res.json().then(body => {
