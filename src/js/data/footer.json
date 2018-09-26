@@ -138,6 +138,16 @@
           "pdf": "Modern_Slavery_Policy_StoreDNA.pdf",
           "title": "Modern Slavery Policy",
           "description": "StoreDNA is committed to ensuring that its business activities, workforce and supply chains are free from any kind of slavery, forced labor and human trafficking."
+        },
+        {
+          "type": "download",
+          "label": "Information Security Policy",
+          "href": "employee_supplier_information_slavery_policy",
+          "blogUrl": "",
+          "image": "/assets/images/privacy_statement.png",
+          "pdf": "Employee_Supplier_Information_Security_Requirements_Policy-StoreDNA.pdf",
+          "title": "Employee/Supplier Information Security Policy",
+          "description": "StoreDNA uses a number of suppliers and employees who provide services and goods. The effective management of these parties is essential for the provision of onward services to StoreDNA’s clients and ensuring the security of the StoreDNA’s systems and data."
         }
       ]
     },
