@@ -1,7 +1,7 @@
 import { sections } from './data/footer.json'
 
 export const BLOG_URL = 'https://blog.storedna.co'
-export const S3_BUCKET_URL = 'http://storedna-website.s3-website-eu-west-1.amazonaws.com'
+export const S3_BUCKET_URL = 'https://storedna.co'
 
 export const iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 
