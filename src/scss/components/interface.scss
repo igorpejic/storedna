@@ -3,20 +3,13 @@
     text-transform: uppercase;
     font-weight: bold;
   }
-}
 
-.macbook--screen {
-  position: absolute;
-  z-index: 6;
-  top: 7.2%;
-  left: 14.8%;
-  width: 70.5%;
-  height: 78%;
-  background-color: $black;
-}
-
-.screen--interface {
-  box-shadow: inset 0 0 3px $grey;
+  .heading {
+    @include media-breakpoint-down(sm) {
+        position: absolute;
+        top: 50px;
+    }
+  }
 }
 
 .optimisation-cycle {
@@ -41,16 +34,24 @@
   }
 
   @include media-breakpoint-down(sm) {
-    height: 60vh;
-    margin-bottom: 350px;
+    height: 100vh;
+    margin-bottom: 220px;
+    margin-top: 0;
   }
+}
 
-  .heading {
-      @include media-breakpoint-down(sm) {
-          position: absolute;
-          top: 10px;
-      }
-  }
+.macbook--screen {
+  position: absolute;
+  z-index: 6;
+  top: 7.2%;
+  left: 14.8%;
+  width: 70.5%;
+  height: 78%;
+  background-color: $black;
+}
+
+.screen--interface {
+  box-shadow: inset 0 0 3px $grey;
 }
 
 .interface--container {

@@ -14,11 +14,12 @@ const VideoPage = ({match}) => {
         title={ title }
         subtitle={ subtitle }
         illustration={ illustration } />
-      <div className="scroll-1 p-6" style={{ backgroundColor: "#b8b6b4" }}>
+      <div className="scroll-1 p-lg-6" style={{ backgroundColor: "#b8b6b4" }}>
         <LazyLoad offsetVertical={ 500 } debounce={ false } className="d-flex">
           <video
             className="mx-auto"
-            style={{ maxHeight: '80vh', maxWidth: '100%' }}
+            width="100%"
+            height="40%"
             poster={ poster }
             src={ S3_BUCKET_URL + video }
             muted controls playsInline />

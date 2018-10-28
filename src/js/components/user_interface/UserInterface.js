@@ -1,7 +1,7 @@
 import React from 'react';
 import CycleNavItem from './CycleNavItem.js'
 import Screen from './Screen.js'
-import { screens as items, title } from '../../data/userInterface.json'
+import { screens as items, title, platformTitle } from '../../data/userInterface.json'
 
 export default class UserInterface extends React.PureComponent {
   constructor() {
@@ -110,7 +110,7 @@ export default class UserInterface extends React.PureComponent {
   render() {
     return (
       <div ref="section" className='section--interface pos-relative mt-4 mt-md-6 o-hidden w-100'>
-        <h1 className="heading t-center px-3 mb-0">{ title }</h1>
+        <h1 className="heading t-center px-3 mb-0">{ this.props.showPlatformTitle ? platformTitle : title }</h1>
         <div ref="container" className="optimisation-cycle pos-relative w-100 z-6">
           <div ref="macbook" className="interface--container">
               <img src='/assets/images/macbook.png' className="interface--macbook img--fluid" alt="macbook" />

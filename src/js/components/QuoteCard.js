@@ -23,7 +23,7 @@ const QuoteCard = ({ props }) => {
               successLabel="Thank you!"
               label="Download"
               showArrow={ true }
-              btnColor="brand"
+              btnStyle="brand"
               fileName={ pdf }
               kind="case-studies"
               href={ `/assets/pdf/${pdf}` } />

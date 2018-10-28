@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Button = ({ label, href, onClick, classAdditions, btnColor }) => {
+const Button = ({ label, href, onClick, classAdditions, btnStyle }) => {
   const onBtnClick = (e) => {
     e && e.preventDefault();
     onClick ? onClick() : window.location.href = href;
@@ -9,7 +9,7 @@ const Button = ({ label, href, onClick, classAdditions, btnColor }) => {
 
   return (
       <button
-        className={ `btn dna-btn clickable btn--${btnColor} ${classAdditions ? classAdditions : ''}` }
+        className={ `btn dna-btn clickable btn--${btnStyle} ${classAdditions ? classAdditions : ''}` }
         onClick={ onBtnClick }>
         { label }
       </button>
@@ -21,14 +21,14 @@ Button.propTypes = {
   href: PropTypes.string,
   onClick: PropTypes.func,
   classAdditions: PropTypes.string,
-  btnColor: PropTypes.string,
+  btnStyle: PropTypes.string,
 }
 
 Button.defaultProps = {
   href: null,
   onClick: null,
   classAdditions: null,
-  btnColor: 'white',
+  btnStyle: 'white',
 }
 
 export default Button

@@ -16,6 +16,16 @@ input, a, button {
     box-shadow: 0 2px 8px rgba(0,0,0,.09),0 4px 40px rgba(0,0,0,.1);
   }
 
+  &.btn--stealth {
+    border: 1px solid transparent;
+    box-shadow: none;
+    transition: border .3s ease-in-out, width .2s ease-in-out;
+
+    &:hover {
+      border: 1px solid white;
+    }
+  }
+
   button {
     float: right;
     margin: 2px;

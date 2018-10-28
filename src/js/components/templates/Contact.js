@@ -44,7 +44,7 @@ const Contact = () =>
             classAdditions="m-2"
             label="Request a Demo"
             successLabel="Request sent"
-            btnColor="black"
+            btnStyle="black"
             kind="ask-for-demo-contact"
             height={ 40 } />
       </div>
@@ -57,17 +57,17 @@ const Contact = () =>
         <div className="contact-buttons d-flex flex-column flex-sm-row justify-content-center align-items-center">
           <Button
             classAdditions="m-2"
-            btnColor="black"
+            btnStyle="black"
             label="Contact USA"
             href="mailto:scott@storedna.co" />
           <Button
             classAdditions="m-2"
-            btnColor="black"
+            btnStyle="black"
             label="Contact EU"
             href="mailto:martin@storedna.co" />
           <Button
             classAdditions="m-2"
-            btnColor="black"
+            btnStyle="black"
             label="Contact MENA"
             href="mailto:uros@storedna.co" />
         </div>
@@ -80,7 +80,7 @@ const Contact = () =>
         <p>(expected response time: within minutes during CET working hours)</p>
 
         <Button
-          btnColor="black"
+          btnStyle="black"
           label="Contact Customer Support"
           classAdditions="m-2 drift-open-chat"
           onClick={(e) => {e && e.preventDefault}} // eslint-disable-line no-unused-expressions

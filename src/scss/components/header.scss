@@ -11,8 +11,8 @@
 
     &.opened {
       height: 350px;
-      background: rgba(50, 50, 50, 1);
-      transition: 
+      background: rgba(29, 29, 33, 1);
+      transition:
         background .36s cubic-bezier(0.32, 0.08, 0.24, 1),
         height .56s cubic-bezier(0.52, 0.16, 0.24, 1);
     }

@@ -24,14 +24,14 @@ const Epub = ({ title, description, image, pdf, blogUrl, btnLabel, showImage }) 
               initialLabel={ btnLabel }
               successLabel="Thank you!"
               label="Download"
-              btnColor="black"
+              btnStyle="black"
               kind={ pdf }
               showArrow={ true }
               fileName={ pdf }
               href={ `/assets/pdf/${pdf}` } />
             { blogUrl &&
               <Button
-                btnColor="black"
+                btnStyle="black"
                 classAdditions="ml-3"
                 label="Read more"
                 href={ blogUrl } />

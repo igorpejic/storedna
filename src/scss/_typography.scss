@@ -54,7 +54,7 @@ h1,
         @include media-breakpoint-up(md) {
             font-size: 1.5rem;
             padding: 0 10vw;
-            max-width: 800px;
+            max-width: 600px;
 
             &.t-center {
               margin-left: auto;
@@ -66,6 +66,7 @@ h1,
             font-size: 1.75rem;
             margin-bottom: $spacer * 3;
             padding: 0;
+            max-width: 750px;
         }
     }
 }

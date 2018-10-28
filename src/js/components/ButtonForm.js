@@ -82,7 +82,7 @@ export default class ButtonForm extends React.PureComponent {
 
   render() {
     const { placeholder, label, active, inputValid, submitted } = this.state;
-    const { href, fileName, height, btnColor, showArrow, classAdditions } = this.props;
+    const { href, fileName, height, btnStyle, showArrow, classAdditions } = this.props;
 
     return (
       <React.Fragment>
@@ -97,7 +97,7 @@ export default class ButtonForm extends React.PureComponent {
           : null
         }
         <form
-          className={ `btn--form btn--${btnColor} d-inline-flex${active ? ' active' : ''} ${classAdditions ? classAdditions : ''}` }
+          className={ `btn--form btn--${btnStyle} d-inline-flex${active ? ' active' : ''} ${classAdditions ? classAdditions : ''}` }
           name="download_publication_form"
           onSubmit={ this.onSubmit }
           style={{ height: `${height}px`}}>
@@ -133,7 +133,7 @@ ButtonForm.propTypes = {
   onClick: PropTypes.func,
   fileName: PropTypes.string,
   height: PropTypes.number,
-  btnColor: PropTypes.string,
+  btnStyle: PropTypes.string,
   showArrow: PropTypes.bool,
   classAdditions: PropTypes.string,
 }
@@ -143,7 +143,7 @@ ButtonForm.defaultProps = {
   successLabel: "Thank you!",
   initialLabel: '',
   href: '',
-  btnColor: 'white',
+  btnStyle: 'white',
   fileName: '',
   onClick: null,
   height: 40,
