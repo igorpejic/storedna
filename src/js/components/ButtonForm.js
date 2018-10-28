@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { arrowDown } from '../svgInline'
-import { sendEmail } from '../utils'
+import { sendEmail, iOS } from '../utils'
 
 // eslint-disable-next-line no-useless-escape
 const EMAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -46,7 +46,9 @@ export default class ButtonForm extends React.PureComponent {
     sendEmail(email, this.state.kind).then(() => {
       if (this.props.href && this.props.fileName) {
         if (this.isSafari()) {
-          windowReference.location = this.props.href
+          windowReference.location = this.props.href;
+        } else if (iOS) {
+          window.location.href = this.props.href;
         } else if (this.isLegacyBrowser()) {
           window.open(this.props.href, '_blank').focus();
         } else {
@@ -63,7 +65,7 @@ export default class ButtonForm extends React.PureComponent {
     }).catch((err) => {
       this.refs.input.value = ''
       this.setState({ placeholder: "Sorry, try again" })
-      console.log(err.message)
+      console.error(err.message)
     });
   }
 
@@ -73,11 +75,9 @@ export default class ButtonForm extends React.PureComponent {
 
   isLegacyBrowser() {
     const isOpera = (!!window.opr && !!window.opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-    const isSafari = this.isSafari();
-    const iOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
     const isIE = /*@cc_on!@*/false || !!document.documentMode;
 
-    return isOpera || isIE || isSafari || iOS;
+    return isOpera || isIE;
   }
 
   render() {
