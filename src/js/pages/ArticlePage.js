@@ -20,10 +20,14 @@ const ArticlePage = ({match}) => {
 
   return (
     <div className="page o-hidden">
+      <div className='article__illustration bg-blue'>
       <img
         src='/assets/images/our_dna.png'
         alt='illustration'
-        className='article__illustration bg-blue' />
+        style={{objectFit: 'cover'}}
+        width='100%'
+        height='100%' />
+      </div>
       { renderTemplate(article.href) }
     </div>
   )

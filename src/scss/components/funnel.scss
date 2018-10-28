@@ -38,11 +38,11 @@
 .carousel {
   .slide {
     background: #343439;
-    height: 440px;
+    height: 470px;
     overflow: hidden;
 
     @include media-breakpoint-up(sm) {
-      height: 430px //number * height of funnel levels
+      height: 420px;
     }
 
     img {

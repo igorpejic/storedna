@@ -24,7 +24,6 @@ export default class Funnel extends React.Component {
     }
   }
 
-
   setActiveLevel = (index) => this.setState(this.state.opened ? { activeLevel: index } : { opened: true, activeLevel: index })
 
   onChange = (activeIndex) => this.setActiveLevel(activeIndex)
@@ -73,7 +72,7 @@ export default class Funnel extends React.Component {
     </div>
 
   renderFunnel = () =>
-    <div className="funnel-container pos-relative py-4 px-md-4 py-md-5">
+    <div className="funnel-container pos-relative py-3 px-md-4 py-md-5">
       <div className="funnel-sideNav pos-absolute mx-4 z-10 d-none d-md-flex flex-column align-items-center">
         { funnel.map((step, index) =>
           <div
@@ -92,7 +91,7 @@ export default class Funnel extends React.Component {
         showThumbs={false}
         axis={ this.isMobile ? "horizontal" : "vertical" }
         verticalSwipe={ this.isMobile ? "standard" : "natural" }
-        useKeyboardArrows
+        useKeyboardArrows={ true }
         emulateTouch>
           { funnel.map((step, index) =>
             <div key={ step.label } className="col-md-7 col-lg-6 col-xl-4 offset-md-5 offset-xl-7 d-flex flex-column align-items-start mt-1">
@@ -128,6 +127,10 @@ export default class Funnel extends React.Component {
                   </div>
                 : null }
               </div>
+              { index === 0 && 
+                <button className="d-md-none mx-auto mt-5" style={{width: '70px'}} onClick={ () => this.setActiveLevel(1) }>
+                  <img alt='next' src='/assets/svg/icons/scroll-arrow.svg' className="w-50" style={{transform: 'rotate(-90deg)'}} />
+                </button> }
             </div>
           ) }
       </Carousel>

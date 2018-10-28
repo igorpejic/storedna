@@ -1,13 +1,20 @@
 .header {
-  background-color: rgba(29, 29, 40, 0.9);
+  background-color: rgba(29, 29, 33, 0.9);
 
   @include media-breakpoint-down(sm) {
-    height: 30px;
-    transition: all 0.2s ease-in;
+    &.closed {
+      height: 30px;
+      transition: 
+        background .44s .2s cubic-bezier(0.52, 0.16, 0.24, 1),
+        height .56s cubic-bezier(0.52, 0.16, 0.24, 1);
+    }
 
     &.opened {
-      height: 100vh;
-      background-color: rgba(50, 50, 50, 1);
+      height: 350px;
+      background: rgba(50, 50, 50, 1);
+      transition: 
+        background .36s cubic-bezier(0.32, 0.08, 0.24, 1),
+        height .56s cubic-bezier(0.52, 0.16, 0.24, 1);
     }
   }
 }
@@ -19,5 +26,15 @@
     &::before {
       content: none;
     }
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-right: 0.8rem;
+    margin-left: 0.8rem;
   }
 }

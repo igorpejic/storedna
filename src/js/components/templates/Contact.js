@@ -13,9 +13,6 @@ const Contact = () =>
         <div>The Netherlands</div>
         <br/>
         <div>Monolith International BV</div>
-        <div>grow@storedna.co</div>
-        <div>+31 6 4697 6484</div>
-        <div></div>
       </div>
       <br className="d-sm-none" />
       <br className="d-sm-none" />
@@ -26,9 +23,12 @@ const Contact = () =>
         <div>USA</div>
         <br/>
         <div>Monolith Retail Solutions Inc.</div>
-        <div>grow@storedna.co</div>
       </div>
     </div>
+    <Button
+      classAdditions="mt-4 btn-unstyled px-4 bg-brand"
+      label="Send email"
+      href="mailto:grow@storedna.co" />
   </div>
 
   <div className="article__body">

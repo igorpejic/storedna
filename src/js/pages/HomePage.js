@@ -4,6 +4,7 @@ import Methodology from '../components/Methodology.js';
 import Funnel from '../components/Funnel.js';
 import UserInterface from '../components/user_interface/UserInterface.js';
 import References from '../components/References.js';
+import { isMobile } from '../utils';
 
 const HomePage = () =>
   <div className="page o-hidden">
@@ -13,7 +14,7 @@ const HomePage = () =>
       illustration="/assets/svg/backgrounds/intro-bg.svg" />
     <Methodology />
     <Funnel />
-    <UserInterface />
+    {!isMobile() && <UserInterface />}
     <References />
   </div>
 

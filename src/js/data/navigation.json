@@ -5,20 +5,16 @@
       "href": "/platform"
     },
     {
-      "label": "Verticals",
-      "href": "/verticals"
-    },
-    {
-      "label": "Resources",
-      "href": "resources"
-    },
-    {
       "label": "Company",
-      "href": "/company"
+      "href": "/article/our_dna"
     },
     {
-      "label": "Support",
-      "href": "/support"
+      "label": "Contact",
+      "href": "/article/contact"
+    },
+    {
+      "label": "Blog",
+      "href": "https://blog.storedna.co/"
     }
   ]
 }

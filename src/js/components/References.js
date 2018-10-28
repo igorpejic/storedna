@@ -23,7 +23,7 @@ const References = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container pt-2 pt-md-0">
       <div className="row m-0">
         { renderQuotes() }
         { renderCases() }

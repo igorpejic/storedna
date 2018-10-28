@@ -39,7 +39,7 @@ export default class ButtonForm extends React.PureComponent {
     const email = this.refs.input.value;
 
     let windowReference = null
-    if (this.isSafari()) {
+    if (this.props.href && this.props.fileName && this.isSafari()) {
       windowReference = window.open("about:blank", '_blank');
     }
 

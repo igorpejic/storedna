@@ -30,3 +30,10 @@ export const autoplayVideoIniOS = (video) => {
     video.play();
   }
 }
+
+export const isMobile = () => {
+  console.log(window.innerWidth)
+  if (window) {
+    return window.innerWidth < 700;
+  }
+}
