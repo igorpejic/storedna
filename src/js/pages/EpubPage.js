@@ -6,7 +6,7 @@ const EpubPage = ({ match }) => {
   const props = getFooterItem(match.params.downloadId)
 
   return (
-    <div className="page page--epub">
+    <div className="page page--epub o-hidden">
       <div className='pos-relative w-100'>
         <img
           src='/assets/svg/illustrations/workspace.svg'

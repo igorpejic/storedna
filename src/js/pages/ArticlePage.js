@@ -19,7 +19,7 @@ const ArticlePage = ({match}) => {
   }
 
   return (
-    <div className="page">
+    <div className="page o-hidden">
       <img
         src='/assets/images/our_dna.png'
         alt='illustration'

@@ -9,7 +9,7 @@ const VideoPage = ({match}) => {
   const { video, title, subtitle, poster, illustration } = props;
 
   return (
-    <div className="page">
+    <div className="page o-hidden">
       <Intro
         title={ title }
         subtitle={ subtitle }

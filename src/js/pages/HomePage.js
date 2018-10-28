@@ -6,7 +6,7 @@ import UserInterface from '../components/user_interface/UserInterface.js';
 import References from '../components/References.js';
 
 const HomePage = () =>
-  <div className="page">
+  <div className="page o-hidden">
     <Intro
       title={ <Fragment><span>Shopability</span><br /><span>for Profitability.</span></Fragment> }
       subtitle="Decision-making platform for brick and mortar retail."
