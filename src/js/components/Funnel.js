@@ -72,7 +72,7 @@ export default class Funnel extends React.Component {
     </div>
 
   renderFunnel = () =>
-    <div className="funnel-container pos-relative py-3 px-md-4 py-md-5">
+    <div className="funnel-container pos-relative py-3 px-md-4 pt-md-5">
       <div className="funnel-sideNav pos-absolute mx-4 z-10 d-none d-md-flex flex-column align-items-center">
         { funnel.map((step, index) =>
           <div
