@@ -1,13 +1,14 @@
 import React from 'react';
 import CycleNavItem from './CycleNavItem.js'
 import Screen from './Screen.js'
+import { isMobile } from '../../utils.js'
 import { screens as items, title, platformTitle } from '../../data/userInterface.json'
 
 export default class UserInterface extends React.PureComponent {
   constructor() {
     super();
 
-    this.state = { activeScreen: 'video'};
+    this.state = { activeScreen: 'video', hideNavItems: false };
   }
 
   componentDidMount() {
@@ -34,11 +35,13 @@ export default class UserInterface extends React.PureComponent {
       const translateNav = (innerWidth > 767 ? 250 : 120) + innerWidth * scrollY * 0.0002;
       const translateNavX = macHeight * 0.55 * scale
       const maxScale = innerWidth > 600 ? 1.0 : 1.3;
-
+      const activeScale = isMobile() ? 1.2 : 0.9;
+      
       if (scale < maxScale) {
         requestAnimationFrame(() => {
           this.refs.container.style.transform = `translateY(${translateMac}px)`;
           this.refs.macbook.style.transform = `scale(${scale - 0.09})`;
+
           // eslint-disable-next-line array-callback-return
           this.cycleNavItems.map((item, index) => {
             let step = scale * 600
@@ -56,19 +59,24 @@ export default class UserInterface extends React.PureComponent {
         });
       }
 
-      if (!this.isClickable && scale > 0.9) {
+      if (isMobile() && scale < activeScale) {this.setState({hideNavItems: true})}
+
+      if (!this.isClickable && scale > activeScale) {
+        if (isMobile()) {this.setState({hideNavItems: false})}
         this.setState({ activeScreen: 'fleet' });
         this.cycleNavItems.map((item) => item.classList.add('clickable'));
         this.isClickable = true;
         this.cycleNavItems[0].classList.add('active');
       }
 
-      if (this.isClickable && scale <= 0.9) {
+      if (this.isClickable && scale <= activeScale) {
+        if (isMobile()) {this.setState({hideNavItems: true})}
         this.setState({ activeScreen: 'video' });
         this.cycleNavItems.map((item) => item.classList.remove('clickable', 'active'));
         this.isClickable = false;
       }
     } else {
+      if (isMobile()) {this.setState({hideNavItems: false})}
       this.refs.container.style.transform = '';
       this.refs.macbook.style.transform = '';
       this.cycleNavItems.map((item, index) => item.style.transform = '');
@@ -109,14 +117,14 @@ export default class UserInterface extends React.PureComponent {
 
   render() {
     return (
-      <div ref="section" className='section--interface pos-relative mt-4 mt-md-6 o-hidden w-100'>
+      <div ref="section" className='section--interface pos-relative mt-4 o-hidden w-100'>
         <h1 className="heading t-center px-3 mb-0">{ this.props.showPlatformTitle ? platformTitle : title }</h1>
         <div ref="container" className="optimisation-cycle pos-relative w-100 z-6">
           <div ref="macbook" className="interface--container">
               <img src='/assets/images/macbook.png' className="interface--macbook img--fluid" alt="macbook" />
               { this.renderScreen() }
           </div>
-          <div ref="cycleNav" className="cycle-nav">
+          <div ref="cycleNav" className={ `cycle-nav ${this.state.hideNavItems ? 'fade' : ''}` }>
             { this.renderCycleNavItems() }
           </div>
         </div>
