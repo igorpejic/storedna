@@ -6,6 +6,10 @@ const Contact = () =>
 <div className="article article--contact">
   <div className="article__intro">
     <div className="d-flex flex-column flex-sm-row justify-content-between">
+      <Button
+        classAdditions="d-sm-none mb-5 btn-unstyled px-4 bg-brand"
+        label="Send email"
+        href="mailto:grow@storedna.co" />
       <div>
         <h3 className="mb-3 pt-0">Global HQ</h3>
         <div>Singel 542</div>
@@ -24,9 +28,17 @@ const Contact = () =>
         <br/>
         <div>Monolith Retail Solutions Inc.</div>
       </div>
+      <br className="d-sm-none" />
+      <br className="d-sm-none" />
+      <div className="ml-sm-6">
+        <h3 className="mb-3 pt-0">MENA Office</h3>
+        <div>Dubai Design District (D3)</div>
+        <div>Dubai, 30069</div>
+        <div>UAE</div>
+      </div>
     </div>
     <Button
-      classAdditions="mt-4 btn-unstyled px-4 bg-brand"
+      classAdditions="d-none d-sm-block mt-4 btn-unstyled px-4 bg-brand"
       label="Send email"
       href="mailto:grow@storedna.co" />
   </div>

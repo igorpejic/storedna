@@ -20,7 +20,7 @@ const ArticlePage = ({match}) => {
 
   return (
     <div className="page o-hidden">
-      <div className='article__illustration bg-blue'>
+      <div className='article__illustration bg-brand-dark'>
       <img
         src='/assets/images/our_dna.png'
         alt='illustration'

@@ -7,8 +7,8 @@ const OurDna = () =>
 	    <p>
 				This document is to be developed jointly by StoreDNA leadership to be used
 				as the integral policy describing company's culture and values. StoreDNA manifesto
-				is based on ActionBoard manifesto, which describes the beliefs and values of how
-				StoreDNA designs, produces and delivers its core product.
+				is based on <a href="/article/manifesto" className="t-bold t-brand t-underline--fancy-hover">ActionBoard manifesto</a>,
+				which describes the beliefs and values of how StoreDNA designs, produces and delivers its core product.
 			</p>
 		</div>
 
