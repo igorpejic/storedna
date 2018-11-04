@@ -117,7 +117,7 @@ export default class UserInterface extends React.PureComponent {
 
   render() {
     return (
-      <div ref="section" className='section--interface pos-relative mt-4 mt-md-5 o-hidden w-100'>
+      <div ref="section" className='section--interface pos-relative mt-4 mt-md-6 o-hidden w-100'>
         <h1 className="heading t-center px-3 mb-0">{ this.props.showPlatformTitle ? platformTitle : title }</h1>
         <div ref="container" className="optimisation-cycle pos-relative w-100 z-6">
           <div ref="macbook" className="interface--container">
