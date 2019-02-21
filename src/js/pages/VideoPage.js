@@ -10,10 +10,12 @@ const VideoPage = ({match}) => {
 
   return (
     <div className="page o-hidden">
-      <Intro
-        title={ title }
-        subtitle={ subtitle }
-        illustration={ illustration } />
+      <Intro illustration={ illustration }>
+        <div className="intro__text t-white d-flex flex-column justify-content-center align-items-center">
+          <h1 className="heading mb-3 p-0">{ title }</h1>
+          <p className="t-2 t-center px-4 w-75">{ subtitle }</p>
+        </div>
+      </Intro>
       <div className="scroll-1 p-lg-6" style={{ backgroundColor: "#b8b6b4" }}>
         <LazyLoad offsetVertical={ 500 } debounce={ false } className="d-flex">
           <video

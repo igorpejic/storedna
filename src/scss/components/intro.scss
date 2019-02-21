@@ -23,4 +23,26 @@
       max-width: 500px;
     }
   }
+
+  &.intro--home {
+    background-position: top left;
+    background-size: 120%;
+    background-color: #071940;
+
+    .intro__text {
+      text-align: left;
+      max-width: 100%;
+      margin-right: auto;
+      font-family: $font-family-condensed;
+    }
+
+    @include media-breakpoint-up(lg) {
+      background-size: 100%;
+
+      .heading {
+        font-size: 5rem;
+        line-height: 1;
+      }
+    }
+  }
 }

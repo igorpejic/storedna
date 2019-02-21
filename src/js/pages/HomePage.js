@@ -8,10 +8,18 @@ import { isMobile } from '../utils';
 
 const HomePage = () =>
   <div className="page o-hidden">
-    <Intro
-      title={ <Fragment><span>Shopability</span><br /><span>for Profitability.</span></Fragment> }
-      subtitle="Decision-making platform for brick and mortar retail."
-      illustration="/assets/svg/backgrounds/intro-bg.svg" />
+    <Intro className="intro--home" illustration="/assets/svg/backgrounds/intro-bg-2.svg">
+      <div className="intro__text d-flex flex-column justify-content-end align-items-start">
+        <p className="t-1 t-white t-bold w-75 d-none d-sm-block">
+          SHOPABILITY FOR PROFITABILITY
+          <br/>
+          POWERED BY
+        </p>
+        <h1 className="heading t-brand t-left mb-3 p-0">
+         DECISION READY <br/> INSIGHTS
+        </h1>
+      </div>
+    </Intro>
     <Methodology />
     <Funnel />
     {!isMobile() && <UserInterface />}
