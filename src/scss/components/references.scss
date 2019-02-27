@@ -49,3 +49,21 @@
     }
   }
 }
+
+.client-logo {
+  opacity: 0.6;
+  max-width: 150px;
+
+  img {
+    min-height: 20px;
+    max-height: 20px;
+
+    @include media-breakpoint-up(lg) {
+      max-height: 25px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-height: 30px;
+    }
+  }
+}

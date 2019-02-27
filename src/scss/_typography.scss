@@ -68,6 +68,11 @@ h1,
             padding: 0;
             max-width: 750px;
         }
+
+        @include media-breakpoint-up(xxxl) {
+          font-size: 2rem;
+          max-width: 900px;
+      }
     }
 }
 

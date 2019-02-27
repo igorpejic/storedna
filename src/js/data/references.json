@@ -28,5 +28,6 @@
       "pdf": "Future_Of_Store_Innovation_Samsung.pdf"
     }
   ],
-  "partners": ["Accenture", "Deloitte", "ATKearney", "EY", "Imagination"]
+  "partners": ["Accenture", "Deloitte", "ATKearney", "EY", "Imagination"],
+  "clients": ["Samsung", "Footlocker", "Hunkemoller", "Intersport", "Timberland", "Chalhoub", "Audi", "Jaguar", "LandRover", "Volkswagen"]
 }

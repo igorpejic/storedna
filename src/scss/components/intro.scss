@@ -36,6 +36,14 @@
       font-family: $font-family-condensed;
     }
 
+    .scroll-arrow {
+      z-index: 10;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-bottom: 3.5rem !important;
+    }
+
     @include media-breakpoint-up(lg) {
       background-size: 100%;
 
