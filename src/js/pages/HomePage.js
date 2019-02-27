@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Intro from '../components/Intro.js';
 import Methodology from '../components/Methodology.js';
 import Funnel from '../components/Funnel.js';

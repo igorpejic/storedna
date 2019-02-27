@@ -50,6 +50,14 @@
   }
 }
 
+.clients-banner {
+  transition: opacity 1s ease;
+
+  &.fade {
+    opacity: 0;
+  }
+}
+
 .client-logo {
   opacity: 0.6;
   max-width: 150px;
