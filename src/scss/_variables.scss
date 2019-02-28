@@ -96,7 +96,8 @@ $grid-breakpoints: (
     md: 768px,
     lg: 992px,
     xl: 1200px,
-    xxl: 1400px
+    xxl: 1400px,
+    xxxl: 1550px,
 ) !default;
 
 $grid-columns: 12 !default;
@@ -123,8 +124,8 @@ $disabled-color: $grey-500;
 //
 
 $font-family-sans-serif: "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family:           $font-family-sans-serif !default;
+$font-family: $font-family-sans-serif !default;
+$font-family-condensed: "NewGroteskSquare-FIVE", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
 $font-size:  0.938rem !default;
 $font-size-sm: 0.7rem !default;    // 11px

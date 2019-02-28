@@ -6,6 +6,8 @@ export default class Section extends React.PureComponent {
   componentDidMount() {
     if (this.props.applyOverlay) {
       window.addEventListener('scroll', this.applyOverlay.bind(this));
+    } else if (this.props.onScroll) {
+      window.addEventListener('scroll', this.props.onScroll);
     }
   }
 
@@ -75,6 +77,7 @@ Section.propTypes = {
   applyOverlay: PropTypes.bool,
   className: PropTypes.string,
   bgImg: PropTypes.string,
+  onScroll: PropTypes.func,
 }
 
 Section.defaultProps = {
@@ -84,4 +87,5 @@ Section.defaultProps = {
   applyOverlay: true,
   className: 'section',
   bgImg: '',
+  onScroll: null,
 }

@@ -19,3 +19,9 @@
         url('#{$directory-font}/proxima_nova-bold.woff2') format('woff2'),
         url('#{$directory-font}/proxima_nova-bold.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'NewGroteskSquare-FIVE';
+  font-weight: bold;
+  src: url('#{$directory-font}/NewGroteskSquare-FIVE.otf');
+}

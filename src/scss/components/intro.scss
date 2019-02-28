@@ -23,4 +23,35 @@
       max-width: 500px;
     }
   }
+
+  &.intro--home {
+    background-position: top left;
+    background-size: 120%;
+    background-color: #071940;
+    max-height: none;
+
+    .intro__text {
+      text-align: left;
+      max-width: 100%;
+      margin-right: auto;
+      font-family: $font-family-condensed;
+    }
+
+    .scroll-arrow {
+      z-index: 10;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding-bottom: 3.5rem !important;
+    }
+
+    @include media-breakpoint-up(lg) {
+      background-size: 100%;
+
+      .heading {
+        font-size: 4.2rem;
+        line-height: 1;
+      }
+    }
+  }
 }

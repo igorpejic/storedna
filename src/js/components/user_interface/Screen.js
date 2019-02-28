@@ -4,10 +4,16 @@ import LazyLoad from 'react-lazy-load'
 import ActionBoard from './ActionBoard.js';
 import Opportunities from './Opportunities.js'
 import KnowledgeCenter from './KnowledgeCenter.js'
-import { S3_BUCKET_URL } from '../../utils'
+import { S3_BUCKET_URL, isMobile } from '../../utils'
 
 export default class Screen extends React.PureComponent {
   renderVideo() {
+    if (isMobile()) {
+      return (
+        <img src="/assets/images/3D_heatmap.png" alt="3D heatmap" width="100%" />
+      );
+    }
+
     return (
       <LazyLoad offsetVertical={ 300 } debounce={ false }>
         <video
