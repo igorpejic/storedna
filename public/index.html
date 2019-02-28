@@ -52,7 +52,31 @@
         }
       }();
       drift.SNIPPET_VERSION = '0.3.1';
-      drift.load('hrh36vacx967');
+    </script>
+    <script>
+    SCROLL_HEIGHT_DRIFT = 550;
+    window.driftInitialized = false;
+    window.onscroll = function() {!window.driftInitialized && driftInitialization()};
+    function driftInitialization () {
+      if (document.documentElement.scrollTop > (SCROLL_HEIGHT_DRIFT - 10)) {
+              drift.load('hrh36vacx967');
+              window.driftInitialized = true;
+      }
+    }
+    drift.on("ready", api => {
+      window.driftWidgetHidden = true;
+      window.onscroll = function() {myFunction()};
+      function myFunction() {
+        if (window.driftWidgetHidden && (document.documentElement.scrollTop > SCROLL_HEIGHT_DRIFT)) {
+          api.widget.show();
+          window.driftWidgetHidden = false;
+        }
+        if (!window.driftWidgetHidden && (document.documentElement.scrollTop < SCROLL_HEIGHT_DRIFT)) {
+          api.widget.hide();
+          window.driftWidgetHidden = true;
+        }
+      }
+    })
     </script>
     <!-- End of Async Drift Code -->
 
