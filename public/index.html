@@ -52,7 +52,31 @@
         }
       }();
       drift.SNIPPET_VERSION = '0.3.1';
-      drift.load('hrh36vacx967');
+    </script>
+    <script>
+    SCROLL_HEIGHT_DRIFT = 550;
+    window.driftInitialized = false;
+    window.onscroll = function() {!window.driftInitialized && driftInitialization()};
+    function driftInitialization () {
+      if (document.documentElement.scrollTop > (SCROLL_HEIGHT_DRIFT - 10)) {
+              drift.load('hrh36vacx967');
+              window.driftInitialized = true;
+      }
+    }
+    drift.on("ready", api => {
+      window.driftWidgetHidden = true;
+      window.onscroll = function() {myFunction()};
+      function myFunction() {
+        if (window.driftWidgetHidden && (document.documentElement.scrollTop > SCROLL_HEIGHT_DRIFT)) {
+          api.widget.show();
+          window.driftWidgetHidden = false;
+        }
+        if (!window.driftWidgetHidden && (document.documentElement.scrollTop < SCROLL_HEIGHT_DRIFT)) {
+          api.widget.hide();
+          window.driftWidgetHidden = true;
+        }
+      }
+    })
     </script>
     <!-- End of Async Drift Code -->
 
@@ -66,6 +90,25 @@
       gtag('config', 'UA-105587030-4');
     </script>
     <!-- End of Google Analytics Code -->
+    <!--- Lin -->
+      <script type="text/javascript">
+        _linkedin_partner_id = "545874";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+      </script><script type="text/javascript">
+        (function(){var s = document.getElementsByTagName("script")[0];
+        var b = document.createElement("script");
+        b.type = "text/javascript";b.async = true;
+        b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+        s.parentNode.insertBefore(b, s);})();
+      </script>
+      <noscript>
+        <img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=545874&fmt=gif" />
+      </noscript>
+    <!-- End Lin -->
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5145671.js"></script>
+    <!-- End of HubSpot Embed Code -->
 
   <!-- drift chat activate by button integration code-->
   <script>
