@@ -58,7 +58,7 @@ const References = () => (
             </p>
           ] }
           image="assets/images/study_cover.png"
-          pdf="Monolith_Deloitte_Store_Of_The_Future.pdf"
+          pdf="StoreDNA_Deloitte_Store_Of_The_Future.pdf"
         />
         <div
           className="px-2 py-4 px-md-6 pb-md-6 pt-md-4"
